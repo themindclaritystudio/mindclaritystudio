@@ -52,40 +52,55 @@ export default function HomePage() {
 
       {/* Who We Are */}
       <section id="about" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-serif font-black text-gray-900 mb-6">Who We Are</h2>
-              <p className="text-lg text-gray-600 mb-6 font-sans leading-relaxed">
-                At The Mind Clarity Studio, we believe that mental clarity is the foundation of personal and professional success. 
-                Founded by Lavina Pratap Bhambhani, the studio integrates psychology, coaching, education, research, and mentorship 
-                to help individuals navigate challenges, build resilience, and achieve meaningful transformation.
-              </p>
-              <div className="flex items-center space-x-8">
-                <div className="text-center">
-                  <div className="text-3xl font-serif font-black text-cyan-600">10+</div>
-                  <div className="text-sm text-gray-600 font-sans">Years of Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-serif font-black text-cyan-600">1000+</div>
-                  <div className="text-sm text-gray-600 font-sans">Individuals Guided</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-serif font-black text-cyan-600">20+</div>
-                  <div className="text-sm text-gray-600 font-sans">Research &amp; Publication Contributions</div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <img
-                src="/images/hero-lavina.jpg"
-                alt="Mind Clarity Studio session"
-                className="rounded-lg shadow-xl"
-              />
-            </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 className="text-4xl font-serif font-black text-gray-900 mb-6">
+          Who We Are
+        </h2>
+
+        <p className="text-lg text-gray-600 mb-8 font-sans leading-relaxed">
+          At The Mind Clarity Studio, we believe that mental clarity is the
+          foundation of personal and professional success. Founded by Lavina
+          Pratap Bhambhani, the studio integrates psychology, coaching,
+          education, research, and mentorship to help individuals navigate
+          challenges, build resilience, and achieve meaningful transformation.
+        </p>
+
+        <div className="grid grid-cols-3 gap-6 pt-4">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-600">10+</div>
+            <p className="mt-2 text-sm text-gray-600">
+              Years of Experience
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-600">1000+</div>
+            <p className="mt-2 text-sm text-gray-600">
+              Individuals Guided
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-600">20+</div>
+            <p className="mt-2 text-sm text-gray-600">
+              Research & Publications
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div>
+        <img
+          src="/images/hero-lavina.jpg"
+          alt="Mind Clarity Studio session"
+          className="h-[280px] md:h-[320px] lg:h-[600px] w-full rounded-2xl object-cover shadow-xl"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Why Choose The Mind Clarity Studio */}
       <section id="services" className="py-20 bg-gray-50">
