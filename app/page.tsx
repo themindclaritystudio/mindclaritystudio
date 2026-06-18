@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { ArrowRight, Shield, TrendingUp, Users, CheckCircle, Star } from "lucide-react"
 import Navigation from "@/components/navigation"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -70,7 +71,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <img
-                src="/pms-img-2.jpg"
+                src="/images/hero-lavina.jpg"
                 alt="Mind Clarity Studio session"
                 className="rounded-lg shadow-xl"
               />
@@ -451,8 +452,16 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-serif font-black text-cyan-400 mb-4">The Mind Clarity Studio</h3>
-              <p className="text-gray-400 font-sans mb-4">
+<Link href="/" className="flex items-center">
+  <Image
+    src="images/logo.png"
+    alt="The Mind Clarity Studio"
+    width={220}
+    height={70}
+    className="h-10 md:h-12 lg:h-14 w-auto object-contain"
+    priority
+  />
+</Link>              <p className="text-gray-400 font-sans mb-4">
                 For Stronger Minds, Think Lavina.
               </p>
             </div>

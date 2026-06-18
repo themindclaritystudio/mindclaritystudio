@@ -17,7 +17,7 @@ export default function Navigation() {
             <div className="flex-shrink-0">
            <Link href="/" className="flex items-center">
   <Image
-    src="/logo.png"
+    src="images/logo.png"
     alt="The Mind Clarity Studio"
     width={220}
     height={70}
