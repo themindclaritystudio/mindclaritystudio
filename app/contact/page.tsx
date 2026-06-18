@@ -20,7 +20,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     subject: "",
-    investmentAmount: "",
+    interest: "",
     message: "",
     preferredContact: "",
   })
@@ -32,7 +32,6 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission logic here
     console.log("Contact form submission:", formData)
     setIsSubmitted(true)
   }
@@ -81,8 +80,8 @@ export default function ContactPage() {
               Get In <span className="text-cyan-600">Touch</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto font-sans">
-              Ready to start your investment journey? Our team of experts is here to help you achieve your financial
-              goals.
+              Ready to begin your journey toward greater clarity, confidence, and personal transformation? 
+              We're here to support you every step of the way.
             </p>
           </div>
         </div>
@@ -98,11 +97,11 @@ export default function ContactPage() {
                   <Phone className="h-8 w-8 text-cyan-600" />
                 </div>
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Call Us</h3>
-                <p className="text-gray-600 font-sans mb-4">Speak directly with our investment advisors</p>
-                <a href="tel:+919876543210" className="text-cyan-600 hover:text-cyan-700 font-sans font-medium text-lg">
-                  +91 98765 43210
+                <p className="text-gray-600 font-sans mb-4">Speak directly with Lavina</p>
+                <a href="tel:+917990202179" className="text-cyan-600 hover:text-cyan-700 font-sans font-medium text-lg">
+                  +91 79902 02179
                 </a>
-                <p className="text-sm text-gray-500 font-sans mt-2">Mon-Fri: 9:00 AM - 6:00 PM</p>
+                <p className="text-sm text-gray-500 font-sans mt-2">Mon-Fri: 9:00 AM - 7:00 PM</p>
               </CardContent>
             </Card>
 
@@ -114,10 +113,10 @@ export default function ContactPage() {
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Email Us</h3>
                 <p className="text-gray-600 font-sans mb-4">Send us your questions anytime</p>
                 <a
-                  href="mailto:info@pmsinvestment.com"
+                  href="mailto:info@themindclaritystudio.com"
                   className="text-cyan-600 hover:text-cyan-700 font-sans font-medium"
                 >
-                  info@pmsinvestment.com
+                  info@themindclaritystudio.com
                 </a>
                 <p className="text-sm text-gray-500 font-sans mt-2">We respond within 24 hours</p>
               </CardContent>
@@ -128,12 +127,14 @@ export default function ContactPage() {
                 <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Calendar className="h-8 w-8 text-cyan-600" />
                 </div>
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Schedule Meeting</h3>
-                <p className="text-gray-600 font-sans mb-4">Book a consultation at your convenience</p>
-                <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
-                  Book Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Book a Call</h3>
+                <p className="text-gray-600 font-sans mb-4">Schedule a discovery consultation</p>
+                <Link href="/consultation">
+                  <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
+                    Book Consultation
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
@@ -169,7 +170,6 @@ export default function ContactPage() {
                           required
                           value={formData.firstName}
                           onChange={(e) => handleInputChange("firstName", e.target.value)}
-                          className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 font-sans"
                           placeholder="Your first name"
                         />
                       </div>
@@ -184,7 +184,6 @@ export default function ContactPage() {
                           required
                           value={formData.lastName}
                           onChange={(e) => handleInputChange("lastName", e.target.value)}
-                          className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 font-sans"
                           placeholder="Your last name"
                         />
                       </div>
@@ -201,7 +200,6 @@ export default function ContactPage() {
                           required
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}
-                          className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 font-sans"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -216,45 +214,26 @@ export default function ContactPage() {
                           required
                           value={formData.phone}
                           onChange={(e) => handleInputChange("phone", e.target.value)}
-                          className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 font-sans"
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 79902 02179"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="subject" className="text-sm font-medium text-gray-700 font-sans">
-                        Subject *
+                      <Label htmlFor="interest" className="text-sm font-medium text-gray-700 font-sans">
+                        Area of Interest *
                       </Label>
-                      <Select onValueChange={(value) => handleInputChange("subject", value)}>
-                        <SelectTrigger className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 font-sans">
-                          <SelectValue placeholder="Select a subject" />
+                      <Select onValueChange={(value) => handleInputChange("interest", value)}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="What would you like support with?" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="consultation">Schedule a Consultation</SelectItem>
-                          <SelectItem value="portfolio-review">Portfolio Review</SelectItem>
-                          <SelectItem value="investment-planning">Investment Planning</SelectItem>
-                          <SelectItem value="tax-optimization">Tax Optimization</SelectItem>
-                          <SelectItem value="general-inquiry">General Inquiry</SelectItem>
-                          <SelectItem value="support">Technical Support</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="investmentAmount" className="text-sm font-medium text-gray-700 font-sans">
-                        Investment Amount Range
-                      </Label>
-                      <Select onValueChange={(value) => handleInputChange("investmentAmount", value)}>
-                        <SelectTrigger className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 font-sans">
-                          <SelectValue placeholder="Select investment range (optional)" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="25-50-lakhs">₹25 - ₹50 Lakhs</SelectItem>
-                          <SelectItem value="50-lakhs-1-crore">₹50 Lakhs - ₹1 Crore</SelectItem>
-                          <SelectItem value="1-2-crores">₹1 - ₹2 Crores</SelectItem>
-                          <SelectItem value="2-5-crores">₹2 - ₹5 Crores</SelectItem>
-                          <SelectItem value="5-crores-plus">₹5 Crores+</SelectItem>
+                          <SelectItem value="psychological-coaching">Psychological Coaching</SelectItem>
+                          <SelectItem value="career-guidance">Career Guidance & Mentorship</SelectItem>
+                          <SelectItem value="personal-growth">Personal Growth</SelectItem>
+                          <SelectItem value="research">Research & Academic Support</SelectItem>
+                          <SelectItem value="workshops">Workshops & Training</SelectItem>
+                          <SelectItem value="general">General Inquiry</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -264,14 +243,14 @@ export default function ContactPage() {
                         Preferred Contact Method
                       </Label>
                       <Select onValueChange={(value) => handleInputChange("preferredContact", value)}>
-                        <SelectTrigger className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 font-sans">
+                        <SelectTrigger>
                           <SelectValue placeholder="How would you like us to contact you?" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="email">Email</SelectItem>
                           <SelectItem value="phone">Phone Call</SelectItem>
                           <SelectItem value="whatsapp">WhatsApp</SelectItem>
-                          <SelectItem value="in-person">In-Person Meeting</SelectItem>
+                          <SelectItem value="video">Video Call</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -286,8 +265,7 @@ export default function ContactPage() {
                         rows={5}
                         value={formData.message}
                         onChange={(e) => handleInputChange("message", e.target.value)}
-                        className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 font-sans resize-none"
-                        placeholder="Tell us about your investment goals, questions, or how we can help you..."
+                        placeholder="Tell us about your goals, challenges, or how we can support your journey..."
                       />
                     </div>
 
@@ -300,80 +278,11 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Office Locations */}
+            {/* Office Location */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-serif font-black text-gray-900 mb-8">Our Offices</h2>
+                <h2 className="text-3xl font-serif font-black text-gray-900 mb-8">Our Location</h2>
 
-                {/* Mumbai Office */}
-                <Card className="border-0 shadow-lg mb-6">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <MapPin className="h-6 w-6 text-cyan-600" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Mumbai Head Office</h3>
-                        <div className="space-y-2 text-gray-600 font-sans">
-                          <p className="flex items-start">
-                            <MapPin className="h-4 w-4 text-gray-400 mr-2 mt-1 flex-shrink-0" />
-                            15th Floor, Nariman Point,
-                            <br />
-                            Mumbai, Maharashtra 400021
-                          </p>
-                          <p className="flex items-center">
-                            <Phone className="h-4 w-4 text-gray-400 mr-2" />
-                            +91 98765 43210
-                          </p>
-                          <p className="flex items-center">
-                            <Mail className="h-4 w-4 text-gray-400 mr-2" />
-                            mumbai@pmsinvestment.com
-                          </p>
-                          <p className="flex items-center">
-                            <Clock className="h-4 w-4 text-gray-400 mr-2" />
-                            Mon-Fri: 9:00 AM - 6:00 PM
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Delhi Office */}
-                <Card className="border-0 shadow-lg mb-6">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <MapPin className="h-6 w-6 text-amber-600" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Delhi Branch</h3>
-                        <div className="space-y-2 text-gray-600 font-sans">
-                          <p className="flex items-start">
-                            <MapPin className="h-4 w-4 text-gray-400 mr-2 mt-1 flex-shrink-0" />
-                            8th Floor, Connaught Place,
-                            <br />
-                            New Delhi, Delhi 110001
-                          </p>
-                          <p className="flex items-center">
-                            <Phone className="h-4 w-4 text-gray-400 mr-2" />
-                            +91 98765 43211
-                          </p>
-                          <p className="flex items-center">
-                            <Mail className="h-4 w-4 text-gray-400 mr-2" />
-                            delhi@pmsinvestment.com
-                          </p>
-                          <p className="flex items-center">
-                            <Clock className="h-4 w-4 text-gray-400 mr-2" />
-                            Mon-Fri: 9:30 AM - 6:30 PM
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Bangalore Office */}
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
@@ -381,25 +290,23 @@ export default function ContactPage() {
                         <MapPin className="h-6 w-6 text-cyan-600" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Bangalore Branch</h3>
+                        <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">The Mind Clarity Studio</h3>
                         <div className="space-y-2 text-gray-600 font-sans">
                           <p className="flex items-start">
                             <MapPin className="h-4 w-4 text-gray-400 mr-2 mt-1 flex-shrink-0" />
-                            12th Floor, UB City Mall,
-                            <br />
-                            Bangalore, Karnataka 560001
+                            Gujarat, India
                           </p>
                           <p className="flex items-center">
                             <Phone className="h-4 w-4 text-gray-400 mr-2" />
-                            +91 98765 43212
+                            +91 79902 02179
                           </p>
                           <p className="flex items-center">
                             <Mail className="h-4 w-4 text-gray-400 mr-2" />
-                            bangalore@pmsinvestment.com
+                            info@themindclaritystudio.com
                           </p>
                           <p className="flex items-center">
                             <Clock className="h-4 w-4 text-gray-400 mr-2" />
-                            Mon-Fri: 9:00 AM - 6:00 PM
+                            Mon-Fri: 9:00 AM - 7:00 PM
                           </p>
                         </div>
                       </div>
@@ -408,24 +315,17 @@ export default function ContactPage() {
                 </Card>
               </div>
 
-              {/* Additional Contact Info */}
+              {/* Additional Info */}
               <Card className="border-0 shadow-lg bg-cyan-50">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-serif font-bold text-gray-900 mb-4 flex items-center">
                     <Users className="h-6 w-6 text-cyan-600 mr-3" />
-                    Need Immediate Assistance?
+                    We're Here to Help
                   </h3>
-                  <div className="space-y-3 text-gray-700 font-sans">
-                    <p>
-                      <strong>Emergency Support:</strong> +91 98765 43200 (Available 24/7 for existing clients)
-                    </p>
-                    <p>
-                      <strong>WhatsApp Support:</strong> +91 98765 43210 (Mon-Fri: 9 AM - 9 PM)
-                    </p>
-                    <p>
-                      <strong>Client Portal Support:</strong> support@pmsinvestment.com
-                    </p>
-                  </div>
+                  <p className="text-gray-700 font-sans leading-relaxed">
+                    Whether you're seeking emotional clarity, career direction, academic guidance, or personal growth — 
+                    we're just a message away.
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -436,24 +336,16 @@ export default function ContactPage() {
       {/* CTA Section */}
       <section className="py-20 bg-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Start Your Investment Journey?</h2>
+          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Create Lasting Change?</h2>
           <p className="text-xl text-cyan-100 mb-8 font-sans">
-            Schedule a free consultation with our investment experts and discover how we can help you achieve your
-            financial goals.
+            Take the first step toward a clearer, stronger, and more fulfilling life.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/consultation">
             <Button size="lg" className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 text-lg font-sans">
-              Schedule Free Consultation
+              Book a Discovery Call
               <Calendar className="ml-2 h-5 w-5" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 text-lg font-sans bg-transparent"
-            >
-              Download Investment Guide
-            </Button>
-          </div>
+          </Link>
         </div>
       </section>
 
@@ -462,38 +354,21 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-serif font-black text-cyan-400 mb-4">PMS Investment Services</h3>
+              <h3 className="text-2xl font-serif font-black text-cyan-400 mb-4">The Mind Clarity Studio</h3>
               <p className="text-gray-400 font-sans mb-4">
-                Empowering your financial future with expertise, transparency, and unwavering trust.
+                For Stronger Minds, Think Lavina.
               </p>
-              <div className="text-sm text-gray-400 font-sans">
-                <p>SEBI Registered Investment Advisor</p>
-                <p>Registration No: INA000012345</p>
-              </div>
+              <p className="text-sm text-gray-400 font-sans">
+                Psychology • Coaching • Emotional Wellness • Personal Growth
+              </p>
             </div>
             <div>
               <h4 className="text-lg font-serif font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400 font-sans">
-                <li>
-                  <Link href="/services/portfolio-management" className="hover:text-cyan-400 transition-colors">
-                    Portfolio Management
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/wealth-planning" className="hover:text-cyan-400 transition-colors">
-                    Wealth Planning
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/risk-assessment" className="hover:text-cyan-400 transition-colors">
-                    Risk Assessment
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/tax-optimization" className="hover:text-cyan-400 transition-colors">
-                    Tax Optimization
-                  </Link>
-                </li>
+                <li>Psychological Coaching</li>
+                <li>Career Guidance & Mentorship</li>
+                <li>Research & Academic Consulting</li>
+                <li>Workshops & Training</li>
               </ul>
             </div>
             <div>
@@ -501,17 +376,17 @@ export default function ContactPage() {
               <ul className="space-y-2 text-gray-400 font-sans">
                 <li>
                   <Link href="/about" className="hover:text-cyan-400 transition-colors">
-                    About Us
+                    About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#team" className="hover:text-cyan-400 transition-colors">
-                    Our Team
+                  <Link href="/services" className="hover:text-cyan-400 transition-colors">
+                    Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-cyan-400 transition-colors">
-                    Careers
+                  <Link href="/blog" className="hover:text-cyan-400 transition-colors">
+                    Blog
                   </Link>
                 </li>
                 <li>
@@ -524,15 +399,15 @@ export default function ContactPage() {
             <div>
               <h4 className="text-lg font-serif font-bold mb-4">Contact Info</h4>
               <div className="space-y-2 text-gray-400 font-sans">
-                <p>📧 info@pmsinvestment.com</p>
-                <p>📞 +91 98765 43210</p>
-                <p>📍 Mumbai, Maharashtra</p>
+                <p>📧 <a href="mailto:info@themindclaritystudio.com" className="hover:text-cyan-400">info@themindclaritystudio.com</a></p>
+                <p>📞 +91 79902 02179</p>
+                <p>📍 Gujarat, India</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
             <p className="text-gray-400 font-sans">
-              © 2024 PMS Investment Services. All rights reserved. | Privacy Policy | Terms of Service
+              © 2026 The Mind Clarity Studio. All Rights Reserved.
             </p>
           </div>
         </div>

@@ -19,11 +19,11 @@ export default function ConsultationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-black text-gray-900 mb-6">
-              Schedule Your <span className="text-cyan-600">Consultation</span>
+              Book Your <span className="text-cyan-600">Consultation</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto font-sans">
-              Take the first step towards your financial goals. Book a complimentary consultation with our expert
-              advisors to discuss your investment needs and explore how we can help you build wealth.
+              Take the first step toward greater clarity, emotional well-being, and personal transformation. 
+              Schedule a discovery call with Lavina Pratap Bhambhani.
             </p>
           </div>
         </div>
@@ -36,10 +36,9 @@ export default function ConsultationPage() {
             {/* Consultation Form */}
             <Card className="border-0 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-3xl font-serif font-bold text-gray-900">Book Your Consultation</CardTitle>
+                <CardTitle className="text-3xl font-serif font-bold text-gray-900">Book Your Discovery Call</CardTitle>
                 <p className="text-gray-600 font-sans">
-                  Fill out the form below and we'll get back to you within 24 hours to schedule your personalized
-                  consultation.
+                  Fill out the form below and we will get back to you within 24 hours to schedule your personalized consultation.
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -70,41 +69,23 @@ export default function ConsultationPage() {
                     <Label htmlFor="phone" className="font-sans">
                       Phone Number *
                     </Label>
-                    <Input id="phone" type="tel" placeholder="+91 98765 43210" required />
+                    <Input id="phone" type="tel" placeholder="+91 79902 02179" required />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="investmentAmount" className="font-sans">
-                      Investment Amount Range
+                    <Label htmlFor="interest" className="font-sans">
+                      Area of Interest
                     </Label>
                     <Select>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select investment range" />
+                        <SelectValue placeholder="What would you like support with?" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="25-50">₹25 Lakhs - ₹50 Lakhs</SelectItem>
-                        <SelectItem value="50-100">₹50 Lakhs - ₹1 Crore</SelectItem>
-                        <SelectItem value="100-250">₹1 Crore - ₹2.5 Crores</SelectItem>
-                        <SelectItem value="250+">₹2.5 Crores+</SelectItem>
-                        <SelectItem value="discuss">Prefer to discuss</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="services" className="font-sans">
-                      Services of Interest
-                    </Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select primary service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="portfolio-management">Portfolio Management</SelectItem>
-                        <SelectItem value="wealth-planning">Wealth Planning</SelectItem>
-                        <SelectItem value="risk-assessment">Risk Assessment</SelectItem>
-                        <SelectItem value="tax-optimization">Tax Optimization</SelectItem>
-                        <SelectItem value="multiple">Multiple Services</SelectItem>
+                        <SelectItem value="emotional-wellness">Emotional Wellness &amp; Stress</SelectItem>
+                        <SelectItem value="career-guidance">Career Guidance &amp; Mentorship</SelectItem>
+                        <SelectItem value="personal-growth">Personal Growth &amp; Self-Awareness</SelectItem>
+                        <SelectItem value="research-academic">Research &amp; Academic Support</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -135,8 +116,8 @@ export default function ConsultationPage() {
                         <SelectValue placeholder="Select meeting type" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="in-person">In-Person (Mumbai Office)</SelectItem>
-                        <SelectItem value="video-call">Video Call</SelectItem>
+                        <SelectItem value="video-call">Video Call (Online)</SelectItem>
+                        <SelectItem value="in-person">In-Person (Gujarat)</SelectItem>
                         <SelectItem value="phone-call">Phone Call</SelectItem>
                         <SelectItem value="no-preference">No Preference</SelectItem>
                       </SelectContent>
@@ -145,11 +126,11 @@ export default function ConsultationPage() {
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="font-sans">
-                      Additional Information
+                      Tell Us More About Your Goals
                     </Label>
                     <Textarea
                       id="message"
-                      placeholder="Tell us about your investment goals, current portfolio, or any specific questions you have..."
+                      placeholder="Share your current challenges, goals, or what you hope to achieve..."
                       rows={4}
                     />
                   </div>
@@ -161,12 +142,12 @@ export default function ConsultationPage() {
                       <Link href="/privacy" className="text-cyan-600 hover:underline">
                         Privacy Policy
                       </Link>{" "}
-                      and consent to being contacted about PMS Investment Services.
+                      and consent to being contacted by The Mind Clarity Studio.
                     </Label>
                   </div>
 
                   <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 text-lg font-sans">
-                    Schedule My Consultation
+                    Book My Consultation
                   </Button>
                 </form>
               </CardContent>
@@ -185,9 +166,9 @@ export default function ConsultationPage() {
                       <CheckCircle className="h-5 w-5 text-cyan-600" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-bold text-gray-900 mb-1">Comprehensive Assessment</h3>
+                      <h3 className="font-serif font-bold text-gray-900 mb-1">Discovery &amp; Understanding</h3>
                       <p className="text-gray-600 font-sans text-sm">
-                        We'll review your current financial situation, investment goals, and risk tolerance.
+                        We’ll explore your goals, challenges, and aspirations in a supportive environment.
                       </p>
                     </div>
                   </div>
@@ -196,9 +177,9 @@ export default function ConsultationPage() {
                       <CheckCircle className="h-5 w-5 text-cyan-600" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-bold text-gray-900 mb-1">Personalized Strategy</h3>
+                      <h3 className="font-serif font-bold text-gray-900 mb-1">Personalized Guidance</h3>
                       <p className="text-gray-600 font-sans text-sm">
-                        Receive tailored investment recommendations based on your unique circumstances.
+                        Receive clear insights and recommendations tailored to your unique journey.
                       </p>
                     </div>
                   </div>
@@ -209,7 +190,7 @@ export default function ConsultationPage() {
                     <div>
                       <h3 className="font-serif font-bold text-gray-900 mb-1">No Obligation</h3>
                       <p className="text-gray-600 font-sans text-sm">
-                        This consultation is completely free with no commitment required.
+                        The discovery call is completely free with no commitment required.
                       </p>
                     </div>
                   </div>
@@ -228,7 +209,7 @@ export default function ConsultationPage() {
                     </div>
                     <div>
                       <p className="font-serif font-bold text-gray-900">Phone</p>
-                      <p className="text-gray-600 font-sans">+91 98765 43210</p>
+                      <p className="text-gray-600 font-sans">+91 79902 02179</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -237,7 +218,7 @@ export default function ConsultationPage() {
                     </div>
                     <div>
                       <p className="font-serif font-bold text-gray-900">Email</p>
-                      <p className="text-gray-600 font-sans">consultation@pmsinvestment.com</p>
+                      <p className="text-gray-600 font-sans">info@themindclaritystudio.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -245,8 +226,8 @@ export default function ConsultationPage() {
                       <MapPin className="h-5 w-5 text-cyan-600" />
                     </div>
                     <div>
-                      <p className="font-serif font-bold text-gray-900">Office</p>
-                      <p className="text-gray-600 font-sans">Nariman Point, Mumbai 400021</p>
+                      <p className="font-serif font-bold text-gray-900">Location</p>
+                      <p className="text-gray-600 font-sans">Gujarat, India</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -266,23 +247,23 @@ export default function ConsultationPage() {
                 <CardContent className="pt-6">
                   <div className="text-center space-y-4">
                     <TrendingUp className="h-12 w-12 text-cyan-600 mx-auto" />
-                    <h3 className="text-xl font-serif font-bold text-gray-900">Why Choose Us?</h3>
+                    <h3 className="text-xl font-serif font-bold text-gray-900">Our Impact</h3>
                     <div className="grid grid-cols-2 gap-4 text-center">
                       <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">20+</div>
+                        <div className="text-2xl font-serif font-black text-cyan-600">10+</div>
                         <div className="text-sm text-gray-600 font-sans">Years Experience</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">₹500Cr+</div>
-                        <div className="text-sm text-gray-600 font-sans">Assets Managed</div>
+                        <div className="text-2xl font-serif font-black text-cyan-600">1000+</div>
+                        <div className="text-sm text-gray-600 font-sans">Lives Impacted</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">200+</div>
-                        <div className="text-sm text-gray-600 font-sans">Happy Clients</div>
+                        <div className="text-2xl font-serif font-black text-cyan-600">20+</div>
+                        <div className="text-sm text-gray-600 font-sans">Research Contributions</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">15.2%</div>
-                        <div className="text-sm text-gray-600 font-sans">Avg. Returns</div>
+                        <div className="text-2xl font-serif font-black text-cyan-600">100+</div>
+                        <div className="text-sm text-gray-600 font-sans">Workshops Delivered</div>
                       </div>
                     </div>
                   </div>
@@ -298,26 +279,24 @@ export default function ConsultationPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-serif font-black text-gray-900 mb-4">Consultation FAQs</h2>
-            <p className="text-lg text-gray-600 font-sans">Common questions about our consultation process.</p>
+            <p className="text-lg text-gray-600 font-sans">Common questions about our discovery calls.</p>
           </div>
           <div className="space-y-6">
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
                 <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">How long is the consultation?</h3>
                 <p className="text-gray-600 font-sans">
-                  Initial consultations typically last 45-60 minutes, giving us enough time to understand your needs and
-                  provide meaningful insights.
+                  Discovery calls typically last 45-60 minutes, providing enough time to understand your needs and explore how we can support you.
                 </p>
               </CardContent>
             </Card>
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
                 <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">
-                  What should I bring to the consultation?
+                  What should I prepare before the call?
                 </h3>
                 <p className="text-gray-600 font-sans">
-                  Please bring recent investment statements, tax returns, insurance policies, and any financial
-                  documents that provide a complete picture of your current situation.
+                  Just come as you are. It helps to reflect on your current challenges and what you hope to achieve through coaching or mentorship.
                 </p>
               </CardContent>
             </Card>
@@ -327,8 +306,7 @@ export default function ConsultationPage() {
                   Is there any cost for the consultation?
                 </h3>
                 <p className="text-gray-600 font-sans">
-                  No, the initial consultation is completely complimentary. We believe in demonstrating our value before
-                  asking for your business.
+                  The initial discovery call is completely free and comes with no obligation.
                 </p>
               </CardContent>
             </Card>
@@ -338,8 +316,7 @@ export default function ConsultationPage() {
                   What happens after the consultation?
                 </h3>
                 <p className="text-gray-600 font-sans">
-                  We'll provide you with a detailed proposal outlining our recommended strategy, fee structure, and next
-                  steps. You'll have time to review everything before making any decisions.
+                  We’ll discuss the best way forward — whether it’s a coaching program, mentorship, workshop, or customized support plan.
                 </p>
               </CardContent>
             </Card>
@@ -352,38 +329,21 @@ export default function ConsultationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-serif font-black text-cyan-400 mb-4">PMS Investment Services</h3>
+              <h3 className="text-2xl font-serif font-black text-cyan-400 mb-4">The Mind Clarity Studio</h3>
               <p className="text-gray-400 font-sans mb-4">
-                Empowering your financial future with expertise, transparency, and unwavering trust.
+                For Stronger Minds, Think Lavina.
               </p>
-              <div className="text-sm text-gray-400 font-sans">
-                <p>SEBI Registered Investment Advisor</p>
-                <p>Registration No: INA000012345</p>
-              </div>
+              <p className="text-sm text-gray-400 font-sans">
+                Psychology • Coaching • Emotional Wellness • Personal Growth
+              </p>
             </div>
             <div>
               <h4 className="text-lg font-serif font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400 font-sans">
-                <li>
-                  <Link href="/services/portfolio-management" className="hover:text-cyan-400 transition-colors">
-                    Portfolio Management
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/wealth-planning" className="hover:text-cyan-400 transition-colors">
-                    Wealth Planning
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/risk-assessment" className="hover:text-cyan-400 transition-colors">
-                    Risk Assessment
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/tax-optimization" className="hover:text-cyan-400 transition-colors">
-                    Tax Optimization
-                  </Link>
-                </li>
+                <li>Psychological Coaching</li>
+                <li>Career Guidance &amp; Mentorship</li>
+                <li>Research &amp; Academic Consulting</li>
+                <li>Workshops &amp; Training</li>
               </ul>
             </div>
             <div>
@@ -391,17 +351,17 @@ export default function ConsultationPage() {
               <ul className="space-y-2 text-gray-400 font-sans">
                 <li>
                   <Link href="/about" className="hover:text-cyan-400 transition-colors">
-                    About Us
+                    About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#team" className="hover:text-cyan-400 transition-colors">
-                    Our Team
+                  <Link href="/services" className="hover:text-cyan-400 transition-colors">
+                    Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-cyan-400 transition-colors">
-                    Careers
+                  <Link href="/blog" className="hover:text-cyan-400 transition-colors">
+                    Blog
                   </Link>
                 </li>
                 <li>
@@ -414,15 +374,15 @@ export default function ConsultationPage() {
             <div>
               <h4 className="text-lg font-serif font-bold mb-4">Contact Info</h4>
               <div className="space-y-2 text-gray-400 font-sans">
-                <p>📧 info@pmsinvestment.com</p>
-                <p>📞 +91 98765 43210</p>
-                <p>📍 Mumbai, Maharashtra</p>
+                <p>📧 <a href="mailto:info@themindclaritystudio.com" className="hover:text-cyan-400">info@themindclaritystudio.com</a></p>
+                <p>📞 +91 79902 02179</p>
+                <p>📍 Gujarat, India</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
             <p className="text-gray-400 font-sans">
-              © 2024 PMS Investment Services. All rights reserved. | Privacy Policy | Terms of Service
+              © 2026 The Mind Clarity Studio. All Rights Reserved.
             </p>
           </div>
         </div>

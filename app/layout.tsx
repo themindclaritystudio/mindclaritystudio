@@ -18,10 +18,26 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "PMS Investment Services - Empowering Your Financial Future",
+  title: "The Mind Clarity Studio | For Stronger Minds, Think Lavina",
   description:
-    "Tailored investment strategies for discerning investors. Professional portfolio management services with expertise and trust.",
-  generator: "v0.app",
+    "The Mind Clarity Studio by Lavina Pratap Bhambhani offers psychology-based coaching, emotional wellness guidance, career mentorship, research consulting, workshops, and personal development programs designed to help individuals achieve clarity, confidence, and meaningful growth.",
+  keywords: [
+    "The Mind Clarity Studio",
+    "Lavina Pratap Bhambhani",
+    "Psychologist",
+    "Career Mentor",
+    "Mental Wellness",
+    "Personal Growth",
+    "Emotional Wellbeing",
+    "Career Guidance",
+    "Research Consultant",
+    "Life Coaching",
+    "Workshops",
+    "Mentorship",
+  ],
+  authors: [{ name: "Lavina Pratap Bhambhani" }],
+  creator: "The Mind Clarity Studio",
+  publisher: "The Mind Clarity Studio",
 }
 
 export default function RootLayout({

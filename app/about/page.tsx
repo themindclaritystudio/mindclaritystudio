@@ -14,11 +14,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-black text-gray-900 mb-6">
-              About <span className="text-cyan-600">PMS Investment Services</span>
+              About <span className="text-cyan-500">The Mind Clarity Studio</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto font-sans">
-              Two decades of excellence in portfolio management, built on trust, expertise, and unwavering commitment to
-              our clients' financial success.
+              Empowering individuals through psychology, emotional wellness, coaching, education, and personal transformation. 
+              We help people build clarity, confidence, resilience, and meaningful growth.
             </p>
           </div>
         </div>
@@ -31,26 +31,24 @@ export default function AboutPage() {
             <div>
               <h2 className="text-4xl font-serif font-black text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6 font-sans leading-relaxed">
-                Founded in 2004, PMS Investment Services began with a simple yet powerful vision: to democratize
-                sophisticated investment management for discerning investors. What started as a boutique firm serving a
-                select group of high-net-worth individuals has evolved into one of India's most trusted portfolio
-                management companies.
+                The Mind Clarity Studio was founded by Lavina Pratap Bhambhani, an International Author, Psychologist, 
+                Educator, Researcher, and Mental Wellness Expert. The vision behind the studio is to create a safe space 
+                where individuals can gain clarity, strengthen emotional well-being, and unlock their true potential.
               </p>
               <p className="text-lg text-gray-600 mb-6 font-sans leading-relaxed">
-                Our journey has been marked by consistent performance, unwavering ethical standards, and an relentless
-                focus on client success. Through market cycles, economic uncertainties, and changing investment
-                landscapes, we have remained steadfast in our commitment to delivering exceptional results.
+                Through a combination of psychology, coaching, mentoring, workshops, and educational initiatives, 
+                The Mind Clarity Studio supports students, professionals, entrepreneurs, and individuals navigating 
+                personal and professional challenges.
               </p>
               <p className="text-lg text-gray-600 mb-8 font-sans leading-relaxed">
-                Today, we manage over ₹500 crores in assets for more than 200 satisfied clients, each receiving
-                personalized attention and customized investment strategies designed to meet their unique financial
-                goals.
+                Our mission is to help people make better decisions, build emotional resilience, improve self-awareness, 
+                and create a fulfilling life through practical and evidence-based approaches to personal growth and mental wellness.
               </p>
             </div>
             <div className="relative">
               <img
                 src="/images/pms-img-1.jpg"
-                alt="PMS Investment Services office"
+                alt="The Mind Clarity Studio"
                 className="rounded-lg shadow-xl"
               />
             </div>
@@ -64,7 +62,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              The principles that guide every decision we make and every relationship we build.
+              The principles that guide every interaction and every transformation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -77,8 +75,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 font-sans text-center">
-                  We operate with complete transparency, putting our clients' interests first in every decision and
-                  maintaining the highest ethical standards.
+                  We create a safe, ethical, and supportive environment where individuals can openly explore their 
+                  thoughts, emotions, and aspirations.
                 </p>
               </CardContent>
             </Card>
@@ -92,8 +90,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 font-sans text-center">
-                  We strive for excellence in everything we do, from investment research to client service, continuously
-                  raising the bar for performance.
+                  We are committed to delivering high-quality guidance, evidence-based practices, and meaningful 
+                  support that creates lasting positive change.
                 </p>
               </CardContent>
             </Card>
@@ -107,8 +105,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 font-sans text-center">
-                  Every strategy, every decision, and every action is designed with our clients' long-term financial
-                  success as the primary objective.
+                  Every individual is unique. We provide personalized guidance, mentorship, and support tailored to 
+                  each person&apos;s goals and journey.
                 </p>
               </CardContent>
             </Card>
@@ -116,60 +114,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team */}
+      {/* Founder */}
       <section id="team" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Leadership Team</h2>
+            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Founder</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              Meet the experienced professionals who guide our investment strategies and client relationships.
+              Meet the visionary behind The Mind Clarity Studio
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg text-center">
+          <div className="flex justify-center">
+            <Card className="border-0 shadow-lg text-center max-w-md">
               <CardContent className="pt-6">
                 <img
-                  src="/images/avatar/avatar-1.jpg"
-                  alt="Rajesh Mehta"
+                  src="/images/hero-lavina.jpg"
+                  alt="Lavina Pratap Bhambhani"
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Rajesh Mehta</h3>
-                <p className="text-cyan-600 font-sans mb-4">Founder & CEO</p>
-                <p className="text-gray-600 font-sans text-sm">
-                  25+ years in investment management. Former VP at Goldman Sachs. CFA charterholder with expertise in
-                  equity research and portfolio construction.
+                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">
+                  Lavina Pratap Bhambhani
+                </h3>
+                <p className="text-cyan-600 font-sans mb-4">
+                  Psychologist • Author • Educator • Researcher
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg text-center">
-              <CardContent className="pt-6">
-                <img
-                  src="/images/avatar/avatar-4.jpg"
-                  alt="Priya Sharma"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Priya Sharma</h3>
-                <p className="text-cyan-600 font-sans mb-4">Chief Investment Officer</p>
                 <p className="text-gray-600 font-sans text-sm">
-                  20+ years in asset management. Former fund manager at HDFC AMC. Specializes in risk management and
-                  alternative investments.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg text-center">
-              <CardContent className="pt-6">
-                <img
-                  src="/images/avatar/avatar-3.jpg"
-                  alt="Amit Kumar"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Amit Kumar</h3>
-                <p className="text-cyan-600 font-sans mb-4">Head of Research</p>
-                <p className="text-gray-600 font-sans text-sm">
-                  15+ years in equity research. Former analyst at Morgan Stanley. Expert in fundamental analysis and
-                  sector rotation strategies.
+                  Founder of The Mind Clarity Studio, dedicated to helping individuals achieve emotional clarity, 
+                  personal growth, career direction, and mental well-being through coaching, education, and 
+                  psychology-based interventions.
                 </p>
               </CardContent>
             </Card>
@@ -181,9 +152,9 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Investment Approach</h2>
+            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Approach</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              A disciplined, research-driven methodology that has delivered consistent results across market cycles.
+              A holistic, evidence-based methodology focused on meaningful personal transformation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -192,37 +163,36 @@ export default function AboutPage() {
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Rigorous Research Process</h3>
+                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Psychological Understanding</h3>
                     <p className="text-gray-600 font-sans">
-                      Our investment decisions are backed by comprehensive fundamental analysis, technical research, and
-                      macroeconomic insights.
+                      Understanding thoughts, emotions, and behaviors to create lasting positive change.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Risk-Adjusted Returns</h3>
+                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Personalized Guidance</h3>
                     <p className="text-gray-600 font-sans">
-                      We focus on generating superior risk-adjusted returns rather than chasing short-term performance.
+                      Providing tailored support that aligns with each individual&apos;s goals, challenges, and aspirations.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Active Portfolio Management</h3>
+                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Practical Transformation</h3>
                     <p className="text-gray-600 font-sans">
-                      Continuous monitoring and rebalancing to adapt to changing market conditions and opportunities.
+                      Offering actionable tools and strategies that can be applied in everyday life.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Long-term Perspective</h3>
+                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Lifelong Growth</h3>
                     <p className="text-gray-600 font-sans">
-                      We invest with a long-term horizon, focusing on sustainable wealth creation over market cycles.
+                      Encouraging continuous self-awareness, learning, and personal development.
                     </p>
                   </div>
                 </div>
@@ -231,7 +201,7 @@ export default function AboutPage() {
             <div>
               <img
                 src="/images/pms-img-1.jpg"
-                alt="Investment research and analysis"
+                alt="Our Approach"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -243,27 +213,27 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Track Record</h2>
+            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Impact</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              Numbers that speak to our commitment to excellence and client success.
+              Trusted by individuals across India for meaningful transformation.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">20+</div>
+              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">10+</div>
               <div className="text-gray-600 font-sans">Years of Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">₹500Cr+</div>
-              <div className="text-gray-600 font-sans">Assets Under Management</div>
+              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">1000+</div>
+              <div className="text-gray-600 font-sans">Lives Impacted</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">200+</div>
-              <div className="text-gray-600 font-sans">Satisfied Clients</div>
+              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">20+</div>
+              <div className="text-gray-600 font-sans">Research &amp; Publication Contributions</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">15.2%</div>
-              <div className="text-gray-600 font-sans">Average Annual Returns</div>
+              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">100+</div>
+              <div className="text-gray-600 font-sans">Workshops &amp; Sessions Delivered</div>
             </div>
           </div>
         </div>
@@ -272,14 +242,13 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Partner with Us?</h2>
+          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Begin Your Journey of Growth?</h2>
           <p className="text-xl text-cyan-100 mb-8 font-sans">
-            Join our family of successful investors and experience the difference that professional portfolio management
-            can make.
+            Take the first step toward greater clarity, confidence, emotional well-being, and personal transformation.
           </p>
           <Link href="/consultation">
             <Button size="lg" className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 text-lg font-sans">
-              Schedule a Consultation
+              Book a Consultation
             </Button>
           </Link>
         </div>
@@ -290,38 +259,21 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-serif font-black text-cyan-400 mb-4">PMS Investment Services</h3>
+              <h3 className="text-2xl font-serif font-black text-cyan-400 mb-4">The Mind Clarity Studio</h3>
               <p className="text-gray-400 font-sans mb-4">
-                Empowering your financial future with expertise, transparency, and unwavering trust.
+                For Stronger Minds, Think Lavina.
               </p>
-              <div className="text-sm text-gray-400 font-sans">
-                <p>SEBI Registered Investment Advisor</p>
-                <p>Registration No: INA000012345</p>
-              </div>
+              <p className="text-sm text-gray-400 font-sans">
+                Psychology • Coaching • Emotional Wellness • Personal Growth
+              </p>
             </div>
             <div>
               <h4 className="text-lg font-serif font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400 font-sans">
-                <li>
-                  <Link href="/services/portfolio-management" className="hover:text-cyan-400 transition-colors">
-                    Portfolio Management
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/wealth-planning" className="hover:text-cyan-400 transition-colors">
-                    Wealth Planning
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/risk-assessment" className="hover:text-cyan-400 transition-colors">
-                    Risk Assessment
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/tax-optimization" className="hover:text-cyan-400 transition-colors">
-                    Tax Optimization
-                  </Link>
-                </li>
+                <li>Psychological Coaching</li>
+                <li>Career Guidance</li>
+                <li>Workshops &amp; Training</li>
+                <li>Research &amp; Publications</li>
               </ul>
             </div>
             <div>
@@ -329,17 +281,17 @@ export default function AboutPage() {
               <ul className="space-y-2 text-gray-400 font-sans">
                 <li>
                   <Link href="/about" className="hover:text-cyan-400 transition-colors">
-                    About Us
+                    About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#team" className="hover:text-cyan-400 transition-colors">
-                    Our Team
+                  <Link href="/services" className="hover:text-cyan-400 transition-colors">
+                    Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-cyan-400 transition-colors">
-                    Careers
+                  <Link href="/experience" className="hover:text-cyan-400 transition-colors">
+                    Experience
                   </Link>
                 </li>
                 <li>
@@ -352,15 +304,15 @@ export default function AboutPage() {
             <div>
               <h4 className="text-lg font-serif font-bold mb-4">Contact Info</h4>
               <div className="space-y-2 text-gray-400 font-sans">
-                <p>📧 info@pmsinvestment.com</p>
-                <p>📞 +91 98765 43210</p>
-                <p>📍 Mumbai, Maharashtra</p>
+                <p>📧 <a href="mailto:info@themindclaritystudio.com" className="hover:text-cyan-400">info@themindclaritystudio.com</a></p>
+                <p>📞 +91 79902 02179</p>
+                <p>📍 Gujarat, India</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
             <p className="text-gray-400 font-sans">
-              © 2024 PMS Investment Services. All rights reserved. | Privacy Policy | Terms of Service
+              © 2026 The Mind Clarity Studio. All Rights Reserved.
             </p>
           </div>
         </div>

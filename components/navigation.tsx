@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useState } from "react"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export default function Navigation() {
@@ -14,9 +15,16 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-serif font-black text-cyan-600">
-                PMS
-              </Link>
+           <Link href="/" className="flex items-center">
+  <Image
+    src="/logo.png"
+    alt="The Mind Clarity Studio"
+    width={220}
+    height={70}
+    className="h-10 md:h-12 lg:h-14 w-auto object-contain"
+    priority
+  />
+</Link>
             </div>
             <div className="hidden md:block ml-10">
               <div className="flex items-baseline space-x-8">
@@ -59,10 +67,14 @@ export default function Navigation() {
               </div>
             </div>
           </div>
+
           <div className="hidden md:flex items-center space-x-4">
             <Link href="/consultation">
-              <Button variant="outline" className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 bg-transparent">
-                Schedule Consultation
+              <Button 
+                variant="outline" 
+                className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 bg-transparent"
+              >
+                Book Consultation
               </Button>
             </Link>
             <Link href="/login">
@@ -72,7 +84,10 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-600 hover:text-cyan-600 p-2">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              className="text-gray-600 hover:text-cyan-600 p-2"
+            >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
@@ -124,12 +139,15 @@ export default function Navigation() {
               >
                 Contact
               </Link>
-              <Link href="/consultation" className="block px-3 py-2" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white mb-2">Schedule Consultation</Button>
-              </Link>
-              <Link href="/login" className="block px-3 py-2" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-gray-600 hover:bg-gray-700 text-white">Login</Button>
-              </Link>
+
+              <div className="pt-4 space-y-2">
+                <Link href="/consultation" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">
+                    Book Consultation
+                  </Button>
+                </Link>
+               
+              </div>
             </div>
           </div>
         )}
