@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Shield, TrendingUp, Users, Calculator, ArrowRight, CheckCircle, Target, PieChart } from "lucide-react"
 import Link from "next/link"
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+} from "react-icons/fa"
 import Image from "next/image"
 
 export default function ServicesPage() {
@@ -348,11 +353,38 @@ const services = [
 
         <div className="mt-8">
           <h5 className="text-white font-medium mb-3">Follow Us</h5>
-          <div className="flex gap-5">
-            <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">LinkedIn</a>
-            <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">Instagram</a>
-            <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">Facebook</a>
+          
+          <div className="mt-6 flex items-center gap-5">
+            <a
+              href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
+            >
+              <FaLinkedin size={24} />
+            </a>
+
+            <a
+              href="https://www.instagram.com/lavina_bhambhani/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
+            >
+              <FaInstagram size={24} />
+            </a>
+
+            <a
+              href="https://www.facebook.com/lavina.bhambhani.77"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
+            >
+              <FaFacebook size={24} />
+            </a>
+
           </div>
+
+
         </div>
       </div>
     </div>
