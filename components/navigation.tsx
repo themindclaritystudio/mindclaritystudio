@@ -77,9 +77,7 @@ export default function Navigation() {
                 Book Consultation
               </Button>
             </Link>
-            <Link href="/login">
-              <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">Login</Button>
-            </Link>
+            
           </div>
 
           {/* Mobile menu button */}
