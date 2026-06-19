@@ -65,6 +65,8 @@ export default function HomePage() {
           Pratap Bhambhani, the studio integrates psychology, coaching,
           education, research, and mentorship to help individuals navigate
           challenges, build resilience, and achieve meaningful transformation.
+
+Our mission is to help people make better decisions, build emotional resilience, improve self-awareness, and create a fulfilling life through practical and evidence-based approaches to personal growth and mental wellness.
         </p>
 
         <div className="grid grid-cols-3 gap-6 pt-4">
