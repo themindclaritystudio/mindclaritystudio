@@ -35,9 +35,7 @@ export const metadata: Metadata = {
     "Workshops",
     "Mentorship",
   ],
-  icons:{
-    icon:"/favicon.ico"
-  },
+  
   authors: [{ name: "Lavina Pratap Bhambhani" }],
   creator: "The Mind Clarity Studio",
   publisher: "The Mind Clarity Studio",

@@ -141,17 +141,26 @@ export default function ConsultationPage() {
                       rows={4}
                     />
                   </div>
+<div className="flex items-start gap-3">
+  <Checkbox
+    id="terms"
+    className="mt-1 flex-shrink-0"
+  />
 
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="terms" />
-                    <Label htmlFor="terms" className="text-sm font-sans text-gray-600">
-                      I agree to the{" "}
-                      <Link href="/privacy" className="text-cyan-600 hover:underline">
-                        Privacy Policy
-                      </Link>{" "}
-                      and consent to being contacted by The Mind Clarity Studio.
-                    </Label>
-                  </div>
+  <label
+    htmlFor="terms"
+    className="text-sm text-gray-600 leading-6 cursor-pointer"
+  >
+    I agree to the{" "}
+    <Link
+      href="/privacy"
+      className="text-cyan-600 hover:underline"
+    >
+      Privacy Policy
+    </Link>{" "}
+    and consent to being contacted by The Mind Clarity Studio.
+  </label>
+</div>
 
                   <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 text-lg font-sans">
                     Book My Consultation
