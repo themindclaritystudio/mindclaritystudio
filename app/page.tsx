@@ -351,49 +351,93 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all">
-              <CardHeader>
-                <CardTitle className="text-2xl font-serif font-bold">Psychological Coaching</CardTitle>
-                <CardDescription className="font-sans">Deep therapeutic support for emotional wellness</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 font-sans text-sm">
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Anxiety &amp; stress management</li>
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Emotional regulation</li>
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Self-esteem building</li>
-                </ul>
-              </CardContent>
-            </Card>
+  <Card className="border-0 shadow-lg hover:shadow-xl transition-all">
+    <CardHeader>
+      <CardTitle className="text-2xl font-serif font-bold">
+        Mind Coaching
+      </CardTitle>
+      <CardDescription className="font-sans">
+        Supporting emotional resilience, self-awareness, and personal growth.
+      </CardDescription>
+    </CardHeader>
+    <CardContent>
+      <ul className="space-y-3 font-sans text-sm">
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          Emotional Clarity
+        </li>
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          Personal Development
+        </li>
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          Emotional Resilience Building
+        </li>
+      </ul>
+    </CardContent>
+  </Card>
 
-            <Card className="border-2 border-cyan-600 shadow-xl relative">
-              <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-amber-500">Recommended</Badge>
-              <CardHeader>
-                <CardTitle className="text-2xl font-serif font-bold">Career Guidance &amp; Mentorship</CardTitle>
-                <CardDescription className="font-sans">Strategic support for professional growth</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 font-sans text-sm">
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Career transition planning</li>
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Leadership development</li>
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Interview &amp; negotiation skills</li>
-                </ul>
-              </CardContent>
-            </Card>
+  <Card className="border-2 border-cyan-600 shadow-xl relative">
+    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-amber-500">
+      Featured
+    </Badge>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all">
-              <CardHeader>
-                <CardTitle className="text-2xl font-serif font-bold">Personal Development Programs</CardTitle>
-                <CardDescription className="font-sans">Group workshops and self-paced journeys</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 font-sans text-sm">
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Mindfulness &amp; resilience</li>
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Goal setting &amp; habit building</li>
-                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-cyan-600 mr-2" /> Research &amp; Academic Consulting</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
+    <CardHeader>
+      <CardTitle className="text-2xl font-serif font-bold">
+        Education & Mentorship
+      </CardTitle>
+      <CardDescription className="font-sans">
+        Academic guidance, research support, and lifelong learning.
+      </CardDescription>
+    </CardHeader>
+
+    <CardContent>
+      <ul className="space-y-3 font-sans text-sm">
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          Research Guidance
+        </li>
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          Publications & Academic Writing
+        </li>
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          Mentorship & Professional Development
+        </li>
+      </ul>
+    </CardContent>
+  </Card>
+
+  <Card className="border-0 shadow-lg hover:shadow-xl transition-all">
+    <CardHeader>
+      <CardTitle className="text-2xl font-serif font-bold">
+        Professional Consultation
+      </CardTitle>
+      <CardDescription className="font-sans">
+        Personalized one-on-one coaching designed around individual goals.
+      </CardDescription>
+    </CardHeader>
+
+    <CardContent>
+      <ul className="space-y-3 font-sans text-sm">
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          1-on-1 Coaching Sessions
+        </li>
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          Personal & Professional Growth
+        </li>
+        <li className="flex items-center">
+          <CheckCircle className="h-5 w-5 text-cyan-600 mr-2" />
+          Goal-Oriented Guidance
+        </li>
+      </ul>
+    </CardContent>
+  </Card>
+</div>
         </div>
       </section>
 
