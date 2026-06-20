@@ -19,8 +19,8 @@ export default function Navigation() {
   <Image
     src="images/logo.png"
     alt="The Mind Clarity Studio"
-    width={220}
-    height={70}
+    width={240}
+    height={90}
     className="h-10 md:h-12 lg:h-14 w-auto object-contain"
     priority
   />
@@ -40,12 +40,12 @@ export default function Navigation() {
                 >
                   Services
                 </Link>
-                <Link
+                {/* <Link
                   href="/blog"
                   className="text-gray-600 hover:text-cyan-600 px-3 py-2 text-sm font-medium transition-colors"
                 >
                   Blog
-                </Link>
+                </Link> */}
                 <Link
                   href="/testimonials"
                   className="text-gray-600 hover:text-cyan-600 px-3 py-2 text-sm font-medium transition-colors"
@@ -109,13 +109,13 @@ export default function Navigation() {
               >
                 Services
               </Link>
-              <Link
+              {/* <Link
                 href="/blog"
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-cyan-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
-              </Link>
+              </Link> */}
               <Link
                 href="/testimonials"
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-cyan-600"

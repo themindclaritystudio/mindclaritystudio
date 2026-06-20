@@ -11,7 +11,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare, Calendar, Users, ArrowRight, CheckCircle } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
 import {
   FaLinkedin,
   FaInstagram,
@@ -20,59 +19,6 @@ import {
 import Image from "next/image"
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    subject: "",
-    interest: "",
-    message: "",
-    preferredContact: "",
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Contact form submission:", formData)
-    setIsSubmitted(true)
-  }
-
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-white">
-        <Navigation />
-
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md w-full text-center">
-            <div className="mx-auto h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-              <CheckCircle className="h-8 w-8 text-green-600" />
-            </div>
-            <h2 className="text-3xl font-serif font-black text-gray-900 mb-4">Thank You!</h2>
-            <p className="text-gray-600 font-sans mb-8">
-              We've received your message and will get back to you within 24 hours.
-            </p>
-            <div className="space-y-4">
-              <Link href="/">
-                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">Return to Homepage</Button>
-              </Link>
-              <Button
-                variant="outline"
-                onClick={() => setIsSubmitted(false)}
-                className="w-full border-cyan-600 text-cyan-600 hover:bg-cyan-50"
-              >
-                Send Another Message
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -164,18 +110,26 @@ export default function ContactPage() {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form
+                    action="https://formsubmit.co/themindclaritystudiobylavina@gmail.com"
+                    method="POST"
+                    className="space-y-6"
+                  >
+                    {/* Hidden Fields for FormSubmit */}
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Mind Clarity Studio" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="firstName" className="text-sm font-medium text-gray-700 font-sans">
                           First Name *
                         </Label>
                         <Input
+                          name="firstName"
                           id="firstName"
                           type="text"
                           required
-                          value={formData.firstName}
-                          onChange={(e) => handleInputChange("firstName", e.target.value)}
                           placeholder="Your first name"
                         />
                       </div>
@@ -185,11 +139,10 @@ export default function ContactPage() {
                           Last Name *
                         </Label>
                         <Input
+                          name="lastName"
                           id="lastName"
                           type="text"
                           required
-                          value={formData.lastName}
-                          onChange={(e) => handleInputChange("lastName", e.target.value)}
                           placeholder="Your last name"
                         />
                       </div>
@@ -201,11 +154,10 @@ export default function ContactPage() {
                           Email Address *
                         </Label>
                         <Input
+                          name="email"
                           id="email"
                           type="email"
                           required
-                          value={formData.email}
-                          onChange={(e) => handleInputChange("email", e.target.value)}
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -215,11 +167,10 @@ export default function ContactPage() {
                           Phone Number *
                         </Label>
                         <Input
+                          name="phone"
                           id="phone"
                           type="tel"
                           required
-                          value={formData.phone}
-                          onChange={(e) => handleInputChange("phone", e.target.value)}
                           placeholder="+91 79902 02179"
                         />
                       </div>
@@ -229,7 +180,7 @@ export default function ContactPage() {
                       <Label htmlFor="interest" className="text-sm font-medium text-gray-700 font-sans">
                         Area of Interest *
                       </Label>
-                      <Select onValueChange={(value) => handleInputChange("interest", value)}>
+                      <Select name="interest" required>
                         <SelectTrigger>
                           <SelectValue placeholder="What would you like support with?" />
                         </SelectTrigger>
@@ -248,7 +199,7 @@ export default function ContactPage() {
                       <Label htmlFor="preferredContact" className="text-sm font-medium text-gray-700 font-sans">
                         Preferred Contact Method
                       </Label>
-                      <Select onValueChange={(value) => handleInputChange("preferredContact", value)}>
+                      <Select name="preferredContact">
                         <SelectTrigger>
                           <SelectValue placeholder="How would you like us to contact you?" />
                         </SelectTrigger>
@@ -266,16 +217,18 @@ export default function ContactPage() {
                         Message *
                       </Label>
                       <Textarea
+                        name="message"
                         id="message"
                         required
                         rows={5}
-                        value={formData.message}
-                        onChange={(e) => handleInputChange("message", e.target.value)}
                         placeholder="Tell us about your goals, challenges, or how we can support your journey..."
                       />
                     </div>
 
-                    <Button type="submit" className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 font-sans">
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 font-sans"
+                    >
                       Send Message
                       <Send className="ml-2 h-4 w-4" />
                     </Button>
@@ -300,7 +253,7 @@ export default function ContactPage() {
                         <div className="space-y-2 text-gray-600 font-sans">
                           <p className="flex items-start">
                             <MapPin className="h-4 w-4 text-gray-400 mr-2 mt-1 flex-shrink-0" />
-                            Gujarat, India
+                            E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015
                           </p>
                           <p className="flex items-center">
                             <Phone className="h-4 w-4 text-gray-400 mr-2" />
@@ -321,7 +274,6 @@ export default function ContactPage() {
                 </Card>
               </div>
 
-              {/* Additional Info */}
               <Card className="border-0 shadow-lg bg-cyan-50">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-serif font-bold text-gray-900 mb-4 flex items-center">
@@ -356,134 +308,87 @@ export default function ContactPage() {
       </section>
 
       {/* Footer */}
-     <footer className="bg-gray-900 text-white py-20">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-      
-      {/* Logo & Tagline */}
-      <div className="flex flex-col items-start">
-        <Link href="/" className="mb-6">
-          <Image
-            src="/images/logo.png"
-            alt="The Mind Clarity Studio"
-            width={320}
-            height={120}
-            priority
-            className="h-20 md:h-24 w-auto object-contain"
-          />
-        </Link>
-        <p className="max-w-xs text-gray-400 text-lg leading-relaxed font-sans">
-          For Stronger Minds, Think Lavina.
-        </p>
-      </div>
+      <footer className="bg-gray-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+            {/* Logo & Tagline */}
+            <div className="flex flex-col items-start">
+              <Link href="/" className="mb-6">
+                <Image
+                  src="/images/logo.png"
+                  alt="The Mind Clarity Studio"
+                  width={320}
+                  height={120}
+                  priority
+                  className="h-20 md:h-24 w-auto object-contain"
+                />
+              </Link>
+              <p className="max-w-xs text-gray-400 text-lg leading-relaxed font-sans">
+                For Stronger Minds, Think Lavina.
+              </p>
+            </div>
 
-      {/* Services */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Services</h4>
-        <ul className="space-y-3 text-gray-400 font-sans">
-          <li>Psychological Coaching</li>
-          <li>Career Guidance &amp; Mentorship</li>
-          <li>Research &amp; Academic Consulting</li>
-          <li>Workshops &amp; Training</li>
-          <li>Personal Development Programs</li>
-        </ul>
-      </div>
+            {/* Services */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Services</h4>
+              <ul className="space-y-3 text-gray-400 font-sans">
+                <li>Psychological Coaching</li>
+                <li>Career Guidance &amp; Mentorship</li>
+                <li>Research &amp; Academic Consulting</li>
+                <li>Workshops &amp; Training</li>
+                <li>Personal Development Programs</li>
+              </ul>
+            </div>
 
-      {/* Company */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Company</h4>
-        <ul className="space-y-3 text-gray-400 font-sans">
-          <li>
-            <Link href="/about" className="hover:text-cyan-400 transition-colors">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link href="/services" className="hover:text-cyan-400 transition-colors">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="/testimonials" className="hover:text-cyan-400 transition-colors">
-              Testimonials
-            </Link>
-          </li>
-          <li>
-            <Link href="/pricing" className="hover:text-cyan-400 transition-colors">
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
+            {/* Company */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Company</h4>
+              <ul className="space-y-3 text-gray-400 font-sans">
+                <li><Link href="/about" className="hover:text-cyan-400 transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-cyan-400 transition-colors">Services</Link></li>
+                <li><Link href="/testimonials" className="hover:text-cyan-400 transition-colors">Testimonials</Link></li>
+                <li><Link href="/pricing" className="hover:text-cyan-400 transition-colors">Pricing</Link></li>
+                <li><Link href="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
+              </ul>
+            </div>
 
-      {/* Contact Info */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
-        <div className="space-y-3 text-gray-400 font-sans">
-          <p>
-            {" "}
-            <a
-              href="mailto:info@themindclaritystudio.com"
-              className="hover:text-cyan-400 transition-colors"
-            >
-              info@themindclaritystudio.com
-            </a>
-          </p>
-          <p> +91 79902 02179</p>
-          <p> Gujarat, India</p>
-        </div>
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
+              <div className="space-y-3 text-gray-400 font-sans">
+                <p>
+                  <a href="mailto:info@themindclaritystudio.com" className="hover:text-cyan-400 transition-colors">
+                    info@themindclaritystudio.com
+                  </a>
+                </p>
+                <p>+91 79902 02179</p>
+                <p>E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
+              </div>
 
-        <div className="mt-8">
-          <h5 className="text-white font-medium mb-3">Follow Us</h5>
-          
-          <div className="mt-6 flex items-center gap-5">
-            <a
-              href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaLinkedin size={24} />
-            </a>
-
-            <a
-              href="https://www.instagram.com/lavina_bhambhani/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaInstagram size={24} />
-            </a>
-
-            <a
-              href="https://www.facebook.com/lavina.bhambhani.77"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaFacebook size={24} />
-            </a>
-
+              <div className="mt-8">
+                <h5 className="text-white font-medium mb-3">Follow Us</h5>
+                <div className="mt-6 flex items-center gap-5">
+                  <a href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaLinkedin size={24} />
+                  </a>
+                  <a href="https://www.instagram.com/lavina_bhambhani/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaInstagram size={24} />
+                  </a>
+                  <a href="https://www.facebook.com/lavina.bhambhani.77" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaFacebook size={24} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-
+          <div className="border-t border-gray-800 mt-16 pt-8 text-center">
+            <p className="text-gray-400 font-sans">
+              © 2026 The Mind Clarity Studio. All Rights Reserved.
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-
-    {/* Copyright */}
-    <div className="border-t border-gray-800 mt-16 pt-8 text-center">
-      <p className="text-gray-400 font-sans">
-        © 2026 The Mind Clarity Studio. All Rights Reserved.
-      </p>
-    </div>
-  </div>
-</footer>
+      </footer>
     </div>
   )
 }

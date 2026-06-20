@@ -303,7 +303,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </a>
           </p>
           <p> +91 79902 02179</p>
-          <p> Gujarat, India</p>
+          <p> E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
         </div>
 
         <div className="mt-8">

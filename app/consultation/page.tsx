@@ -1,3 +1,5 @@
+"use client"
+
 import Navigation from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -8,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox"
 import { Clock, Phone, Mail, MapPin, CheckCircle, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 import {
   FaLinkedin,
   FaInstagram,
@@ -15,8 +18,41 @@ import {
 } from "react-icons/fa"
 import Image from "next/image"
 
-
 export default function ConsultationPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-white">
+        <Navigation />
+
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md w-full text-center">
+            <div className="mx-auto h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+              <CheckCircle className="h-8 w-8 text-green-600" />
+            </div>
+            <h2 className="text-3xl font-serif font-black text-gray-900 mb-4">Thank You!</h2>
+            <p className="text-gray-600 font-sans mb-8">
+              We've received your consultation request. We will contact you within 24 hours to schedule your discovery call.
+            </p>
+            <div className="space-y-4">
+              <Link href="/">
+                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">Return to Homepage</Button>
+              </Link>
+              <Button
+                variant="outline"
+                onClick={() => setIsSubmitted(false)}
+                className="w-full border-cyan-600 text-cyan-600 hover:bg-cyan-50"
+              >
+                Book Another Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -49,59 +85,57 @@ export default function ConsultationPage() {
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
-                <form className="space-y-6">
+                <form
+                  action="https://formsubmit.co/themindclaritystudiobylavina@gmail.com"
+                  method="POST"
+                  onSubmit={() => setTimeout(() => setIsSubmitted(true), 800)}
+                  className="space-y-6"
+                >
+                  {/* Hidden Fields */}
+                  <input type="hidden" name="_subject" value="New Consultation Request - Mind Clarity Studio" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName" className="font-sans">
-                        First Name *
-                      </Label>
-                      <Input id="firstName" placeholder="Enter your first name" required />
+                      <Label htmlFor="firstName" className="font-sans">First Name *</Label>
+                      <Input name="firstName" id="firstName" placeholder="Enter your first name" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastName" className="font-sans">
-                        Last Name *
-                      </Label>
-                      <Input id="lastName" placeholder="Enter your last name" required />
+                      <Label htmlFor="lastName" className="font-sans">Last Name *</Label>
+                      <Input name="lastName" id="lastName" placeholder="Enter your last name" required />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="font-sans">
-                      Email Address *
-                    </Label>
-                    <Input id="email" type="email" placeholder="Enter your email address" required />
+                    <Label htmlFor="email" className="font-sans">Email Address *</Label>
+                    <Input name="email" id="email" type="email" placeholder="Enter your email address" required />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="font-sans">
-                      Phone Number *
-                    </Label>
-                    <Input id="phone" type="tel" placeholder="+91 79902 02179" required />
+                    <Label htmlFor="phone" className="font-sans">Phone Number *</Label>
+                    <Input name="phone" id="phone" type="tel" placeholder="+91 79902 02179" required />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="interest" className="font-sans">
-                      Area of Interest
-                    </Label>
-                    <Select>
+                    <Label htmlFor="interest" className="font-sans">Area of Interest</Label>
+                    <Select name="interest" required>
                       <SelectTrigger>
                         <SelectValue placeholder="What would you like support with?" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="emotional-wellness">Emotional Wellness &amp; Stress</SelectItem>
-                        <SelectItem value="career-guidance">Career Guidance &amp; Mentorship</SelectItem>
-                        <SelectItem value="personal-growth">Personal Growth &amp; Self-Awareness</SelectItem>
-                        <SelectItem value="research-academic">Research &amp; Academic Support</SelectItem>
+                        <SelectItem value="emotional-wellness">Emotional Wellness & Stress</SelectItem>
+                        <SelectItem value="career-guidance">Career Guidance & Mentorship</SelectItem>
+                        <SelectItem value="personal-growth">Personal Growth & Self-Awareness</SelectItem>
+                        <SelectItem value="research-academic">Research & Academic Support</SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="preferredTime" className="font-sans">
-                      Preferred Meeting Time
-                    </Label>
-                    <Select>
+                    <Label htmlFor="preferredTime" className="font-sans">Preferred Meeting Time</Label>
+                    <Select name="preferredTime">
                       <SelectTrigger>
                         <SelectValue placeholder="Select preferred time" />
                       </SelectTrigger>
@@ -115,10 +149,8 @@ export default function ConsultationPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="meetingType" className="font-sans">
-                      Meeting Preference
-                    </Label>
-                    <Select>
+                    <Label htmlFor="meetingType" className="font-sans">Meeting Preference</Label>
+                    <Select name="meetingType">
                       <SelectTrigger>
                         <SelectValue placeholder="Select meeting type" />
                       </SelectTrigger>
@@ -132,37 +164,30 @@ export default function ConsultationPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message" className="font-sans">
-                      Tell Us More About Your Goals
-                    </Label>
+                    <Label htmlFor="message" className="font-sans">Tell Us More About Your Goals</Label>
                     <Textarea
+                      name="message"
                       id="message"
                       placeholder="Share your current challenges, goals, or what you hope to achieve..."
                       rows={4}
                     />
                   </div>
-<div className="flex items-start gap-3">
-  <Checkbox
-    id="terms"
-    className="mt-1 flex-shrink-0"
-  />
 
-  <label
-    htmlFor="terms"
-    className="text-sm text-gray-600 leading-6 cursor-pointer"
-  >
-    I agree to the{" "}
-    <Link
-      href="/privacy"
-      className="text-cyan-600 hover:underline"
-    >
-      Privacy Policy
-    </Link>{" "}
-    and consent to being contacted by The Mind Clarity Studio.
-  </label>
-</div>
+                  <div className="flex items-start gap-3">
+                    <Checkbox id="terms" className="mt-1 flex-shrink-0" required />
+                    <label htmlFor="terms" className="text-sm text-gray-600 leading-6 cursor-pointer">
+                      I agree to the{" "}
+                      <Link href="/privacy" className="text-cyan-600 hover:underline">
+                        Privacy Policy
+                      </Link>{" "}
+                      and consent to being contacted by The Mind Clarity Studio.
+                    </label>
+                  </div>
 
-                  <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 text-lg font-sans">
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 text-lg font-sans"
+                  >
                     Book My Consultation
                   </Button>
                 </form>
@@ -182,7 +207,7 @@ export default function ConsultationPage() {
                       <CheckCircle className="h-5 w-5 text-cyan-600" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-bold text-gray-900 mb-1">Discovery &amp; Understanding</h3>
+                      <h3 className="font-serif font-bold text-gray-900 mb-1">Discovery & Understanding</h3>
                       <p className="text-gray-600 font-sans text-sm">
                         We’ll explore your goals, challenges, and aspirations in a supportive environment.
                       </p>
@@ -243,7 +268,7 @@ export default function ConsultationPage() {
                     </div>
                     <div>
                       <p className="font-serif font-bold text-gray-900">Location</p>
-                      <p className="text-gray-600 font-sans">Gujarat, India</p>
+                      <p className="text-gray-600 font-sans">E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -270,7 +295,7 @@ export default function ConsultationPage() {
                         <div className="text-sm text-gray-600 font-sans">Years Experience</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">1000+</div>
+                        <div className="text-2xl font-serif font-black text-cyan-600">100+</div>
                         <div className="text-sm text-gray-600 font-sans">Lives Impacted</div>
                       </div>
                       <div>
@@ -308,9 +333,7 @@ export default function ConsultationPage() {
             </Card>
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">
-                  What should I prepare before the call?
-                </h3>
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">What should I prepare before the call?</h3>
                 <p className="text-gray-600 font-sans">
                   Just come as you are. It helps to reflect on your current challenges and what you hope to achieve through coaching or mentorship.
                 </p>
@@ -318,9 +341,7 @@ export default function ConsultationPage() {
             </Card>
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">
-                  Is there any cost for the consultation?
-                </h3>
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Is there any cost for the consultation?</h3>
                 <p className="text-gray-600 font-sans">
                   The initial discovery call is completely free and comes with no obligation.
                 </p>
@@ -328,9 +349,7 @@ export default function ConsultationPage() {
             </Card>
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">
-                  What happens after the consultation?
-                </h3>
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">What happens after the consultation?</h3>
                 <p className="text-gray-600 font-sans">
                   We’ll discuss the best way forward — whether it’s a coaching program, mentorship, workshop, or customized support plan.
                 </p>
@@ -342,133 +361,82 @@ export default function ConsultationPage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-20">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-      
-      {/* Logo & Tagline */}
-      <div className="flex flex-col items-start">
-        <Link href="/" className="mb-6">
-          <Image
-            src="/images/logo.png"
-            alt="The Mind Clarity Studio"
-            width={320}
-            height={120}
-            priority
-            className="h-20 md:h-24 w-auto object-contain"
-          />
-        </Link>
-        <p className="max-w-xs text-gray-400 text-lg leading-relaxed font-sans">
-          For Stronger Minds, Think Lavina.
-        </p>
-      </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+            <div className="flex flex-col items-start">
+              <Link href="/" className="mb-6">
+                <Image
+                  src="/images/logo.png"
+                  alt="The Mind Clarity Studio"
+                  width={320}
+                  height={120}
+                  priority
+                  className="h-20 md:h-24 w-auto object-contain"
+                />
+              </Link>
+              <p className="max-w-xs text-gray-400 text-lg leading-relaxed font-sans">
+                For Stronger Minds, Think Lavina.
+              </p>
+            </div>
 
-      {/* Services */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Services</h4>
-        <ul className="space-y-3 text-gray-400 font-sans">
-          <li>Psychological Coaching</li>
-          <li>Career Guidance &amp; Mentorship</li>
-          <li>Research &amp; Academic Consulting</li>
-          <li>Workshops &amp; Training</li>
-          <li>Personal Development Programs</li>
-        </ul>
-      </div>
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Services</h4>
+              <ul className="space-y-3 text-gray-400 font-sans">
+                <li>Psychological Coaching</li>
+                <li>Career Guidance &amp; Mentorship</li>
+                <li>Research &amp; Academic Consulting</li>
+                <li>Workshops &amp; Training</li>
+                <li>Personal Development Programs</li>
+              </ul>
+            </div>
 
-      {/* Company */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Company</h4>
-        <ul className="space-y-3 text-gray-400 font-sans">
-          <li>
-            <Link href="/about" className="hover:text-cyan-400 transition-colors">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link href="/services" className="hover:text-cyan-400 transition-colors">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="/testimonials" className="hover:text-cyan-400 transition-colors">
-              Testimonials
-            </Link>
-          </li>
-          <li>
-            <Link href="/pricing" className="hover:text-cyan-400 transition-colors">
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Company</h4>
+              <ul className="space-y-3 text-gray-400 font-sans">
+                <li><Link href="/about" className="hover:text-cyan-400 transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-cyan-400 transition-colors">Services</Link></li>
+                <li><Link href="/testimonials" className="hover:text-cyan-400 transition-colors">Testimonials</Link></li>
+                <li><Link href="/pricing" className="hover:text-cyan-400 transition-colors">Pricing</Link></li>
+                <li><Link href="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
+              </ul>
+            </div>
 
-      {/* Contact Info */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
-        <div className="space-y-3 text-gray-400 font-sans">
-          <p>
-            {" "}
-            <a
-              href="mailto:info@themindclaritystudio.com"
-              className="hover:text-cyan-400 transition-colors"
-            >
-              info@themindclaritystudio.com
-            </a>
-          </p>
-          <p> +91 79902 02179</p>
-          <p> Gujarat, India</p>
-        </div>
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
+              <div className="space-y-3 text-gray-400 font-sans">
+                <p>
+                  <a href="mailto:info@themindclaritystudio.com" className="hover:text-cyan-400 transition-colors">
+                    info@themindclaritystudio.com
+                  </a>
+                </p>
+                <p>+91 79902 02179</p>
+                <p>E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
+              </div>
 
-        <div className="mt-8">
-          <h5 className="text-white font-medium mb-3">Follow Us</h5>
-          
-          <div className="mt-6 flex items-center gap-5">
-            <a
-              href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaLinkedin size={24} />
-            </a>
-
-            <a
-              href="https://www.instagram.com/lavina_bhambhani/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaInstagram size={24} />
-            </a>
-
-            <a
-              href="https://www.facebook.com/lavina.bhambhani.77"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaFacebook size={24} />
-            </a>
-
+              <div className="mt-8">
+                <h5 className="text-white font-medium mb-3">Follow Us</h5>
+                <div className="mt-6 flex items-center gap-5">
+                  <a href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaLinkedin size={24} />
+                  </a>
+                  <a href="https://www.instagram.com/lavina_bhambhani/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaInstagram size={24} />
+                  </a>
+                  <a href="https://www.facebook.com/lavina.bhambhani.77" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaFacebook size={24} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-
+          <div className="border-t border-gray-800 mt-16 pt-8 text-center">
+            <p className="text-gray-400 font-sans">
+              © 2026 The Mind Clarity Studio. All Rights Reserved.
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-
-    {/* Copyright */}
-    <div className="border-t border-gray-800 mt-16 pt-8 text-center">
-      <p className="text-gray-400 font-sans">
-        © 2026 The Mind Clarity Studio. All Rights Reserved.
-      </p>
-    </div>
-  </div>
-</footer>
+      </footer>
     </div>
   )
 }

@@ -142,50 +142,61 @@ const services = [
       </section>
 
       {/* Why Choose Our Services */}
-      <section className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Why Choose The Mind Clarity Studio?</h2>
+            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Why Individuals Trust The Mind Clarity Studio</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              Evidence-based approaches combined with compassionate, personalized guidance.
+              We combine scientific insight with compassionate guidance to help you achieve lasting transformation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg text-center">
-              <CardContent className="pt-8 pb-8">
-                <Shield className="h-16 w-16 text-cyan-600 mx-auto mb-4" />
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Evidence-Based Methods</h3>
-                <p className="text-gray-600 font-sans">
-                  Rooted in proven psychological principles and latest research in mental wellness
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-cyan-600" />
+                </div>
+                <CardTitle className="text-xl font-serif font-bold">Evidence-Based Psychological Guidance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 font-sans text-center">
+                Evidence-based psychological principles and practical strategies tailored to individual goals and challenges.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg text-center">
-              <CardContent className="pt-8 pb-8">
-                <Users className="h-16 w-16 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Personalized Support</h3>
-                <p className="text-gray-600 font-sans">
-                  Every journey is unique. We tailor our coaching and mentorship to your specific goals and life stage.
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="h-8 w-8 text-amber-600" />
+                </div>
+                <CardTitle className="text-xl font-serif font-bold">Personalized Coaching &amp; Mentorship</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 font-sans text-center">
+                  One-on-one support designed around your goals, challenges, and life stage.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg text-center">
-              <CardContent className="pt-8 pb-8">
-                <TrendingUp className="h-16 w-16 text-cyan-600 mx-auto mb-4" />
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Real Transformation</h3>
-                <p className="text-gray-600 font-sans">
-                  Focus on sustainable change, emotional resilience, and measurable personal growth
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-cyan-600" />
+                </div>
+                <CardTitle className="text-xl font-serif font-bold">Research-Driven Approach</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 font-sans text-center">
+                  Integrating contemporary research in psychology, emotional well-being, learning, and human development.
                 </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-
       {/* Process Overview */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Process</h2>
@@ -232,7 +243,7 @@ const services = [
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-cyan-600">
@@ -332,7 +343,7 @@ const services = [
             </a>
           </p>
           <p> +91 79902 02179</p>
-          <p> Gujarat, India</p>
+          <p> E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
         </div>
 
         <div className="mt-8">

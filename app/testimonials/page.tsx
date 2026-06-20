@@ -264,7 +264,7 @@ export default function TestimonialsPage() {
             <Card className="border-0 shadow-lg text-center">
               <CardContent className="pt-8 pb-8">
                 <Users className="h-16 w-16 text-cyan-600 mx-auto mb-4" />
-                <div className="text-4xl font-serif font-black text-cyan-600 mb-2">1000+</div>
+                <div className="text-4xl font-serif font-black text-cyan-600 mb-2">100+</div>
                 <div className="text-lg font-serif font-bold text-gray-900 mb-2">Lives Impacted</div>
                 <div className="text-gray-600 font-sans">
                   Through coaching, mentorship, and workshops
@@ -371,7 +371,7 @@ export default function TestimonialsPage() {
             </a>
           </p>
           <p> +91 79902 02179</p>
-          <p> Gujarat, India</p>
+          <p> E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
         </div>
 
         <div className="mt-8">

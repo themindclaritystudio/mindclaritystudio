@@ -24,11 +24,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-black text-gray-900 mb-6">
-              Transform Your <span className="text-cyan-600">Mind. Transform Your Life.</span>
+             Build Clarity,Strengthen Resilience,Create  <br></br> <span className="text-cyan-600">Meaningful Growth.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto font-sans">
-              The Mind Clarity Studio empowers individuals through psychology, coaching, emotional wellness, career guidance, and personal growth programs.
-            </p>
+The Mind Clarity Studio supports individuals through psychology, emotional wellness, education, mentorship, and personal development programs designed to foster resilience, self-awareness, and meaningful growth.            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/consultation">
                 <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 text-lg">
@@ -51,7 +50,7 @@ export default function HomePage() {
       </section>
 
       {/* Who We Are */}
-      <section id="about" className="py-20 bg-white">
+<section id="about" className="py-20 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div>
@@ -60,11 +59,7 @@ export default function HomePage() {
         </h2>
 
         <p className="text-lg text-gray-600 mb-8 font-sans leading-relaxed">
-          At The Mind Clarity Studio, we believe that mental clarity is the
-          foundation of personal and professional success. Founded by Lavina
-          Pratap Bhambhani, the studio integrates psychology, coaching,
-          education, research, and mentorship to help individuals navigate
-          challenges, build resilience, and achieve meaningful transformation.
+          At The Mind Clarity Studio, we believe that mental clarity is the foundation of personal and professional well-being. Founded by  Lavina Pratap Bhambhani, the studio brings together psychology, education, research, mentorship, and personal development to help individuals navigate challenges, build resilience, and achieve meaningful growth. Our mission is to empower people with evidence-based guidance, practical tools, and deeper self-awareness to support lasting mental wellness and personal development.
         </p>
 
         <div className="grid grid-cols-3 gap-6 pt-4">
@@ -76,7 +71,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-600">1000+</div>
+            <div className="text-4xl font-bold text-cyan-600">100+</div>
             <p className="mt-2 text-sm text-gray-600">
               Individuals Guided
             </p>
@@ -106,7 +101,7 @@ export default function HomePage() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Why Choose The Mind Clarity Studio</h2>
+            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Why Individuals Trust The Mind Clarity Studio</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
               We combine scientific insight with compassionate guidance to help you achieve lasting transformation.
             </p>
@@ -121,7 +116,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 font-sans text-center">
-                  Proven psychological frameworks and therapeutic approaches tailored to your unique needs.
+                Evidence-based psychological principles and practical strategies tailored to individual goals and challenges.
                 </p>
               </CardContent>
             </Card>
@@ -149,7 +144,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 font-sans text-center">
-                  Integration of latest research in psychology, emotional wellness, and human development.
+                  Integrating contemporary research in psychology, emotional well-being, learning, and human development.
                 </p>
               </CardContent>
             </Card>
@@ -158,65 +153,76 @@ export default function HomePage() {
       </section>
 
       {/* Our Philosophy */}
-      <section id="philosophy" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Philosophy</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              We believe in the power of the mind to create meaningful, lasting change.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Self-awareness creates lasting growth</h3>
-                    <p className="text-gray-600 font-sans">
-                      True transformation begins with deep understanding of yourself.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Mental wellness fuels success</h3>
-                    <p className="text-gray-600 font-sans">
-                      A clear and balanced mind unlocks greater potential in every area of life.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Lifelong learning drives transformation</h3>
-                    <p className="text-gray-600 font-sans">
-                      Continuous growth and learning are essential for personal evolution.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Every individual has untapped potential</h3>
-                    <p className="text-gray-600 font-sans">
-                      We help you discover and harness the strengths within you.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <img
-                src="/images/pms-img-1.jpg"
-                alt="Mindfulness and personal growth"
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
+     <section id="philosophy" className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Section Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">
+        Our Philosophy
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
+        We believe in the power of the mind to create meaningful, lasting change.
+      </p>
+    </div>
+
+    {/* Philosophy Points */}
+    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <div className="text-center">
+        <div className="flex justify-center mb-4">
+          <CheckCircle className="h-10 w-10 text-cyan-600" />
         </div>
-      </section>
+        <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
+          Self-Awareness Creates Lasting Growth
+        </h3>
+        <p className="text-gray-600 font-sans leading-relaxed">
+          Meaningful growth begins with understanding yourself, your strengths,
+          and your patterns.
+        </p>
+      </div>
+
+      <div className="text-center">
+        <div className="flex justify-center mb-4">
+          <CheckCircle className="h-10 w-10 text-cyan-600" />
+        </div>
+        <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
+          Mental Wellness Fuels Success
+        </h3>
+        <p className="text-gray-600 font-sans leading-relaxed">
+          A healthy and balanced mind supports success, fulfillment, and
+          resilience in everyday life.
+        </p>
+      </div>
+
+      <div className="text-center">
+        <div className="flex justify-center mb-4">
+          <CheckCircle className="h-10 w-10 text-cyan-600" />
+        </div>
+        <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
+          Lifelong Learning Drives Transformation
+        </h3>
+        <p className="text-gray-600 font-sans leading-relaxed">
+          Continuous learning and reflection are essential for personal and
+          professional development.
+        </p>
+      </div>
+
+      <div className="text-center">
+        <div className="flex justify-center mb-4">
+          <CheckCircle className="h-10 w-10 text-cyan-600" />
+        </div>
+        <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
+          Every Individual Has Untapped Potential
+        </h3>
+        <p className="text-gray-600 font-sans leading-relaxed">
+          Every individual possesses unique strengths that can be nurtured
+          through awareness, learning, and purposeful action.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* How It Works */}
       <section className="py-20 bg-gray-50">
@@ -250,7 +256,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-cyan-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-serif font-black">
                 3
               </div>
-              <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Coaching / Mentorship Plan</h3>
+              <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Personalized Growth Plan</h3>
               <p className="text-gray-600 font-sans">
                 Creation of a tailored roadmap aligned with your unique needs.
               </p>
@@ -467,6 +473,13 @@ export default function HomePage() {
                 Yes, all coaching and mentorship sessions are available both online and in-person (in select cities in India), giving you flexibility and convenience.
               </AccordionContent>
             </AccordionItem>
+             <AccordionItem value="item-6" className="border border-gray-200 rounded-lg px-6">
+              <AccordionTrigger className="text-left font-serif font-bold text-gray-900 hover:text-cyan-600">
+                 Is coaching different from therapy or counseling?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 font-sans">
+               Yes. Coaching focuses on personal growth, goal achievement, and self-development. Therapy and counseling address mental health concerns and emotional difficulties through clinical approaches              </AccordionContent>
+            </AccordionItem>
             <AccordionItem value="item-3" className="border border-gray-200 rounded-lg px-6">
               <AccordionTrigger className="text-left font-serif font-bold text-gray-900 hover:text-cyan-600">
                 What topics are covered?
@@ -498,7 +511,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Create Lasting Change?</h2>
+          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Begin Your Journey Toward Greater Clarity and Growth?</h2>
           <p className="text-xl text-cyan-100 mb-8 font-sans">
             Take the first step toward greater clarity, confidence, and personal growth.
           </p>
@@ -594,7 +607,7 @@ export default function HomePage() {
             </a>
           </p>
           <p> +91 79902 02179</p>
-          <p> Gujarat, India</p>
+          <p> E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
         </div>
 
         <div className="mt-8">

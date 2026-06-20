@@ -155,7 +155,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Approach</h2>
@@ -213,10 +213,10 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Key Statistics */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Impact</h2>
@@ -230,7 +230,7 @@ export default function AboutPage() {
               <div className="text-gray-600 font-sans">Years of Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">1000+</div>
+              <div className="text-4xl font-serif font-black text-cyan-600 mb-2">100+</div>
               <div className="text-gray-600 font-sans">Lives Impacted</div>
             </div>
             <div className="text-center">
@@ -243,7 +243,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-cyan-600">
@@ -340,7 +340,7 @@ export default function AboutPage() {
                 </a>
               </p>
               <p> +91 79902 02179</p>
-              <p> Gujarat, India</p>
+              <p> E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
             </div>
     
             <div className="mt-8">

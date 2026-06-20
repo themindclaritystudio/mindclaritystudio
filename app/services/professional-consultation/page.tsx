@@ -2,10 +2,16 @@ import Navigation from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, ArrowRight, TrendingUp, Shield, Users, Target } from "lucide-react"
+import { CheckCircle, ArrowRight, UserCheck, Target, Briefcase, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+} from "react-icons/fa"
 
-export default function PortfolioManagementPage() {
+export default function ProfessionalConsultationPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -17,26 +23,16 @@ export default function PortfolioManagementPage() {
             <div>
               <Badge className="bg-cyan-600 text-white mb-4">Our Flagship Service</Badge>
               <h1 className="text-5xl md:text-6xl font-serif font-black text-gray-900 mb-6">
-                Portfolio <span className="text-cyan-600">Management</span>
+                Professional <span className="text-cyan-600">Consultation</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 font-sans leading-relaxed">
-                Professional investment management that adapts to your goals, risk tolerance, and market conditions. Let
-                our experienced team handle the complexities while you focus on what matters most.
+                One-on-one coaching and consultation specifically designed for individual personal, academic, and professional growth. Receive expert guidance tailored to your unique goals and challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
                   <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 text-lg">
-                    Get Started
+                    Book Consultation
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link href="/pricing">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 px-8 py-4 text-lg bg-transparent"
-                  >
-                    View Pricing
                   </Button>
                 </Link>
               </div>
@@ -44,7 +40,7 @@ export default function PortfolioManagementPage() {
             <div className="relative">
               <img
                 src="/images/pms-img-1.jpg"
-                alt="Portfolio management dashboard"
+                alt="Professional consultation session"
                 className="rounded-lg shadow-xl"
               />
             </div>
@@ -56,44 +52,41 @@ export default function PortfolioManagementPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Why Choose Our Portfolio Management?</h2>
+            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Why Choose Professional Consultation?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              Comprehensive investment management designed to maximize returns while managing risk.
+              Personalized one-on-one support to help you achieve clarity, growth, and success in all areas of life.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            
             <Card className="border-0 shadow-lg text-center hover:shadow-xl transition-shadow">
               <CardContent className="pt-8 pb-8">
-                <TrendingUp className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Superior Returns</h3>
-                <p className="text-gray-600 font-sans text-sm">Average annual returns of 15.2% over the past decade</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg text-center hover:shadow-xl transition-shadow">
-              <CardContent className="pt-8 pb-8">
-                <Shield className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Risk Management</h3>
-                <p className="text-gray-600 font-sans text-sm">Advanced risk controls and diversification strategies</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg text-center hover:shadow-xl transition-shadow">
-              <CardContent className="pt-8 pb-8">
-                <Users className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Personal Service</h3>
+                <UserCheck className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">1-on-1 Coaching</h3>
                 <p className="text-gray-600 font-sans text-sm">
-                  Dedicated relationship manager for personalized attention
+                  Dedicated personal sessions focused entirely on your needs, challenges, and aspirations.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg text-center hover:shadow-xl transition-shadow">
               <CardContent className="pt-8 pb-8">
-                <Target className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Goal Alignment</h3>
+                <MapPin className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Personal Growth Planning</h3>
                 <p className="text-gray-600 font-sans text-sm">
-                  Strategies tailored to your specific financial objectives
+                  Create a clear roadmap for self-improvement, mindset shifts, and long-term personal development.
+                </p>
+              </CardContent>
+            </Card>
+
+            
+
+            <Card className="border-0 shadow-lg text-center hover:shadow-xl transition-shadow md:col-span-2 xl:col-span-1">
+              <CardContent className="pt-8 pb-8">
+                <Target className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
+                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Goal-Oriented Guidance</h3>
+                <p className="text-gray-600 font-sans text-sm">
+                  Structured support to set meaningful goals, overcome obstacles, and track consistent progress.
                 </p>
               </CardContent>
             </Card>
@@ -106,45 +99,41 @@ export default function PortfolioManagementPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-serif font-black text-gray-900 mb-6">Our Investment Approach</h2>
+              <h2 className="text-4xl font-serif font-black text-gray-900 mb-6">Our Consultation Approach</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Research-Driven Decisions</h3>
+                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Holistic Assessment</h3>
                     <p className="text-gray-600 font-sans">
-                      Every investment decision is backed by comprehensive fundamental and technical analysis conducted
-                      by our experienced research team.
+                      In-depth understanding of your current situation, strengths, challenges, and aspirations.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Dynamic Asset Allocation</h3>
+                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Customized Strategy</h3>
                     <p className="text-gray-600 font-sans">
-                      We continuously adjust portfolio allocations based on market conditions, economic indicators, and
-                      your changing life circumstances.
+                      Tailored action plans designed specifically for your personal, academic, and professional goals.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Risk-Adjusted Performance</h3>
+                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Practical Implementation</h3>
                     <p className="text-gray-600 font-sans">
-                      Our focus is on generating superior risk-adjusted returns rather than chasing short-term
-                      performance at the expense of long-term stability.
+                      Actionable tools, techniques, and strategies you can apply immediately in real life.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Transparent Reporting</h3>
+                    <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Regular Progress Review</h3>
                     <p className="text-gray-600 font-sans">
-                      Regular, detailed reports keep you informed about your portfolio performance, holdings, and our
-                      investment rationale.
+                      Ongoing accountability and adjustments to ensure steady growth and goal achievement.
                     </p>
                   </div>
                 </div>
@@ -153,7 +142,7 @@ export default function PortfolioManagementPage() {
             <div>
               <img
                 src="/images/pms-img-2.jpg"
-                alt="Investment research and analysis"
+                alt="Professional consultation session"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -167,31 +156,31 @@ export default function PortfolioManagementPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">What's Included</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              Comprehensive portfolio management services designed to meet all your investment needs.
+              Comprehensive professional consultation designed to support your complete growth journey.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-xl font-serif font-bold text-gray-900">Investment Strategy</CardTitle>
+                <CardTitle className="text-xl font-serif font-bold text-gray-900">Personalized Sessions</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 font-sans text-gray-600">
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Customized asset allocation
+                    One-on-one consultation sessions
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Diversified portfolio construction
+                    In-depth goal exploration
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Regular rebalancing
+                    Mindset &amp; confidence coaching
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Tax-efficient investing
+                    Action plan development
                   </li>
                 </ul>
               </CardContent>
@@ -199,25 +188,25 @@ export default function PortfolioManagementPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-xl font-serif font-bold text-gray-900">Ongoing Management</CardTitle>
+                <CardTitle className="text-xl font-serif font-bold text-gray-900">Growth Support</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 font-sans text-gray-600">
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Daily portfolio monitoring
+                    Career &amp; academic strategy
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Performance tracking
+                    Personal development roadmap
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Risk management
+                    Progress tracking &amp; reviews
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Market opportunity identification
+                    Resource recommendations
                   </li>
                 </ul>
               </CardContent>
@@ -225,25 +214,25 @@ export default function PortfolioManagementPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-xl font-serif font-bold text-gray-900">Client Support</CardTitle>
+                <CardTitle className="text-xl font-serif font-bold text-gray-900">Ongoing Guidance</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 font-sans text-gray-600">
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Dedicated relationship manager
+                    Between-session support
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Quarterly portfolio reviews
+                    Accountability check-ins
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    24/7 online access
+                    Customized worksheets &amp; tools
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Priority customer support
+                    Long-term success planning
                   </li>
                 </ul>
               </CardContent>
@@ -256,30 +245,30 @@ export default function PortfolioManagementPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Portfolio Management Plans</h2>
+            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Professional Consultation Plans</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              Choose the plan that best fits your investment needs and portfolio size.
+              Starting from consultation • Fully Customized Plans
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border-2 border-gray-200 hover:border-cyan-600 transition-colors">
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-serif font-bold">Essential</CardTitle>
-                <div className="text-4xl font-serif font-black text-cyan-600 mt-4">2.5%</div>
-                <div className="text-sm text-gray-600 font-sans">Annual management fee</div>
+                <div className="text-4xl font-serif font-black text-cyan-600 mt-4">Custom</div>
+                <div className="text-sm text-gray-600 font-sans">Starting from ₹6,999/month</div>
               </CardHeader>
               <CardContent>
                 <div className="text-center mb-4">
-                  <div className="text-lg font-serif font-bold text-gray-900">₹25 Lakhs minimum</div>
+                  <div className="text-lg font-serif font-bold text-gray-900">4 sessions/month</div>
                 </div>
                 <ul className="space-y-2 font-sans text-gray-600">
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Quarterly reviews
+                    45-minute sessions
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Online portfolio access
+                    Personalized guidance
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
@@ -296,25 +285,25 @@ export default function PortfolioManagementPage() {
               <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-amber-500">Most Popular</Badge>
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-serif font-bold">Premium</CardTitle>
-                <div className="text-4xl font-serif font-black text-cyan-600 mt-4">2.0%</div>
-                <div className="text-sm text-gray-600 font-sans">Annual management fee</div>
+                <div className="text-4xl font-serif font-black text-cyan-600 mt-4">Custom</div>
+                <div className="text-sm text-gray-600 font-sans">Starting from ₹9,999/month</div>
               </CardHeader>
               <CardContent>
                 <div className="text-center mb-4">
-                  <div className="text-lg font-serif font-bold text-gray-900">₹50 Lakhs minimum</div>
+                  <div className="text-lg font-serif font-bold text-gray-900">8 sessions/month</div>
                 </div>
                 <ul className="space-y-2 font-sans text-gray-600">
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Monthly reviews
+                    60-minute sessions
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Dedicated manager
+                    Dedicated consultant
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Priority support
+                    Resources &amp; follow-up
                   </li>
                 </ul>
                 <Link href="/contact">
@@ -326,25 +315,25 @@ export default function PortfolioManagementPage() {
             <Card className="border-2 border-gray-200 hover:border-cyan-600 transition-colors">
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-serif font-bold">Elite</CardTitle>
-                <div className="text-4xl font-serif font-black text-cyan-600 mt-4">1.5%</div>
-                <div className="text-sm text-gray-600 font-sans">Annual management fee</div>
+                <div className="text-4xl font-serif font-black text-cyan-600 mt-4">Custom</div>
+                <div className="text-sm text-gray-600 font-sans">Starting from ₹15,999/month</div>
               </CardHeader>
               <CardContent>
                 <div className="text-center mb-4">
-                  <div className="text-lg font-serif font-bold text-gray-900">₹1 Crore minimum</div>
+                  <div className="text-lg font-serif font-bold text-gray-900">12 sessions/month</div>
                 </div>
                 <ul className="space-y-2 font-sans text-gray-600">
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Weekly monitoring
+                    60-minute sessions
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    Senior manager
+                    Unlimited messaging
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-cyan-600 mr-2" />
-                    24/7 support
+                    Priority scheduling
                   </li>
                 </ul>
                 <Link href="/contact">
@@ -359,14 +348,13 @@ export default function PortfolioManagementPage() {
       {/* CTA Section */}
       <section className="py-20 bg-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Start?</h2>
+          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Take the Next Step?</h2>
           <p className="text-xl text-cyan-100 mb-8 font-sans">
-            Schedule a consultation to discuss your investment goals and learn how our portfolio management can help you
-            achieve them.
+            Book your consultation today and begin your personalized journey toward growth and success.
           </p>
           <Link href="/contact">
             <Button size="lg" className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 text-lg font-sans">
-              Schedule Consultation
+              Book a Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
@@ -374,81 +362,83 @@ export default function PortfolioManagementPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-2xl font-serif font-black text-cyan-400 mb-4">PMS Investment Services</h3>
-              <p className="text-gray-400 font-sans mb-4">
-                Empowering your financial future with expertise, transparency, and unwavering trust.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+            {/* Logo & Tagline */}
+            <div className="flex flex-col items-start">
+              <Link href="/" className="mb-6">
+                <Image
+                  src="/images/logo.png"
+                  alt="The Mind Clarity Studio"
+                  width={320}
+                  height={120}
+                  priority
+                  className="h-20 md:h-24 w-auto object-contain"
+                />
+              </Link>
+              <p className="max-w-xs text-gray-400 text-lg leading-relaxed font-sans">
+                For Stronger Minds, Think Lavina.
               </p>
-              <div className="text-sm text-gray-400 font-sans">
-                <p>SEBI Registered Investment Advisor</p>
-                <p>Registration No: INA000012345</p>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Services</h4>
+              <ul className="space-y-3 text-gray-400 font-sans">
+                <li>Psychological Coaching</li>
+                <li>Education &amp; Mentorship</li>
+                <li>Professional Consultation</li>
+                <li>Career Guidance</li>
+                <li>Workshops &amp; Training</li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Company</h4>
+              <ul className="space-y-3 text-gray-400 font-sans">
+                <li><Link href="/about" className="hover:text-cyan-400 transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-cyan-400 transition-colors">Services</Link></li>
+                <li><Link href="/testimonials" className="hover:text-cyan-400 transition-colors">Testimonials</Link></li>
+                <li><Link href="/pricing" className="hover:text-cyan-400 transition-colors">Pricing</Link></li>
+                <li><Link href="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
+              <div className="space-y-3 text-gray-400 font-sans">
+                <p>
+                  <a href="mailto:info@themindclaritystudio.com" className="hover:text-cyan-400 transition-colors">
+                    info@themindclaritystudio.com
+                  </a>
+                </p>
+                <p>+91 79902 02179</p>
+                <p>E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
               </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-serif font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400 font-sans">
-                <li>
-                  <Link href="/services/portfolio-management" className="hover:text-cyan-400 transition-colors">
-                    Portfolio Management
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/wealth-planning" className="hover:text-cyan-400 transition-colors">
-                    Wealth Planning
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/risk-assessment" className="hover:text-cyan-400 transition-colors">
-                    Risk Assessment
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/tax-optimization" className="hover:text-cyan-400 transition-colors">
-                    Tax Optimization
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-serif font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400 font-sans">
-                <li>
-                  <Link href="/about" className="hover:text-cyan-400 transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about#team" className="hover:text-cyan-400 transition-colors">
-                    Our Team
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-cyan-400 transition-colors">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-cyan-400 transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-serif font-bold mb-4">Contact Info</h4>
-              <div className="space-y-2 text-gray-400 font-sans">
-                <p>📧 info@pmsinvestment.com</p>
-                <p>📞 +91 98765 43210</p>
-                <p>📍 Mumbai, Maharashtra</p>
+
+              <div className="mt-8">
+                <h5 className="text-white font-medium mb-3">Follow Us</h5>
+                <div className="mt-6 flex items-center gap-5">
+                  <a href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaLinkedin size={24} />
+                  </a>
+                  <a href="https://www.instagram.com/lavina_bhambhani/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaInstagram size={24} />
+                  </a>
+                  <a href="https://www.facebook.com/lavina.bhambhani.77" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
+                    <FaFacebook size={24} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+
+          <div className="border-t border-gray-800 mt-16 pt-8 text-center">
             <p className="text-gray-400 font-sans">
-              © 2024 PMS Investment Services. All rights reserved. | Privacy Policy | Terms of Service
+              © 2026 The Mind Clarity Studio. All Rights Reserved.
             </p>
           </div>
         </div>
