@@ -19,35 +19,54 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-serif font-black text-gray-900 mb-6">
-             Build Clarity,Strengthen Resilience,Create  <br></br> <span className="text-cyan-600">Meaningful Growth.</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto font-sans">
-The Mind Clarity Studio supports individuals through psychology, emotional wellness, education, mentorship, and personal development programs designed to foster resilience, self-awareness, and meaningful growth.            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/consultation">
-                <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 text-lg">
-                  Book a Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 px-8 py-4 text-lg bg-transparent"
-                >
-                  Explore Services
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Hero Section */}
+
+<section className="bg-gradient-to-br from-gray-50 to-white py-16 md:py-20 lg:py-24">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center">
+      <h1 className="font-serif font-black text-gray-900 mb-6 leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        Build Clarity,
+        <br />
+        Strengthen Resilience,
+        <br />
+       
+        <span className="text-cyan-600">
+           Create{" "}Meaningful Growth.
+        </span>
+      </h1>
+
+  <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 max-w-4xl mx-auto font-sans leading-relaxed px-2">
+    The Mind Clarity Studio supports individuals through psychology,
+    emotional wellness, education, mentorship, and personal development
+    programs designed to foster resilience, self-awareness, and meaningful
+    growth.
+  </p>
+
+  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+    <Link href="/consultation">
+      <Button
+        size="lg"
+        className="w-full sm:w-auto bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 text-lg"
+      >
+        Book a Consultation
+        <ArrowRight className="ml-2 h-5 w-5" />
+      </Button>
+    </Link>
+
+    <Link href="/services">
+      <Button
+        size="lg"
+        variant="outline"
+        className="w-full sm:w-auto border-cyan-600 text-cyan-600 hover:bg-cyan-50 px-8 py-4 text-lg bg-transparent"
+      >
+        Explore Services
+      </Button>
+    </Link>
+  </div>
+</div>
+
+  </div>
+</section>
 
       {/* Who We Are */}
 <section id="about" className="py-20 bg-white">

@@ -21,12 +21,12 @@ export default function Navigation() {
     alt="The Mind Clarity Studio"
     width={240}
     height={90}
-    className="h-10 md:h-12 lg:h-14 w-auto object-contain"
+    className="h-10 md:h-12 lg:h-10 w-auto object-contain"
     priority
   />
 </Link>
             </div>
-            <div className="hidden md:block ml-10">
+            <div className="hidden md:block ml-64">
               <div className="flex items-baseline space-x-8">
                 <Link
                   href="/about"

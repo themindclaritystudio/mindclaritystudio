@@ -20,7 +20,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-black text-gray-900 mb-6">
-              About <span className="text-cyan-500">The Mind Clarity Studio</span>
+              About <span className="text-cyan-600">The Mind Clarity Studio</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto font-sans">
               Empowering individuals through psychology, emotional wellness, coaching, education, and personal transformation. 
