@@ -83,7 +83,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-3 gap-6 pt-4">
           <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-600">10+</div>
+            <div className="text-4xl font-bold text-cyan-600">4+</div>
             <p className="mt-2 text-sm text-gray-600">
               Years of Experience
             </p>
@@ -97,7 +97,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-600">20+</div>
+            <div className="text-4xl font-bold text-cyan-600">10+</div>
             <p className="mt-2 text-sm text-gray-600">
               Research & Publications
             </p>

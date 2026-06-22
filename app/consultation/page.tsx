@@ -291,7 +291,7 @@ export default function ConsultationPage() {
                     <h3 className="text-xl font-serif font-bold text-gray-900">Our Impact</h3>
                     <div className="grid grid-cols-2 gap-4 text-center">
                       <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">10+</div>
+                        <div className="text-2xl font-serif font-black text-cyan-600">4+</div>
                         <div className="text-sm text-gray-600 font-sans">Years Experience</div>
                       </div>
                       <div>
@@ -299,11 +299,11 @@ export default function ConsultationPage() {
                         <div className="text-sm text-gray-600 font-sans">Lives Impacted</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">20+</div>
+                        <div className="text-2xl font-serif font-black text-cyan-600">10+</div>
                         <div className="text-sm text-gray-600 font-sans">Research Contributions</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">100+</div>
+                        <div className="text-2xl font-serif font-black text-cyan-600">75+</div>
                         <div className="text-sm text-gray-600 font-sans">Workshops Delivered</div>
                       </div>
                     </div>
