@@ -86,7 +86,7 @@ export default function ConsultationPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <form
-                  action="https://formsubmit.co/themindclaritystudiobylavina@gmail.com"
+                  action="https://formsubmit.co/contact@themindclaritystudio.com"
                   method="POST"
                   onSubmit={() => setTimeout(() => setIsSubmitted(true), 800)}
                   className="space-y-6"

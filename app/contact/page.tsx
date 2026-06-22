@@ -111,7 +111,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <form
-                    action="https://formsubmit.co/themindclaritystudiobylavina@gmail.com"
+                    action="https://formsubmit.co/contact@themindclaritystudio.com"
                     method="POST"
                     className="space-y-6"
                   >
