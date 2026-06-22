@@ -11,6 +11,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare, Calendar, Users, ArrowRight, CheckCircle } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
+
 import {
   FaLinkedin,
   FaInstagram,
@@ -19,7 +21,7 @@ import {
 import Image from "next/image"
 
 export default function ContactPage() {
-
+const [isSubmitted, setIsSubmitted] = useState(false)
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -111,10 +113,11 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <form
-                    action="https://formsubmit.co/contact@themindclaritystudio.com"
-                    method="POST"
-                    className="space-y-6"
-                  >
+                  action="https://formsubmit.co/contact@themindclaritystudio.com"
+                  method="POST"
+                  onSubmit={() => setTimeout(() => setIsSubmitted(true), 800)}
+                  className="space-y-6"
+                >
                     {/* Hidden Fields for FormSubmit */}
                     <input type="hidden" name="_subject" value="New Contact Form Submission - Mind Clarity Studio" />
                     <input type="hidden" name="_captcha" value="false" />
