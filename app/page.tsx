@@ -302,67 +302,88 @@ export default function HomePage() {
               Real transformations from individuals who found clarity and growth with us.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "The career guidance sessions helped me transition into a role that truly aligns with my values and strengths. I feel confident and fulfilled."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-1.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Neha Gupta</div>
-                    <div className="text-sm text-gray-600 font-sans">Marketing Professional</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+  {/* Testimonial 1 */}
+  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+    <CardContent className="pt-6">
+      <div className="flex items-center mb-4">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
+        ))}
+      </div>
 
-            <Card className="border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "Working with Lavina transformed how I manage stress and relationships. My personal growth journey has been life-changing."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-4.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Arjun Rao</div>
-                    <div className="text-sm text-gray-600 font-sans">Entrepreneur</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+      <p className="text-gray-600 font-sans mb-6 italic leading-relaxed">
+        "I have been working with Lavina for more than one and a half years and
+        I am truly delighted with the results she has helped me achieve. Her
+        Pencil Sketch technique is incredibly unique and remarkably accurate.
+        I've never experienced anything like it before.
+        <br /><br />
+        I have also attended her workshops and found her to be a phenomenal
+        trainer. Her sessions are engaging, insightful, and never boring.
+        Additionally, her one-on-one guidance has helped me immensely in both my
+        career and personal life.
+        <br /><br />
+        I trust Lavina wholeheartedly and highly recommend her services to
+        anyone seeking deeper self-understanding, clarity, and personal growth."
+      </p>
 
-            <Card className="border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "The mentorship program gave me clarity during my PhD journey. The research guidance and emotional support were invaluable."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-5.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Dr. Meera Sharma</div>
-                    <div className="text-sm text-gray-600 font-sans">Research Scholar</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+      <div className="flex items-center">
+        <div className="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center mr-4">
+          <span className="font-bold text-cyan-600">AS</span>
+        </div>
+        <div>
+          <div className="font-serif font-bold text-gray-900">
+            Mr. Anuj Sharma
           </div>
+          <div className="text-sm text-gray-600 font-sans">
+            Client & Workshop Participant
+          </div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+
+  {/* Testimonial 2 */}
+  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+    <CardContent className="pt-6">
+      <div className="flex items-center mb-4">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
+        ))}
+      </div>
+
+      <p className="text-gray-600 font-sans mb-6 italic leading-relaxed">
+        "At a stage in life, I felt stuck, confused about my goals, and unsure
+        where my time was going. After taking sessions with Lavina at The Mind
+        Clarity Studio and sincerely following her guidance, I gradually gained
+        focus and direction.
+        <br /><br />
+        The most amazing part is that I didn't even realize when I started
+        achieving goals that once felt difficult. Lavina has a unique way of
+        helping you understand yourself, prioritize what truly matters, and take
+        consistent action.
+        <br /><br />
+        If you're looking for clarity in your personal or professional life, I
+        highly recommend her sessions. Thank you, Lavina, for helping me gain
+        clarity and confidence in my journey."
+      </p>
+
+      <div className="flex items-center">
+        <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+          <span className="font-bold text-amber-600">NN</span>
+        </div>
+        <div>
+          <div className="font-serif font-bold text-gray-900">
+            Neeta Nihalani
+          </div>
+          <div className="text-sm text-gray-600 font-sans">
+            Financial Advisor
+          </div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</div>
         </div>
       </section>
 

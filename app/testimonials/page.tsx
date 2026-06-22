@@ -31,68 +31,84 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Featured Testimonials */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <Card className="border-0 shadow-xl bg-gradient-to-br from-cyan-50 to-white">
-              <CardContent className="p-8">
-                <Quote className="h-12 w-12 text-cyan-600 mb-6" />
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-6 w-6 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-lg text-gray-700 font-sans mb-6 italic leading-relaxed">
-                  "Working with Lavina completely transformed how I handle stress and make decisions. After just a few months, 
-                  I gained clarity on my career path and finally made the transition I've been dreaming about for years. 
-                  I feel more confident and balanced than ever."
-                </p>
-                <div className="flex items-center">
-                  <img
-                    src="/images/avatar/avatar-1.jpg"
-                    alt="Neha Gupta"
-                    className="w-15 h-15 rounded-full mr-4"
-                  />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900 text-lg">Neha Gupta</div>
-                    <div className="text-cyan-600 font-sans">Marketing Professional</div>
-                  </div>
-                </div>
-              </CardContent>
+             <CardContent className="p-8">
+  <Quote className="h-12 w-12 text-cyan-600 mb-6" />
+
+  <div className="flex items-center mb-4">
+    {[...Array(5)].map((_, i) => (
+      <Star key={i} className="h-6 w-6 text-amber-500 fill-current" />
+    ))}
+  </div>
+
+  <p className="text-lg text-gray-700 font-sans mb-6 italic leading-relaxed">
+    "I have been working with Lavina for more than one and a half years and I am truly delighted with the results she has helped me achieve. Her unique approach and guidance have brought me remarkable clarity and growth. Her workshops are engaging, insightful, and highly impactful, while her one-on-one sessions have supported me through both professional and personal challenges. I wholeheartedly recommend her services to anyone seeking deeper self-understanding, confidence, and clarity in life."
+  </p>
+
+  <div className="flex items-center">
+    <div className="w-14 h-14 rounded-full bg-cyan-100 flex items-center justify-center mr-4">
+      <span className="font-bold text-cyan-600 text-lg">AS</span>
+    </div>
+
+    <div>
+      <div className="font-serif font-bold text-gray-900 text-lg">
+        Mr. Anuj Sharma
+      </div>
+      <div className="text-cyan-600 font-sans">
+        Client & Workshop Participant
+      </div>
+    </div>
+  </div>
+</CardContent>
             </Card>
 
             <Card className="border-0 shadow-xl bg-gradient-to-br from-amber-50 to-white">
-              <CardContent className="p-8">
-                <Quote className="h-12 w-12 text-amber-600 mb-6" />
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-6 w-6 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-lg text-gray-700 font-sans mb-6 italic leading-relaxed">
-                  "The mentorship and emotional support I received during my PhD journey was invaluable. Lavina helped me 
-                  overcome imposter syndrome, improve my research productivity, and successfully publish my first paper. 
-                  I can't recommend her enough."
-                </p>
-                <div className="flex items-center">
-                  <img
-                    src="/images/avatar/avatar-4.jpg"
-                    alt="Dr. Meera Sharma"
-                    className="w-15 h-15 rounded-full mr-4"
-                  />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900 text-lg">Dr. Meera Sharma</div>
-                    <div className="text-amber-600 font-sans">Research Scholar</div>
-                  </div>
-                </div>
-              </CardContent>
+             <CardContent className="p-8">
+  <Quote className="h-12 w-12 text-amber-600 mb-6" />
+
+  <div className="flex items-center mb-4">
+    {[...Array(5)].map((_, i) => (
+      <Star key={i} className="h-6 w-6 text-amber-500 fill-current" />
+    ))}
+  </div>
+
+  <p className="text-lg text-gray-700 font-sans mb-6 italic leading-relaxed">
+    "At one stage in life, I felt stuck, confused about my goals, and constantly
+    wondered where my time was going. After taking a few sessions with Lavina at
+    The Mind Clarity Studio and sincerely following her guidance, I gradually
+    gained focus and direction. The most amazing part was that I didn't even
+    realize when I started achieving goals that once seemed so difficult.
+    <br /><br />
+    Lavina has a unique way of helping you understand yourself, prioritize what
+    truly matters, and take consistent action. If you're looking for clarity in
+    your personal or professional life, I highly recommend her sessions."
+  </p>
+
+  <div className="flex items-center">
+    <div className="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+      <span className="font-bold text-amber-600 text-lg">NN</span>
+    </div>
+
+    <div>
+      <div className="font-serif font-bold text-gray-900 text-lg">
+        Neeta Nihalani
+      </div>
+      <div className="text-amber-600 font-sans">
+        Financial Advisor
+      </div>
+    </div>
+  </div>
+</CardContent>
             </Card>
           </div>
         </div>
       </section>
 
       {/* All Testimonials Grid */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">More Success Stories</h2>
@@ -165,7 +181,7 @@ export default function TestimonialsPage() {
             </Card>
 
             {/* Additional Testimonials */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            {/* <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -226,8 +242,8 @@ export default function TestimonialsPage() {
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */} 
 
       {/* Success Metrics */}
       <section className="py-20 bg-white">
