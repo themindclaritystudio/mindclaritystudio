@@ -238,7 +238,7 @@ export default function ForgotPasswordPage() {
             <div>
               <h4 className="text-lg font-serif font-bold mb-4">Contact Info</h4>
               <div className="space-y-2 text-gray-400 font-sans">
-                <p>📧 info@pmsinvestment.com</p>
+                <p>📧 contact@pmsinvestment.com</p>
                 <p>📞 +91 98765 43210</p>
                 <p>📍 Mumbai, Maharashtra</p>
               </div>

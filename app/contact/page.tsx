@@ -65,10 +65,10 @@ export default function ContactPage() {
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">Email Us</h3>
                 <p className="text-gray-600 font-sans mb-4">Send us your questions anytime</p>
                 <a
-                  href="mailto:info@themindclaritystudio.com"
+                  href="mailto:contact@themindclaritystudio.com"
                   className="text-cyan-600 hover:text-cyan-700 font-sans font-medium"
                 >
-                  info@themindclaritystudio.com
+                  contact@themindclaritystudio.com
                 </a>
                 <p className="text-sm text-gray-500 font-sans mt-2">We respond within 24 hours</p>
               </CardContent>
@@ -261,7 +261,7 @@ export default function ContactPage() {
                           </p>
                           <p className="flex items-center">
                             <Mail className="h-4 w-4 text-gray-400 mr-2" />
-                            info@themindclaritystudio.com
+                            contact@themindclaritystudio.com
                           </p>
                           <p className="flex items-center">
                             <Clock className="h-4 w-4 text-gray-400 mr-2" />
@@ -357,8 +357,8 @@ export default function ContactPage() {
               <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
               <div className="space-y-3 text-gray-400 font-sans">
                 <p>
-                  <a href="mailto:info@themindclaritystudio.com" className="hover:text-cyan-400 transition-colors">
-                    info@themindclaritystudio.com
+                  <a href="mailto:contact@themindclaritystudio.com" className="hover:text-cyan-400 transition-colors">
+                    contact@themindclaritystudio.com
                   </a>
                 </p>
                 <p>+91 79902 02179</p>

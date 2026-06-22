@@ -259,7 +259,7 @@ export default function ConsultationPage() {
                     </div>
                     <div>
                       <p className="font-serif font-bold text-gray-900">Email</p>
-                      <p className="text-gray-600 font-sans">info@themindclaritystudio.com</p>
+                      <p className="text-gray-600 font-sans">contact@themindclaritystudio.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -405,8 +405,8 @@ export default function ConsultationPage() {
               <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
               <div className="space-y-3 text-gray-400 font-sans">
                 <p>
-                  <a href="mailto:info@themindclaritystudio.com" className="hover:text-cyan-400 transition-colors">
-                    info@themindclaritystudio.com
+                  <a href="mailto:contact@themindclaritystudio.com" className="hover:text-cyan-400 transition-colors">
+                    contact@themindclaritystudio.com
                   </a>
                 </p>
                 <p>+91 79902 02179</p>

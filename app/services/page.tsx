@@ -336,10 +336,10 @@ const services = [
           <p>
             {" "}
             <a
-              href="mailto:info@themindclaritystudio.com"
+              href="mailto:contact@themindclaritystudio.com"
               className="hover:text-cyan-400 transition-colors"
             >
-              info@themindclaritystudio.com
+              contact@themindclaritystudio.com
             </a>
           </p>
           <p> +91 79902 02179</p>
