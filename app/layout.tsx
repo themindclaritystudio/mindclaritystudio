@@ -18,9 +18,13 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://themindclaritystudio.com"),
+
   title: "The Mind Clarity Studio | For Stronger Minds, Think Lavina",
+
   description:
     "The Mind Clarity Studio by Lavina Pratap Bhambhani offers psychology-based coaching, emotional wellness guidance, career mentorship, research consulting, workshops, and personal development programs designed to help individuals achieve clarity, confidence, and meaningful growth.",
+
   keywords: [
     "The Mind Clarity Studio",
     "Lavina Pratap Bhambhani",
@@ -35,12 +39,45 @@ export const metadata: Metadata = {
     "Workshops",
     "Mentorship",
   ],
-  
+
   authors: [{ name: "Lavina Pratap Bhambhani" }],
   creator: "The Mind Clarity Studio",
   publisher: "The Mind Clarity Studio",
-}
 
+  openGraph: {
+    title: "The Mind Clarity Studio | For Stronger Minds, Think Lavina",
+    description:
+      "Build Clarity, Strengthen Resilience, Create Meaningful Growth.",
+
+    url: "https://themindclaritystudio.com",
+    siteName: "The Mind Clarity Studio",
+
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "The Mind Clarity Studio",
+      },
+    ],
+
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "The Mind Clarity Studio | For Stronger Minds, Think Lavina",
+    description:
+      "Build Clarity, Strengthen Resilience, Create Meaningful Growth.",
+    images: ["/images/logo.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
 export default function RootLayout({
   children,
 }: Readonly<{
