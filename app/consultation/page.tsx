@@ -21,37 +21,37 @@ import Image from "next/image"
 export default function ConsultationPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-white">
-        <Navigation />
+  // if (isSubmitted) {
+  //   return (
+  //     <div className="min-h-screen bg-white">
+  //       <Navigation />
 
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md w-full text-center">
-            <div className="mx-auto h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-              <CheckCircle className="h-8 w-8 text-green-600" />
-            </div>
-            <h2 className="text-3xl font-serif font-black text-gray-900 mb-4">Thank You!</h2>
-            <p className="text-gray-600 font-sans mb-8">
-              We've received your consultation request. We will contact you within 24 hours to schedule your discovery call.
-            </p>
-            <div className="space-y-4">
-              <Link href="/">
-                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">Return to Homepage</Button>
-              </Link>
-              <Button
-                variant="outline"
-                onClick={() => setIsSubmitted(false)}
-                className="w-full border-cyan-600 text-cyan-600 hover:bg-cyan-50"
-              >
-                Book Another Consultation
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
+  //       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  //         <div className="max-w-md w-full text-center">
+  //           <div className="mx-auto h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+  //             <CheckCircle className="h-8 w-8 text-green-600" />
+  //           </div>
+  //           <h2 className="text-3xl font-serif font-black text-gray-900 mb-4">Thank You!</h2>
+  //           <p className="text-gray-600 font-sans mb-8">
+  //             We've received your consultation request. We will contact you within 24 hours to schedule your discovery call.
+  //           </p>
+  //           <div className="space-y-4">
+  //             <Link href="/">
+  //               <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">Return to Homepage</Button>
+  //             </Link>
+  //             <Button
+  //               variant="outline"
+  //               onClick={() => setIsSubmitted(false)}
+  //               className="w-full border-cyan-600 text-cyan-600 hover:bg-cyan-50"
+  //             >
+  //               Book Another Consultation
+  //             </Button>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   return (
     <div className="min-h-screen bg-white">
