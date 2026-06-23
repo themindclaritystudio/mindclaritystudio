@@ -18,27 +18,97 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://themindclaritystudio.com"),
+metadataBase: new URL("https://www.themindclaritystudio.com"),
 
+alternates: {
+  canonical: "/",
+},
   title: "The Mind Clarity Studio | For Stronger Minds, Think Lavina",
 
   description:
     "The Mind Clarity Studio by Lavina Pratap Bhambhani offers psychology-based coaching, emotional wellness guidance, career mentorship, research consulting, workshops, and personal development programs designed to help individuals achieve clarity, confidence, and meaningful growth.",
 
-  keywords: [
-    "The Mind Clarity Studio",
-    "Lavina Pratap Bhambhani",
-    "Psychologist",
-    "Career Mentor",
-    "Mental Wellness",
-    "Personal Growth",
-    "Emotional Wellbeing",
-    "Career Guidance",
-    "Research Consultant",
-    "Life Coaching",
-    "Workshops",
-    "Mentorship",
-  ],
+ keywords: [
+  "The Mind Clarity Studio",
+  "Lavina Pratap Bhambhani",
+  "Lavina Bhambhani",
+
+  // Psychology
+  "Psychologist",
+  "Mental Health Expert",
+  "Clinical Psychology",
+  "Counselling",
+  "Psychological Coaching",
+  "Mind Coaching",
+  "Mental Wellness",
+  "Mental Wellbeing",
+  "Emotional Wellness",
+  "Emotional Wellbeing",
+  "Emotional Intelligence",
+  "Emotional Resilience",
+  "Stress Management",
+  "Self Awareness",
+  "Mindset Coaching",
+
+  // Personal Growth
+  "Personal Growth",
+  "Personal Development",
+  "Self Development",
+  "Life Coaching",
+  "Confidence Building",
+  "Clarity and Confidence",
+  "Goal Setting",
+  "Decision Making",
+  "Mindset Mastery",
+
+  // Education & Research
+  "Educator",
+  "Researcher",
+  "Research Consultant",
+  "Academic Mentor",
+  "Research Guidance",
+  "Academic Consulting",
+  "Publication Mentorship",
+  "Research Methodology",
+  "Research Scholar Support",
+
+  // Career & Mentorship
+  "Career Mentor",
+  "Career Guidance",
+  "Professional Development",
+  "Leadership Development",
+  "Student Mentorship",
+  "Career Coaching",
+
+  // Workshops & Training
+  "Corporate Training",
+  "Corporate Workshops",
+  "Leadership Training",
+  "Employee Wellbeing",
+  "Mental Health Workshops",
+  "Personal Development Workshops",
+  "Training Programs",
+
+  // Author
+  "Author",
+  "International Author",
+  "Published Author",
+
+  // Brand
+  "Think Lavina",
+  "For Stronger Minds Think Lavina",
+  "The Mind Clarity Studio by Lavina",
+  "Mind Clarity Studio",
+
+  // Location SEO
+  "Psychologist in Ahmedabad",
+  "Psychologist in Gujarat",
+  "Career Mentor in Ahmedabad",
+  "Mental Wellness Ahmedabad",
+  "Life Coach Gujarat",
+  "Counsellor Ahmedabad",
+  "Psychologist India",
+],
 
   authors: [{ name: "Lavina Pratap Bhambhani" }],
   creator: "The Mind Clarity Studio",
