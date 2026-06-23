@@ -16,15 +16,15 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
            <Link href="/" className="flex items-center">
-  <Image
-    src="images/logo.png"
-    alt="The Mind Clarity Studio"
-    width={240}
-    height={90}
-    className="h-10 md:h-12 lg:h-10 w-auto object-contain"
-    priority
-  />
-</Link>
+            <Image
+              src="/images/logo.png"
+              alt="The Mind Clarity Studio"
+              width={240}
+              height={90}
+              className="h-10 md:h-12 lg:h-10 w-auto object-contain"
+              priority
+            />
+          </Link>
             </div>
             <div className="hidden md:block ml-64">
               <div className="flex items-baseline space-x-8">
