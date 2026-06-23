@@ -84,7 +84,7 @@ const services = [
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {services.map((service) => {
               const IconComponent = service.icon
               const bgColor = service.color === "cyan" ? "bg-cyan-100" : "bg-amber-100"
@@ -92,7 +92,8 @@ const services = [
               const borderColor = service.color === "cyan" ? "border-cyan-600" : "border-amber-600"
 
               return (
-                <Card key={service.slug} className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
+              <Link   key={service.slug} href="/contact" className="block">
+  <Card className="border-0 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
                   <CardHeader className="pb-4">
                     <div className={`w-16 h-16 ${bgColor} rounded-full flex items-center justify-center mb-4`}>
                       <IconComponent className={`h-8 w-8 ${textColor}`} />
@@ -113,7 +114,7 @@ const services = [
                       </ul>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200">
+                    {/* <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200">
                       <div>
                         <p className="text-sm text-gray-500 font-sans">Starting From</p>
                         <p className="font-serif font-bold text-gray-900">{service.minInvestment}</p>
@@ -132,9 +133,18 @@ const services = [
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
-                    </Link>
+                    </Link> */}
+                    <div className="pt-4">
+  <Button
+    className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
+  >
+    Get Started
+    <ArrowRight className="ml-2 h-4 w-4" />
+  </Button>
+</div>
                   </CardContent>
                 </Card>
+                </Link>
               )
             })}
           </div>

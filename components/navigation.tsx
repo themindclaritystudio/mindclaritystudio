@@ -52,12 +52,12 @@ export default function Navigation() {
                 >
                   Testimonials
                 </Link>
-                <Link
+                {/* <Link
                   href="/pricing"
                   className="text-gray-600 hover:text-cyan-600 px-3 py-2 text-sm font-medium transition-colors"
                 >
                   Pricing
-                </Link>
+                </Link> */}
                 <Link
                   href="/contact"
                   className="text-gray-600 hover:text-cyan-600 px-3 py-2 text-sm font-medium transition-colors"
@@ -123,13 +123,13 @@ export default function Navigation() {
               >
                 Testimonials
               </Link>
-              <Link
+              {/* <Link
                 href="/pricing"
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-cyan-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-cyan-600"
