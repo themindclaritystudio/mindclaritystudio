@@ -1,70 +1,76 @@
-"use client"
+'use client';
 
-import Navigation from "@/components/navigation"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Clock, Phone, Mail, MapPin, CheckCircle, TrendingUp } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
-import {
-  FaLinkedin,
-  FaInstagram,
-  FaFacebook,
-} from "react-icons/fa"
-import Image from "next/image"
+import Navigation from "@/components/navigation";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Clock, Phone, Mail, MapPin, CheckCircle, TrendingUp, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import Footer from "@/components/footer";
 
 export default function ConsultationPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // if (isSubmitted) {
-  //   return (
-  //     <div className="min-h-screen bg-white">
-  //       <Navigation />
-
-  //       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  //         <div className="max-w-md w-full text-center">
-  //           <div className="mx-auto h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-  //             <CheckCircle className="h-8 w-8 text-green-600" />
-  //           </div>
-  //           <h2 className="text-3xl font-serif font-black text-gray-900 mb-4">Thank You!</h2>
-  //           <p className="text-gray-600 font-sans mb-8">
-  //             We've received your consultation request. We will contact you within 24 hours to schedule your discovery call.
-  //           </p>
-  //           <div className="space-y-4">
-  //             <Link href="/">
-  //               <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">Return to Homepage</Button>
-  //             </Link>
-  //             <Button
-  //               variant="outline"
-  //               onClick={() => setIsSubmitted(false)}
-  //               className="w-full border-cyan-600 text-cyan-600 hover:bg-cyan-50"
-  //             >
-  //               Book Another Consultation
-  //             </Button>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   )
-  // }
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen antialiased selection:bg-[#0D9488] selection:text-white" style={{ backgroundColor: '#F8FAFC' }}>
+        <Navigation />
+        <div className="min-h-[calc(100vh-200px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md w-full text-center space-y-6 bg-white p-8 rounded-2xl border border-[#E2E8F0] shadow-sm">
+            <div className="mx-auto h-16 w-16 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488]">
+              <CheckCircle className="h-8 w-8" />
+            </div>
+            <h2 className="font-sans font-normal tracking-tight text-3xl" style={{ color: '#0B0F19' }}>
+              Thank <span className="font-serif italic font-light text-[#0D9488]">You!</span>
+            </h2>
+            <p className="text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
+              We've received your consultation request. We will contact you within 24 hours to schedule your discovery call.
+            </p>
+            <div className="space-y-3 pt-2">
+              <Link href="/">
+                <Button 
+                  className="w-full text-base font-medium px-6 py-5 rounded-xl hover:opacity-90 transition-all border-none"
+                  style={{ backgroundColor: '#0B0F19', color: '#F8FAFC' }}
+                >
+                  Return to Homepage
+                </Button>
+              </Link>
+              <Button
+                variant="outline"
+                onClick={() => setIsSubmitted(false)}
+                className="w-full text-base font-medium px-6 py-5 rounded-xl transition-all border border-[#E2E8F0] hover:bg-[#F8FAFC]"
+                style={{ color: '#0B0F19' }}
+              >
+                Book Another Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen antialiased selection:bg-[#0D9488] selection:text-white" style={{ backgroundColor: '#F8FAFC' }}>
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+      <section className="pt-20 pb-12 md:pt-24 md:pb-20 relative bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-serif font-black text-gray-900 mb-6">
-              Book Your <span className="text-cyan-600">Consultation</span>
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="font-sans font-normal tracking-tight text-4xl md:text-6xl leading-tight mb-6 text-balance" style={{ color: '#0B0F19' }}>
+              Book Your{" "}
+              <span className="font-serif italic font-light text-[#0D9488] inline-block">
+                Consultation
+              </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto font-sans">
+            <p className="text-base md:text-xl max-w-3xl mx-auto font-light leading-relaxed text-balance" style={{ color: '#0B0F19', opacity: 0.75 }}>
               Take the first step toward greater clarity, emotional well-being, and personal transformation. 
               Schedule a discovery call with Lavina Pratap Bhambhani.
             </p>
@@ -73,165 +79,176 @@ export default function ConsultationPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            
             {/* Consultation Form */}
-            <Card className="border-0 shadow-xl">
-              <CardHeader>
-                <CardTitle className="text-3xl font-serif font-bold text-gray-900">Book Your Discovery Call</CardTitle>
-                <p className="text-gray-600 font-sans">
-                  Fill out the form below and we will get back to you within 24 hours to schedule your personalized consultation.
-                </p>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <form
-                  action="https://formsubmit.co/contact@themindclaritystudio.com"
-                  method="POST"
-                  onSubmit={() => setTimeout(() => setIsSubmitted(true), 800)}
-                  className="space-y-6"
-                >
-                  {/* Hidden Fields */}
-                  <input type="hidden" name="_subject" value="New Consultation Request - Mind Clarity Studio" />
-                  <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_template" value="table" />
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName" className="font-sans">First Name *</Label>
-                      <Input name="firstName" id="firstName" placeholder="Enter your first name" required />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName" className="font-sans">Last Name *</Label>
-                      <Input name="lastName" id="lastName" placeholder="Enter your last name" required />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="font-sans">Email Address *</Label>
-                    <Input name="email" id="email" type="email" placeholder="Enter your email address" required />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="font-sans">Phone Number *</Label>
-                    <Input name="phone" id="phone" type="tel" placeholder="+91 79902 02179" required />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="interest" className="font-sans">Area of Interest</Label>
-                    <Select name="interest" required>
-                      <SelectTrigger>
-                        <SelectValue placeholder="What would you like support with?" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="emotional-wellness">Emotional Wellness & Stress</SelectItem>
-                        <SelectItem value="career-guidance">Career Guidance & Mentorship</SelectItem>
-                        <SelectItem value="personal-growth">Personal Growth & Self-Awareness</SelectItem>
-                        <SelectItem value="research-academic">Research & Academic Support</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="preferredTime" className="font-sans">Preferred Meeting Time</Label>
-                    <Select name="preferredTime">
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select preferred time" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="morning">Morning (9 AM - 12 PM)</SelectItem>
-                        <SelectItem value="afternoon">Afternoon (12 PM - 4 PM)</SelectItem>
-                        <SelectItem value="evening">Evening (4 PM - 7 PM)</SelectItem>
-                        <SelectItem value="flexible">Flexible</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="meetingType" className="font-sans">Meeting Preference</Label>
-                    <Select name="meetingType">
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select meeting type" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="video-call">Video Call (Online)</SelectItem>
-                        <SelectItem value="in-person">In-Person (Gujarat)</SelectItem>
-                        <SelectItem value="phone-call">Phone Call</SelectItem>
-                        <SelectItem value="no-preference">No Preference</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="font-sans">Tell Us More About Your Goals</Label>
-                    <Textarea
-                      name="message"
-                      id="message"
-                      placeholder="Share your current challenges, goals, or what you hope to achieve..."
-                      rows={4}
-                    />
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <Checkbox id="terms" className="mt-1 flex-shrink-0" required />
-                    <label htmlFor="terms" className="text-sm text-gray-600 leading-6 cursor-pointer">
-                      I agree to the{" "}
-                      <Link href="/privacy" className="text-cyan-600 hover:underline">
-                        Privacy Policy
-                      </Link>{" "}
-                      and consent to being contacted by The Mind Clarity Studio.
-                    </label>
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 text-lg font-sans"
-                  >
-                    Book My Consultation
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Consultation Information */}
-            <div className="space-y-8">
-              {/* What to Expect */}
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-serif font-bold text-gray-900">What to Expect</CardTitle>
+            <div className="lg:col-span-7">
+              <Card className="border border-[#E2E8F0] shadow-[0_10px_30px_rgba(11,15,25,0.02)] bg-white rounded-2xl overflow-hidden">
+                <CardHeader className="p-6 md:p-8 pb-4">
+                  <CardTitle className="text-2xl md:text-3xl font-sans font-normal tracking-tight mb-2" style={{ color: '#0B0F19' }}>
+                    Book Your Discovery Call
+                  </CardTitle>
+                  <p className="text-sm font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.65 }}>
+                    Fill out the form below and we will get back to you within 24 hours to schedule your personalized consultation.
+                  </p>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <CheckCircle className="h-5 w-5 text-cyan-600" />
+                <CardContent className="p-6 md:p-8 pt-0">
+                  <form
+                    action="https://formsubmit.co/contact@themindclaritystudio.com"
+                    method="POST"
+                    onSubmit={() => setTimeout(() => setIsSubmitted(true), 800)}
+                    className="space-y-5"
+                  >
+                    {/* Hidden Fields */}
+                    <input type="hidden" name="_subject" value="New Consultation Request - Mind Clarity Studio" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <Label htmlFor="firstName" className="font-sans text-sm font-normal" style={{ color: '#0B0F19' }}>First Name *</Label>
+                        <Input name="firstName" id="firstName" placeholder="Enter your first name" className="rounded-xl border-[#E2E8F0] focus-visible:ring-[#0D9488]" required />
+                      </div>
+                      <div className="space-y-1.5">
+                        <Label htmlFor="lastName" className="font-sans text-sm font-normal" style={{ color: '#0B0F19' }}>Last Name *</Label>
+                        <Input name="lastName" id="lastName" placeholder="Enter your last name" className="rounded-xl border-[#E2E8F0] focus-visible:ring-[#0D9488]" required />
+                      </div>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <Label htmlFor="email" className="font-sans text-sm font-normal" style={{ color: '#0B0F19' }}>Email Address *</Label>
+                      <Input name="email" id="email" type="email" placeholder="Enter your email address" className="rounded-xl border-[#E2E8F0] focus-visible:ring-[#0D9488]" required />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <Label htmlFor="phone" className="font-sans text-sm font-normal" style={{ color: '#0B0F19' }}>Phone Number *</Label>
+                      <Input name="phone" id="phone" type="tel" placeholder="+91 79902 02179" className="rounded-xl border-[#E2E8F0] focus-visible:ring-[#0D9488]" required />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <Label htmlFor="interest" className="font-sans text-sm font-normal" style={{ color: '#0B0F19' }}>Area of Interest</Label>
+                      <Select name="interest" required>
+                        <SelectTrigger className="rounded-xl border-[#E2E8F0] focus:ring-[#0D9488]">
+                          <SelectValue placeholder="What would you like support with?" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="emotional-wellness">Emotional Wellness & Stress</SelectItem>
+                          <SelectItem value="career-guidance">Career Guidance & Mentorship</SelectItem>
+                          <SelectItem value="personal-growth">Personal Growth & Self-Awareness</SelectItem>
+                          <SelectItem value="research-academic">Research & Academic Support</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <Label htmlFor="preferredTime" className="font-sans text-sm font-normal" style={{ color: '#0B0F19' }}>Preferred Meeting Time</Label>
+                      <Select name="preferredTime">
+                        <SelectTrigger className="rounded-xl border-[#E2E8F0] focus:ring-[#0D9488]">
+                          <SelectValue placeholder="Select preferred time" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="morning">Morning (9 AM - 12 PM)</SelectItem>
+                          <SelectItem value="afternoon">Afternoon (12 PM - 4 PM)</SelectItem>
+                          <SelectItem value="evening">Evening (4 PM - 7 PM)</SelectItem>
+                          <SelectItem value="flexible">Flexible</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <Label htmlFor="meetingType" className="font-sans text-sm font-normal" style={{ color: '#0B0F19' }}>Meeting Preference</Label>
+                      <Select name="meetingType">
+                        <SelectTrigger className="rounded-xl border-[#E2E8F0] focus:ring-[#0D9488]">
+                          <SelectValue placeholder="Select meeting type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="video-call">Video Call (Online)</SelectItem>
+                          <SelectItem value="in-person">In-Person (Gujarat)</SelectItem>
+                          <SelectItem value="phone-call">Phone Call</SelectItem>
+                          <SelectItem value="no-preference">No Preference</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <Label htmlFor="message" className="font-sans text-sm font-normal" style={{ color: '#0B0F19' }}>Tell Us More About Your Goals</Label>
+                      <Textarea
+                        name="message"
+                        id="message"
+                        placeholder="Share your current challenges, goals, or what you hope to achieve..."
+                        rows={4}
+                        className="rounded-xl border-[#E2E8F0] focus-visible:ring-[#0D9488]"
+                      />
+                    </div>
+
+                    <div className="flex items-start gap-3 pt-2">
+                      <Checkbox id="terms" className="mt-1 flex-shrink-0 border-[#E2E8F0] data-[state=checked]:bg-[#0D9488] data-[state=checked]:border-[#0D9488]" required />
+                      <label htmlFor="terms" className="text-xs font-light leading-normal cursor-pointer" style={{ color: '#0B0F19', opacity: 0.75 }}>
+                        I agree to the{" "}
+                        <Link href="/privacy" className="text-[#0D9488] hover:underline font-normal">
+                          Privacy Policy
+                        </Link>{" "}
+                        and consent to being contacted by The Mind Clarity Studio.
+                      </label>
+                    </div>
+
+                    <Button 
+                      type="submit" 
+                      className="w-full text-base font-medium px-8 py-5 rounded-xl hover:opacity-90 transition-all border-none shadow-md"
+                      style={{ backgroundColor: '#0B0F19', color: '#F8FAFC' }}
+                    >
+                      Book My Consultation
+                      <ArrowUpRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Information Sidebar */}
+            <div className="lg:col-span-5 space-y-6">
+              
+              {/* What to Expect */}
+              <Card className="border border-[#E2E8F0] shadow-sm bg-white rounded-2xl overflow-hidden">
+                <CardHeader className="p-5 pb-3">
+                  <CardTitle className="text-lg font-sans font-normal tracking-tight" style={{ color: '#0B0F19' }}>
+                    What to Expect
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-5 pt-0 space-y-4">
+                  <div className="flex items-start space-x-3.5">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 bg-[#F8FAFC] text-[#0D9488] border border-[#E2E8F0]">
+                      <CheckCircle className="h-4 w-4" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-bold text-gray-900 mb-1">Discovery & Understanding</h3>
-                      <p className="text-gray-600 font-sans text-sm">
-                        We’ll explore your goals, challenges, and aspirations in a supportive environment.
+                      <h3 className="font-sans text-sm font-normal mb-0.5" style={{ color: '#0B0F19' }}>Discovery & Understanding</h3>
+                      <p className="font-light text-xs leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
+                        We’ll explore your goals, challenges, and aspirations in a supportive, zero-judgment environment.
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <CheckCircle className="h-5 w-5 text-cyan-600" />
+                  <div className="flex items-start space-x-3.5">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 bg-[#F8FAFC] text-[#0D9488] border border-[#E2E8F0]">
+                      <CheckCircle className="h-4 w-4" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-bold text-gray-900 mb-1">Personalized Guidance</h3>
-                      <p className="text-gray-600 font-sans text-sm">
-                        Receive clear insights and recommendations tailored to your unique journey.
+                      <h3 className="font-sans text-sm font-normal mb-0.5" style={{ color: '#0B0F19' }}>Personalized Guidance</h3>
+                      <p className="font-light text-xs leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
+                        Receive clear insights and frameworks tailored directly to your unique timeline and personal journey.
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <CheckCircle className="h-5 w-5 text-cyan-600" />
+                  <div className="flex items-start space-x-3.5">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 bg-[#F8FAFC] text-[#0D9488] border border-[#E2E8F0]">
+                      <CheckCircle className="h-4 w-4" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-bold text-gray-900 mb-1">No Obligation</h3>
-                      <p className="text-gray-600 font-sans text-sm">
-                        The discovery call is completely free with no commitment required.
+                      <h3 className="font-sans text-sm font-normal mb-0.5" style={{ color: '#0B0F19' }}>No Obligation</h3>
+                      <p className="font-light text-xs leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
+                        The initial discovery session is completely confidential with no dynamic commitments required.
                       </p>
                     </div>
                   </div>
@@ -239,204 +256,63 @@ export default function ConsultationPage() {
               </Card>
 
               {/* Contact Information */}
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-serif font-bold text-gray-900">Contact Information</CardTitle>
+              <Card className="border border-[#E2E8F0] shadow-sm bg-white rounded-2xl overflow-hidden">
+                <CardHeader className="p-5 pb-3">
+                  <CardTitle className="text-lg font-sans font-normal tracking-tight" style={{ color: '#0B0F19' }}>
+                    Contact Details
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center">
-                      <Phone className="h-5 w-5 text-cyan-600" />
+                <CardContent className="p-5 pt-0 space-y-4">
+                  <div className="flex items-center space-x-3.5">
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-[#F8FAFC] text-[#0B0F19] border border-[#E2E8F0]">
+                      <Phone className="h-4 w-4 text-[#0D9488]" />
                     </div>
                     <div>
-                      <p className="font-serif font-bold text-gray-900">Phone</p>
-                      <p className="text-gray-600 font-sans">+91 79902 02179</p>
+                      <p className="text-xs font-medium uppercase tracking-wider opacity-60" style={{ color: '#0B0F19' }}>Phone</p>
+                      <p className="text-sm font-light" style={{ color: '#0B0F19' }}>+91 79902 02179</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center">
-                      <Mail className="h-5 w-5 text-cyan-600" />
+                  <div className="flex items-center space-x-3.5">
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-[#F8FAFC] text-[#0B0F19] border border-[#E2E8F0]">
+                      <Mail className="h-4 w-4 text-[#0D9488]" />
                     </div>
                     <div>
-                      <p className="font-serif font-bold text-gray-900">Email</p>
-                      <p className="text-gray-600 font-sans">contact@themindclaritystudio.com</p>
+                      <p className="text-xs font-medium uppercase tracking-wider opacity-60" style={{ color: '#0B0F19' }}>Email</p>
+                      <p className="text-sm font-light break-all" style={{ color: '#0B0F19' }}>contact@themindclaritystudio.com</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center">
-                      <MapPin className="h-5 w-5 text-cyan-600" />
+                  <div className="flex items-start space-x-3.5">
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-[#F8FAFC] text-[#0B0F19] border border-[#E2E8F0] mt-0.5">
+                      <MapPin className="h-4 w-4 text-[#0D9488]" />
                     </div>
                     <div>
-                      <p className="font-serif font-bold text-gray-900">Location</p>
-                      <p className="text-gray-600 font-sans">E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
+                      <p className="text-xs font-medium uppercase tracking-wider opacity-60" style={{ color: '#0B0F19' }}>Location</p>
+                      <p className="text-sm font-light leading-relaxed" style={{ color: '#0B0F19' }}>
+                        E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015
+                      </p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center">
-                      <Clock className="h-5 w-5 text-cyan-600" />
+                  <div className="flex items-center space-x-3.5">
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-[#F8FAFC] text-[#0B0F19] border border-[#E2E8F0]">
+                      <Clock className="h-4 w-4 text-[#0D9488]" />
                     </div>
                     <div>
-                      <p className="font-serif font-bold text-gray-900">Hours</p>
-                      <p className="text-gray-600 font-sans">Mon-Fri: 9 AM - 7 PM</p>
+                      <p className="text-xs font-medium uppercase tracking-wider opacity-60" style={{ color: '#0B0F19' }}>Studio Hours</p>
+                      <p className="text-sm font-light" style={{ color: '#0B0F19' }}>Mon - Fri: 9 AM - 7 PM</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Quick Stats */}
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-cyan-50 to-amber-50">
-                <CardContent className="pt-6">
-                  <div className="text-center space-y-4">
-                    <TrendingUp className="h-12 w-12 text-cyan-600 mx-auto" />
-                    <h3 className="text-xl font-serif font-bold text-gray-900">Our Impact</h3>
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">4+</div>
-                        <div className="text-sm text-gray-600 font-sans">Years Experience</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">100+</div>
-                        <div className="text-sm text-gray-600 font-sans">Lives Impacted</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">10+</div>
-                        <div className="text-sm text-gray-600 font-sans">Research Contributions</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-serif font-black text-cyan-600">75+</div>
-                        <div className="text-sm text-gray-600 font-sans">Workshops Delivered</div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              {/* Soft Insight Card */}
+              
+
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-black text-gray-900 mb-4">Consultation FAQs</h2>
-            <p className="text-lg text-gray-600 font-sans">Common questions about our discovery calls.</p>
-          </div>
-          <div className="space-y-6">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">How long is the consultation?</h3>
-                <p className="text-gray-600 font-sans">
-                  Discovery calls typically last 45-60 minutes, providing enough time to understand your needs and explore how we can support you.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">What should I prepare before the call?</h3>
-                <p className="text-gray-600 font-sans">
-                  Just come as you are. It helps to reflect on your current challenges and what you hope to achieve through coaching or mentorship.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">Is there any cost for the consultation?</h3>
-                <p className="text-gray-600 font-sans">
-                  The initial discovery call is completely free and comes with no obligation.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">What happens after the consultation?</h3>
-                <p className="text-gray-600 font-sans">
-                  We’ll discuss the best way forward — whether it’s a coaching program, mentorship, workshop, or customized support plan.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-            <div className="flex flex-col items-start">
-              <Link href="/" className="mb-6">
-                <Image
-                  src="/images/logo.png"
-                  alt="The Mind Clarity Studio"
-                  width={320}
-                  height={120}
-                  priority
-                  className="h-20 md:h-24 w-auto object-contain"
-                />
-              </Link>
-              <p className="max-w-xs text-gray-400 text-lg leading-relaxed font-sans">
-                For Stronger Minds, Think Lavina.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-xl font-bold text-white mb-6">Services</h4>
-              <ul className="space-y-3 text-gray-400 font-sans">
-                <li>Psychological Coaching</li>
-                <li>Career Guidance &amp; Mentorship</li>
-                <li>Research &amp; Academic Consulting</li>
-                <li>Workshops &amp; Training</li>
-                <li>Personal Development Programs</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-xl font-bold text-white mb-6">Company</h4>
-              <ul className="space-y-3 text-gray-400 font-sans">
-                <li><Link href="/about" className="hover:text-cyan-400 transition-colors">About Us</Link></li>
-                <li><Link href="/services" className="hover:text-cyan-400 transition-colors">Services</Link></li>
-                <li><Link href="/testimonials" className="hover:text-cyan-400 transition-colors">Testimonials</Link></li>
-                <li><Link href="/pricing" className="hover:text-cyan-400 transition-colors">Pricing</Link></li>
-                <li><Link href="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
-              <div className="space-y-3 text-gray-400 font-sans">
-                <p>
-                  <a href="mailto:contact@themindclaritystudio.com" className="hover:text-cyan-400 transition-colors">
-                    contact@themindclaritystudio.com
-                  </a>
-                </p>
-                <p>+91 79902 02179</p>
-                <p>E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
-              </div>
-
-              <div className="mt-8">
-                <h5 className="text-white font-medium mb-3">Follow Us</h5>
-                <div className="mt-6 flex items-center gap-5">
-                  <a href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
-                    <FaLinkedin size={24} />
-                  </a>
-                  <a href="https://www.instagram.com/lavina_bhambhani/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
-                    <FaInstagram size={24} />
-                  </a>
-                  <a href="https://www.facebook.com/lavina.bhambhani.77" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110">
-                    <FaFacebook size={24} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-16 pt-8 text-center">
-            <p className="text-gray-400 font-sans">
-              © 2026 The Mind Clarity Studio. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
-  )
+  );
 }

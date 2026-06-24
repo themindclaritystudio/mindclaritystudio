@@ -1,30 +1,29 @@
+"use client"
+
+import type React from "react"
 import Navigation from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, Quote, TrendingUp, Shield, Users,ArrowRight } from "lucide-react"
+import { Star, Quote, TrendingUp, Shield, Users, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
-import Footer from "@/components/footer";
-
-import {
-  FaLinkedin,
-  FaInstagram,
-  FaFacebook,
-} from "react-icons/fa"
-import Image from "next/image"
+import Footer from "@/components/footer"
 
 export default function TestimonialsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen antialiased selection:bg-[#0D9488] selection:text-white" style={{ backgroundColor: '#F8FAFC' }}>
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+      <section className="pt-20 pb-12 md:pt-24 md:pb-20 relative bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-serif font-black text-gray-900 mb-6">
-              Real <span className="text-cyan-600">Transformations</span>
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="font-sans font-normal tracking-tight text-4xl md:text-6xl leading-tight mb-6 text-balance" style={{ color: '#0B0F19' }}>
+              Real{" "}
+              <span className="font-serif italic font-light text-[#0D9488] inline-block">
+                Transformations
+              </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto font-sans">
+            <p className="text-base md:text-xl max-w-3xl mx-auto font-light leading-relaxed text-balance" style={{ color: '#0B0F19', opacity: 0.75 }}>
               Hear from individuals whose lives have changed through greater clarity, emotional resilience, 
               career breakthroughs, and personal growth with The Mind Clarity Studio.
             </p>
@@ -33,284 +32,169 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Featured Testimonials */}
-      <section className="py-12 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <Card className="border-0 shadow-xl bg-gradient-to-br from-cyan-50 to-white">
-             <CardContent className="p-8">
-  <Quote className="h-12 w-12 text-cyan-600 mb-6" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Testimonial 1 */}
+            <Card className="border border-[#E2E8F0] bg-white rounded-2xl shadow-sm p-6 md:p-8 flex flex-col justify-between group">
+              <CardContent className="p-0 space-y-6">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488] border border-[#E2E8F0]">
+                    <Quote className="h-4 w-4" />
+                  </div>
+                  <div className="flex items-center space-x-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-[#0D9488] fill-current" />
+                    ))}
+                  </div>
+                </div>
 
-  <div className="flex items-center mb-4">
-    {[...Array(5)].map((_, i) => (
-      <Star key={i} className="h-6 w-6 text-amber-500 fill-current" />
-    ))}
-  </div>
+                <p className="text-sm md:text-base font-light leading-relaxed italic" style={{ color: '#0B0F19', opacity: 0.85 }}>
+                  "I have been working with Lavina for more than one and a half years and I am truly delighted with the results she has helped me achieve. Her unique approach and guidance have brought me remarkable clarity and growth. 
+                  <br /><br />Her workshops are engaging, insightful, and highly impactful, while her one-on-one sessions have supported me through both professional and personal challenges. I wholeheartedly recommend her services to anyone seeking deeper self-understanding, confidence, and clarity in life."
+                </p>
 
-  <p className="text-lg text-gray-700 font-sans mb-6 italic leading-relaxed">
-    "I have been working with Lavina for more than one and a half years and I am truly delighted with the results she has helped me achieve. Her unique approach and guidance have brought me remarkable clarity and growth. Her workshops are engaging, insightful, and highly impactful, while her one-on-one sessions have supported me through both professional and personal challenges. I wholeheartedly recommend her services to anyone seeking deeper self-understanding, confidence, and clarity in life."
-  </p>
-
-  <div className="flex items-center">
-    <div className="w-14 h-14 rounded-full bg-cyan-100 flex items-center justify-center mr-4">
-      <span className="font-bold text-cyan-600 text-lg">AS</span>
-    </div>
-
-    <div>
-      <div className="font-serif font-bold text-gray-900 text-lg">
-        Mr. Anuj Sharma
-      </div>
-      <div className="text-cyan-600 font-sans">
-        Client & Workshop Participant
-      </div>
-    </div>
-  </div>
-</CardContent>
+                <div className="flex items-center pt-4 border-t border-[#E2E8F0]">
+                  <div className="w-11 h-11 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-center mr-3.5 flex-shrink-0 font-sans text-xs font-medium text-[#0D9488]">
+                    AS
+                  </div>
+                  <div>
+                    <div className="text-sm md:text-base font-sans font-normal tracking-tight" style={{ color: '#0B0F19' }}>
+                      Mr. Anuj Sharma
+                    </div>
+                    <div className="text-xs font-light mt-0.5" style={{ color: '#0B0F19', opacity: 0.6 }}>
+                      Client & Workshop Participant
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-xl bg-gradient-to-br from-amber-50 to-white">
-             <CardContent className="p-8">
-  <Quote className="h-12 w-12 text-amber-600 mb-6" />
+            {/* Testimonial 2 */}
+            <Card className="border border-[#E2E8F0] bg-white rounded-2xl shadow-sm p-6 md:p-8 flex flex-col justify-between group">
+              <CardContent className="p-0 space-y-6">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488] border border-[#E2E8F0]">
+                    <Quote className="h-4 w-4" />
+                  </div>
+                  <div className="flex items-center space-x-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-[#0D9488] fill-current" />
+                    ))}
+                  </div>
+                </div>
 
-  <div className="flex items-center mb-4">
-    {[...Array(5)].map((_, i) => (
-      <Star key={i} className="h-6 w-6 text-amber-500 fill-current" />
-    ))}
-  </div>
+                <p className="text-sm md:text-base font-light leading-relaxed italic" style={{ color: '#0B0F19', opacity: 0.85 }}>
+                  "At one stage in life, I felt stuck, confused about my goals, and constantly wondered where my time was going. After taking a few sessions with Lavina at The Mind Clarity Studio and sincerely following her guidance, I gradually gained focus and direction. The most amazing part was that I didn't even realize when I started achieving goals that once seemed so difficult.
+                  <br /><br />
+                  Lavina has a unique way of helping you understand yourself, prioritize what truly matters, and take consistent action. If you're looking for clarity in your personal or professional life, I highly recommend her sessions."
+                </p>
 
-  <p className="text-lg text-gray-700 font-sans mb-6 italic leading-relaxed">
-    "At one stage in life, I felt stuck, confused about my goals, and constantly
-    wondered where my time was going. After taking a few sessions with Lavina at
-    The Mind Clarity Studio and sincerely following her guidance, I gradually
-    gained focus and direction. The most amazing part was that I didn't even
-    realize when I started achieving goals that once seemed so difficult.
-    <br /><br />
-    Lavina has a unique way of helping you understand yourself, prioritize what
-    truly matters, and take consistent action. If you're looking for clarity in
-    your personal or professional life, I highly recommend her sessions."
-  </p>
-
-  <div className="flex items-center">
-    <div className="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mr-4">
-      <span className="font-bold text-amber-600 text-lg">NN</span>
-    </div>
-
-    <div>
-      <div className="font-serif font-bold text-gray-900 text-lg">
-        Neeta Nihalani
-      </div>
-      <div className="text-amber-600 font-sans">
-       Mind Coaching Client
-      </div>
-    </div>
-  </div>
-</CardContent>
+                <div className="flex items-center pt-4 border-t border-[#E2E8F0]">
+                  <div className="w-11 h-11 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-center mr-3.5 flex-shrink-0 font-sans text-xs font-medium text-[#0D9488]">
+                    NN
+                  </div>
+                  <div>
+                    <div className="text-sm md:text-base font-sans font-normal tracking-tight" style={{ color: '#0B0F19' }}>
+                      Neeta Nihalani
+                    </div>
+                    <div className="text-xs font-light mt-0.5" style={{ color: '#0B0F19', opacity: 0.6 }}>
+                      Mind Coaching Client
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
             </Card>
+
           </div>
         </div>
       </section>
 
-      {/* All Testimonials Grid */}
-      {/* <section className="py-20 bg-gray-50">
+      {/* Success Metrics / Impact */}
+      <section id="impact-metrics" className="py-12 md:py-20 border-t border-[#E2E8F0]" style={{ backgroundColor: '#F8FAFC' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">More Success Stories</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
-              Real people. Real growth. Real results.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "The career guidance sessions helped me transition from a stagnant job to a leadership role that aligns 
-                  with my values. I finally feel fulfilled and purposeful in my work."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-2.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Arjun Rao</div>
-                    <div className="text-sm text-gray-600 font-sans">Software Engineer</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "I learned how to manage anxiety and build emotional resilience. The tools and techniques I gained 
-                  have improved every area of my life — relationships, work, and self-confidence."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-3.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Priya Malhotra</div>
-                    <div className="text-sm text-gray-600 font-sans">Homemaker & Entrepreneur</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "The workshop on leadership and communication helped me step up as a team leader. My colleagues have 
-                  noticed a positive change in my approach and confidence."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-5.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Rahul Sharma</div>
-                    <div className="text-sm text-gray-600 font-sans">Team Lead, IT Company</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Additional Testimonials */}
-            {/* <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "As a student, the academic and research mentorship helped me clarify my thesis direction and 
-                  significantly improve my writing and presentation skills."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-6.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Ananya Patel</div>
-                    <div className="text-sm text-gray-600 font-sans">M.Sc. Student</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "I regained control over my emotions and built healthier relationships. The journey has been life-changing."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-7.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Siddharth Rao</div>
-                    <div className="text-sm text-gray-600 font-sans">Business Owner</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 font-sans mb-4 italic">
-                  "The personal development program helped me discover my true potential and set meaningful goals for the future."
-                </p>
-                <div className="flex items-center">
-                  <img src="/images/avatar/avatar-8.jpg" alt="Client" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-serif font-bold text-gray-900">Kiran Desai</div>
-                    <div className="text-sm text-gray-600 font-sans">Corporate Professional</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div> */}
-      {/* </section> */} 
-
-      {/* Success Metrics */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-black text-gray-900 mb-4">Our Impact</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
+          <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto space-y-4">
+            <h2 className="text-2xl md:text-4xl font-sans font-normal tracking-tight" style={{ color: '#0B0F19' }}>
+              Our Impact
+            </h2>
+            <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
               Lives transformed through clarity, growth, and resilience.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg text-center">
-              <CardContent className="pt-8 pb-8">
-                <TrendingUp className="h-16 w-16 text-cyan-600 mx-auto mb-4" />
-                <div className="text-4xl font-serif font-black text-cyan-600 mb-2">92%</div>
-                <div className="text-lg font-serif font-bold text-gray-900 mb-2">Reported Significant Growth</div>
-                <div className="text-gray-600 font-sans">
-                  In self-awareness and emotional well-being
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="border border-[#E2E8F0] shadow-sm bg-white rounded-2xl p-6 text-center group">
+              <CardContent className="p-0 space-y-4 pt-4">
+                <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center mx-auto text-[#0D9488] border border-[#E2E8F0] group-hover:scale-105 transition-transform">
+                  <TrendingUp className="h-5 w-5" />
                 </div>
+                <div>
+                  <div className="text-3xl md:text-4xl font-sans font-normal tracking-tight text-[#0D9488]">92%</div>
+                  <h3 className="text-base font-sans font-normal tracking-tight mt-1" style={{ color: '#0B0F19' }}>Reported Significant Growth</h3>
+                </div>
+                <p className="text-xs md:text-sm font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.65 }}>
+                  In self-awareness and emotional well-being.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg text-center">
-              <CardContent className="pt-8 pb-8">
-                <Shield className="h-16 w-16 text-amber-600 mx-auto mb-4" />
-                <div className="text-4xl font-serif font-black text-amber-600 mb-2">98%</div>
-                <div className="text-lg font-serif font-bold text-gray-900 mb-2">Client Satisfaction</div>
-                <div className="text-gray-600 font-sans">
-                  Would highly recommend our services
+            <Card className="border border-[#E2E8F0] shadow-sm bg-white rounded-2xl p-6 text-center group">
+              <CardContent className="p-0 space-y-4 pt-4">
+                <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center mx-auto text-[#0D9488] border border-[#E2E8F0] group-hover:scale-105 transition-transform">
+                  <Shield className="h-5 w-5" />
                 </div>
+                <div>
+                  <div className="text-3xl md:text-4xl font-sans font-normal tracking-tight text-[#0D9488]">98%</div>
+                  <h3 className="text-base font-sans font-normal tracking-tight mt-1" style={{ color: '#0B0F19' }}>Client Satisfaction</h3>
+                </div>
+                <p className="text-xs md:text-sm font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.65 }}>
+                  Would highly recommend our studio services.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg text-center">
-              <CardContent className="pt-8 pb-8">
-                <Users className="h-16 w-16 text-cyan-600 mx-auto mb-4" />
-                <div className="text-4xl font-serif font-black text-cyan-600 mb-2">100+</div>
-                <div className="text-lg font-serif font-bold text-gray-900 mb-2">Lives Impacted</div>
-                <div className="text-gray-600 font-sans">
-                  Through coaching, mentorship, and workshops
+            <Card className="border border-[#E2E8F0] shadow-sm bg-white rounded-2xl p-6 text-center group">
+              <CardContent className="p-0 space-y-4 pt-4">
+                <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center mx-auto text-[#0D9488] border border-[#E2E8F0] group-hover:scale-105 transition-transform">
+                  <Users className="h-5 w-5" />
                 </div>
+                <div>
+                  <div className="text-3xl md:text-4xl font-sans font-normal tracking-tight text-[#0D9488]">100+</div>
+                  <h3 className="text-base font-sans font-normal tracking-tight mt-1" style={{ color: '#0B0F19' }}>Lives Impacted</h3>
+                </div>
+                <p className="text-xs md:text-sm font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.65 }}>
+                  Through coaching, mentorship, and workshops.
+                </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-cyan-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-serif font-black text-white mb-4">Ready to Write Your Own Success Story?</h2>
-          <p className="text-xl text-cyan-100 mb-8 font-sans">
+      {/* Premium CTA Section */}
+      <section className="py-16 bg-[#0B0F19] text-center text-[#F8FAFC]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <h2 className="text-3xl md:text-4xl font-sans font-normal tracking-tight text-balance">
+            Ready to Write Your Own{" "}
+            <span className="font-serif italic font-light text-[#0D9488]">Success Story?</span>
+          </h2>
+          <p className="text-sm md:text-base font-light max-w-xl mx-auto opacity-80 leading-relaxed text-balance">
             Begin your journey toward clarity, confidence, and meaningful transformation today.
           </p>
-          <Link href="/consultation">
-            <Button size="lg" className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 text-lg font-sans">
-              Book Your Discovery Call
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+          <div className="pt-2">
+            <Link href="/consultation">
+              <Button size="lg" className="bg-[#0D9488] text-white rounded-xl text-sm font-medium px-6 py-5 border-none transition-all shadow-sm">
+                Book Your Discovery Call
+                <ArrowUpRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Footer */}
-   <Footer />
+      {/* Premium Minimal Footer */}
+      <Footer />
     </div>
   )
 }

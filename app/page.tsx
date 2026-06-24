@@ -342,7 +342,7 @@ export default function HomePage() {
               </CardContent>
 
               <div className="flex items-center gap-4 pt-4 border-t border-[#E2E8F0]">
-                <div className="w-10 h-10 rounded-xl text-[#F8FAFC] flex items-center justify-center font-medium text-sm flex-shrink-0" style={{ backgroundColor: '#0B0F19' }}>
+                <div className="w-10 h-10 rounded-xl text-[#F8FAFC] flex items-center justify-center font-medium text-sm flex-shrink-0" style={{ backgroundColor: '#0D9488' }}>
                   AS
                 </div>
                 <div>
@@ -494,7 +494,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-12 md:py-16 bg-white border-t border-[#E2E8F0]">
+      <section className="py-10 md:py-16 bg-white border-t border-[#E2E8F0]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-14">
             <span className="text-xs font-bold tracking-widest uppercase text-[#0D9488] block mb-2">FAQ</span>
