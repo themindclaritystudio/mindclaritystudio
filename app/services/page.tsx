@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Shield, TrendingUp, Users, Calculator, ArrowRight, CheckCircle, Target, PieChart } from "lucide-react"
 import Link from "next/link"
+import Footer from "@/components/footer";
 import {
   FaLinkedin,
   FaInstagram,
@@ -274,134 +275,7 @@ const services = [
       </section>
 
       {/* Footer */}
-    <footer className="bg-gray-900 text-white py-20">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-      
-      {/* Logo & Tagline */}
-      <div className="flex flex-col items-start">
-        <Link href="/" className="mb-6">
-          <Image
-            src="/images/logo.png"
-            alt="The Mind Clarity Studio"
-            width={320}
-            height={120}
-            priority
-            className="h-20 md:h-24 w-auto object-contain"
-          />
-        </Link>
-        <p className="max-w-xs text-gray-400 text-lg leading-relaxed font-sans">
-          For Stronger Minds, Think Lavina.
-        </p>
-      </div>
-
-      {/* Services */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Services</h4>
-        <ul className="space-y-3 text-gray-400 font-sans">
-          <li>Psychological Coaching</li>
-          <li>Career Guidance &amp; Mentorship</li>
-          <li>Research &amp; Academic Consulting</li>
-          <li>Workshops &amp; Training</li>
-          <li>Personal Development Programs</li>
-        </ul>
-      </div>
-
-      {/* Company */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Company</h4>
-        <ul className="space-y-3 text-gray-400 font-sans">
-          <li>
-            <Link href="/about" className="hover:text-cyan-400 transition-colors">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link href="/services" className="hover:text-cyan-400 transition-colors">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="/testimonials" className="hover:text-cyan-400 transition-colors">
-              Testimonials
-            </Link>
-          </li>
-          <li>
-            <Link href="/pricing" className="hover:text-cyan-400 transition-colors">
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
-
-      {/* Contact Info */}
-      <div>
-        <h4 className="text-xl font-bold text-white mb-6">Contact Info</h4>
-        <div className="space-y-3 text-gray-400 font-sans">
-          <p>
-            {" "}
-            <a
-              href="mailto:contact@themindclaritystudio.com"
-              className="hover:text-cyan-400 transition-colors"
-            >
-              contact@themindclaritystudio.com
-            </a>
-          </p>
-          <p> +91 79902 02179</p>
-          <p> E-1206, PNTC (Times of India Press Road), Vejalpur, Ahmedabad - 380015</p>
-        </div>
-
-        <div className="mt-8">
-          <h5 className="text-white font-medium mb-3">Follow Us</h5>
-          
-          <div className="mt-6 flex items-center gap-5">
-            <a
-              href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaLinkedin size={24} />
-            </a>
-
-            <a
-              href="https://www.instagram.com/lavina_bhambhani/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaInstagram size={24} />
-            </a>
-
-            <a
-              href="https://www.facebook.com/lavina.bhambhani.77"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all hover:scale-110"
-            >
-              <FaFacebook size={24} />
-            </a>
-
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-
-    {/* Copyright */}
-    <div className="border-t border-gray-800 mt-16 pt-8 text-center">
-      <p className="text-gray-400 font-sans">
-        © 2026 The Mind Clarity Studio. All Rights Reserved.
-      </p>
-    </div>
-  </div>
-</footer>
+   <Footer />
     </div>
   )
 }
