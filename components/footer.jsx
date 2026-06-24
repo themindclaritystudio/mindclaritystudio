@@ -26,23 +26,18 @@ const Footer = () => {
                 className="h-20 md:h-24 w-auto object-contain"
               />
             </Link>
-            <p 
-              className="max-w-xs text-lg leading-relaxed font-sans"
-              style={{ color: '#2F3437' }}
-            >
-              For Stronger Minds, Think Lavina.
-            </p>
+            
           </div>
 
           {/* Services */}
           <div>
             <h4 
-              className="text-xl font-bold mb-6"
+              className="text-sm font-semibold tracking-wider uppercase mb-6"
               style={{ color: '#6E8F88' }}
             >
               Services
             </h4>
-            <ul className="space-y-3 font-sans" style={{ color: '#2F3437' }}>
+            <ul className="space-y-3 font-sans text-sm font-light" style={{ color: '#2F3437' }}>
               <li className="hover:text-[#6E8F88] transition-colors cursor-pointer">
                 Mind Coaching
               </li>
@@ -58,12 +53,12 @@ const Footer = () => {
           {/* Company */}
           <div>
             <h4 
-              className="text-xl font-bold mb-6"
+              className="text-sm font-semibold tracking-wider uppercase mb-6"
               style={{ color: '#6E8F88' }}
             >
               Company
             </h4>
-            <ul className="space-y-3 font-sans" style={{ color: '#2F3437' }}>
+            <ul className="space-y-3 font-sans text-sm font-light" style={{ color: '#2F3437' }}>
               <li>
                 <Link href="/about" className="hover:text-[#6E8F88] transition-colors">
                   About Us
@@ -95,35 +90,35 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 
-              className="text-xl font-bold mb-6"
+              className="text-sm font-semibold tracking-wider uppercase mb-6"
               style={{ color: '#6E8F88' }}
             >
               Contact Info
             </h4>
-            <div className="space-y-3 font-sans" style={{ color: '#2F3437' }}>
+            <div className="space-y-3 font-sans text-sm font-light leading-relaxed" style={{ color: '#2F3437' }}>
               <p>
                 <a
                   href="mailto:contact@themindclaritystudio.com"
-                  className="hover:text-[#6E8F88] transition-colors"
+                  className="hover:text-[#6E8F88] transition-colors break-all"
                 >
                   contact@themindclaritystudio.com
                 </a>
               </p>
               <p>+91 79902 02179</p>
-              <p className="leading-relaxed">
+              <p className="leading-relaxed text-xs">
                 E-1206, PNTC (Times of India Press Road),<br />
                 Vejalpur, Ahmedabad - 380015
               </p>
             </div>
 
-            <div className="mt-10">
+            <div className="mt-8">
               <h5 
-                className="font-medium mb-4"
+                className="text-xs font-semibold tracking-wider uppercase mb-4"
                 style={{ color: '#6E8F88' }}
               >
                 Follow Us
               </h5>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-5">
                 <a
                   href="https://www.linkedin.com/in/lavina-pratap-bhambhani-0176051a9/"
                   target="_blank"
@@ -131,7 +126,7 @@ const Footer = () => {
                   className="hover:text-[#6E8F88] transition-all hover:scale-110"
                   style={{ color: '#2F3437' }}
                 >
-                  <FaLinkedin size={26} />
+                  <FaLinkedin size={22} />
                 </a>
 
                 <a
@@ -141,7 +136,7 @@ const Footer = () => {
                   className="hover:text-[#6E8F88] transition-all hover:scale-110"
                   style={{ color: '#2F3437' }}
                 >
-                  <FaInstagram size={26} />
+                  <FaInstagram size={22} />
                 </a>
 
                 <a
@@ -151,7 +146,7 @@ const Footer = () => {
                   className="hover:text-[#6E8F88] transition-all hover:scale-110"
                   style={{ color: '#2F3437' }}
                 >
-                  <FaFacebook size={26} />
+                  <FaFacebook size={22} />
                 </a>
               </div>
             </div>
@@ -164,7 +159,7 @@ const Footer = () => {
           style={{ borderColor: '#EAF3F0' }}
         >
           <p 
-            className="font-sans text-sm"
+            className="font-sans text-xs font-light tracking-wide"
             style={{ color: '#6E8F88' }}
           >
             © 2026 The Mind Clarity Studio. All Rights Reserved.
