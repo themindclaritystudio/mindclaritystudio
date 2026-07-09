@@ -51,8 +51,8 @@ export default function CoursesPage() {
               {/* Core Action Button Group */}
               <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
                 <a 
-                //   href="/brochure.pdf" 
-                //   download="TMCS_Programs_Brochure.pdf"
+                  href="/brochure.pdf" 
+                  download="TMCS_Programs_Brochure.pdf"
                   className="w-full sm:w-auto"
                 >
                   <Button className="w-full bg-[#0B0F19] hover:bg-[#111827] text-white rounded-xl text-sm font-medium px-6 py-5 border-none transition-all shadow-sm flex items-center justify-center gap-2">
@@ -329,8 +329,8 @@ export default function CoursesPage() {
               </Button>
             </Link>
             <a 
-            //   href="/brochure.pdf" 
-            //   download="TMCS_Programs_Brochure.pdf"
+              href="/brochure.pdf" 
+              download="TMCS_Programs_Brochure.pdf"
               className="w-full sm:w-auto"
             >
               <Button size="lg" className="w-full bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl text-sm font-medium px-6 py-5 transition-all shadow-sm flex items-center justify-center gap-2">
