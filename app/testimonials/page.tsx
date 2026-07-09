@@ -14,7 +14,90 @@ export default function TestimonialsPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-12 md:pt-24 md:pb-20 relative bg-white border-b border-[#E2E8F0]">
+   
+{/* Intern Testimonials Hero */}
+<section className="pt-20 pb-16 md:pt-24 md:pb-20 bg-white border-b border-[#E2E8F0]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div className="grid lg:grid-cols-2 gap-14 items-center">
+
+      {/* Left */}
+      <div>
+            <span className="text-xs font-bold tracking-widest uppercase text-[#0D9488] block mb-2">First Internship Cohort</span>
+
+      
+
+        <h1 className="font-sans tracking-tight text-4xl md:text-6xl leading-tight text-[#0B0F19]">
+
+          Hear From Our{" "}
+
+          <span className="font-serif italic font-light text-[#0D9488]">
+            First Batch
+          </span>
+
+          {" "}of Interns
+
+        </h1>
+
+        <p
+          className="mt-6 text-lg font-light leading-relaxed max-w-xl"
+          style={{ color: "#0B0F19", opacity: .75 }}
+        >
+          Our internship goes beyond learning skills. It develops
+          confidence, professional thinking, research ability, and real
+          workplace experience through mentorship and hands-on projects.
+        </p>
+
+      
+       <div className="flex flex-wrap gap-8 mt-10">
+
+
+  <div>
+    <div className="text-3xl font-normal text-[#0D9488]">50+</div>
+    <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: 0.65 }}>
+      Mentorship Hours
+    </div>
+  </div>
+    <div> <div className="text-3xl font-normal text-[#0D9488]">5★</div> <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: .65 }} > Mentor Rating </div> </div>
+
+
+  <div>
+    <div className="text-3xl font-normal text-[#0D9488]">100%</div>
+    <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: 0.65 }}>
+      Practical Learning
+    </div>
+  </div>
+
+</div>
+
+      </div>
+
+      {/* Featured Video */}
+
+      <div>
+
+        <div className="rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-sm bg-[#F8FAFC]">
+
+          <div className="aspect-video">
+
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Intern Testimonial"
+              allowFullScreen
+            />
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+   <section className="pt-20 pb-12 md:pt-24 md:pb-20 relative bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="font-sans font-normal tracking-tight text-4xl md:text-6xl leading-tight mb-6 text-balance" style={{ color: '#0B0F19' }}>
@@ -30,7 +113,6 @@ export default function TestimonialsPage() {
           </div>
         </div>
       </section>
-
       {/* Featured Testimonials */}
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
