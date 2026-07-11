@@ -81,6 +81,11 @@ const Footer = () => {
                   Courses
                 </Link>
               </li>
+               <li>
+                <Link href="/gallery" className="hover:text-[#0D9488] transition-colors opacity-85 hover:opacity-100">
+                  Gallery
+                </Link>
+              </li>
               <li>
                 <Link href="/contact" className="hover:text-[#0D9488] transition-colors opacity-85 hover:opacity-100">
                   Contact
