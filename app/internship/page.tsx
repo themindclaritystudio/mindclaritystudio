@@ -120,7 +120,7 @@ export default function InternshipPage() {
       className="space-y-5"
     >
       {/* FormSubmit Configuration Settings */}
-      <input type="hidden" name="_subject" value="New Cohort Enrollment & Internship Request" />
+      <input type="hidden" name="_subject" value="New Internship Application" />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
 
