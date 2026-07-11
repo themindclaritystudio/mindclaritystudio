@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -135,7 +135,15 @@ const Footer = () => {
                 >
                   <FaLinkedin size={20} />
                 </a>
-
+<a
+                  href="https://www.youtube.com/@TheMindClarityStudioByLavina"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#0D9488] transition-all hover:scale-105"
+                  style={{ color: '#0B0F19', opacity: 0.8 }}
+                >
+                  <FaYoutube size={20} />
+                </a>
                 <a
                   href="https://www.instagram.com/lavina_bhambhani/"
                   target="_blank"
@@ -155,6 +163,7 @@ const Footer = () => {
                 >
                   <FaFacebook size={20} />
                 </a>
+                
               </div>
             </div>
           </div>
