@@ -2,17 +2,8 @@
 
 import type React from "react"
 import Navigation from "@/components/navigation"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { 
-  Play, 
-  Image as ImageIcon, 
-  ArrowUpRight, 
-  Download,
-  Calendar,
-  MapPin
-} from "lucide-react"
-import Link from "next/link"
+import { Card } from "@/components/ui/card"
+import { MapPin } from "lucide-react"
 import Footer from "@/components/footer"
 import Image from "next/image"
 
@@ -25,7 +16,7 @@ export default function OfficeGalleryPage() {
       <section className="pt-20 pb-16 md:pt-24 md:pb-20 bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
-            {/* Left */}
+            {/* Left Column */}
             <div>
               <span className="text-xs font-bold tracking-widest uppercase text-[#0D9488] block mb-2">Our Studio</span>
               <h1 className="font-sans tracking-tight text-4xl md:text-6xl leading-tight text-[#0B0F19]">
@@ -41,26 +32,23 @@ export default function OfficeGalleryPage() {
                 A serene, thoughtfully designed space where clarity is cultivated. 
                 Our studio is crafted to support deep reflection, meaningful conversations, and transformative growth.
               </p>
-
-            
             </div>
 
-            {/* Right Visual */}
+            {/* Right Visual Column */}
             <div className="relative">
-              <div className="aspect-video rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-xl relative">
+              <div className="aspect-video w-full rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-xl relative bg-slate-50">
                 <Image 
-                  src="/images/hero-studio.jpeg" 
+                  src="/images/logo.png" 
                   alt="The Mind Clarity Studio Interior" 
                   fill 
-                  className="object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 600px"
+                  /* Optimized for a logo: contained nicely with padding so it never distorts */
+                  className="object-contain p-6" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-white">
-                  <div className="flex items-center gap-2 text-sm">
-                    <MapPin className="h-4 w-4" />
-                    <span>Ahmedabad • India</span>
-                  </div>
-                  <p className="text-xl font-light mt-1">Where Clarity Takes Shape</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-6 left-6 text-[#0B0F19] md:text-white">
+                 
                 </div>
               </div>
             </div>
@@ -78,7 +66,6 @@ export default function OfficeGalleryPage() {
                 Studio Photo Gallery
               </h2>
             </div>
-        
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -88,8 +75,7 @@ export default function OfficeGalleryPage() {
               { src: "/images/stdimg2.jpeg", title: "Resource Library", desc: "Books & research materials" },
               { src: "/images/stdimg4.jpeg", title: "Discussion Lounge", desc: "Intimate group conversations" },
               { src: "/images/stdimg3.jpeg", title: "Work & Reflection Area", desc: "Focused individual space" },
-              { src: "/images/stdimg6.jpeg", title: "Refreshment Corner", desc: "Casual conversations over tea" },
-           
+              { src: "/images/stdimg7.jpeg", title: "Positive Affirmation Wall", desc: "A comforting space filled with motivational messages and daily reminders for mental well-being."}          
             ].map((photo, idx) => (
               <Card 
                 key={idx} 
@@ -110,83 +96,12 @@ export default function OfficeGalleryPage() {
                       <p className="text-sm opacity-90 mt-1">{photo.desc}</p>
                     </div>
                   </div>
-
-                  
                 </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Video Tours Section */}
-      {/* <section className="py-16 md:py-24" style={{ backgroundColor: '#F8FAFC' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 max-w-3xl">
-            <span className="text-xs font-bold tracking-widest uppercase text-[#0D9488]">Walk With Us</span>
-            <h2 className="font-sans font-normal tracking-tight text-3xl md:text-5xl text-[#0B0F19] mt-2">
-              Studio Tours &amp; Highlights
-            </h2>
-            <p className="mt-4 text-lg font-light opacity-75">
-              Experience the calm and intentional atmosphere of The Mind Clarity Studio.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border border-[#E2E8F0] overflow-hidden rounded-3xl group">
-              <div className="relative aspect-video bg-black">
-                <Image 
-                  src="/images/video-thumbnail-1.jpeg" 
-                  alt="Studio Tour" 
-                  fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-700" 
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button 
-                    className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform group-hover:bg-[#0D9488] group-hover:text-white"
-                    onClick={() => alert("Video player will open here")}
-                  >
-                    <Play className="h-8 w-8 ml-0.5" />
-                  </button>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 p-6">
-                  <div className="flex items-center gap-2 text-xs text-white/80">
-                    <Calendar className="h-3 w-3" /> 4K • 6:15
-                  </div>
-                  <h3 className="text-white text-xl font-medium mt-1">Full Studio Tour</h3>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="border border-[#E2E8F0] overflow-hidden rounded-3xl group">
-              <div className="relative aspect-video bg-black">
-                <Image 
-                  src="/images/video-thumbnail-2.jpeg" 
-                  alt="A Day at The Mind Clarity Studio" 
-                  fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-700" 
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button 
-                    className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform group-hover:bg-[#0D9488] group-hover:text-white"
-                    onClick={() => alert("Video player will open here")}
-                  >
-                    <Play className="h-8 w-8 ml-0.5" />
-                  </button>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 p-6">
-                  <div className="flex items-center gap-2 text-xs text-white/80">
-                    <Calendar className="h-3 w-3" /> 4K • 4:50
-                  </div>
-                  <h3 className="text-white text-xl font-medium mt-1">A Day at The Studio</h3>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section> */}
-
-    
 
       <Footer />
     </div>
