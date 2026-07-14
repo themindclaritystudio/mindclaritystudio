@@ -125,115 +125,114 @@ export default function CoursesPage() {
           </div>
 
           <div className="space-y-12">
-            {/* Program 1: Research Methodology Made Easy */}
-            <Card className="border border-[#E2E8F0] bg-white rounded-2xl shadow-sm p-6 md:p-10 group transition-all hover:shadow-md">
-              <CardContent className="p-0 grid lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-5 space-y-4">
-                  <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488] border border-[#E2E8F0]">
-                    <Search className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-2xl font-sans font-normal tracking-tight text-[#0B0F19]">
-                    Research Methodology Made Easy
-                  </h3>
-                  <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
-                    Demystifying academic investigation. Learn to architect credible papers, find high-impact questions, and smoothly navigate the peer-reviewed publishing landscape.
-                  </p>
-                </div>
+  {/* Program 1: Research Methodology Made Easy */}
+  <Card className="border border-[#E2E8F0] bg-white rounded-2xl shadow-sm p-6 md:p-10 group transition-all hover:shadow-md">
+    <CardContent className="p-0 grid lg:grid-cols-12 gap-8 items-start">
+      <div className="lg:col-span-5 space-y-4">
+        <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488] border border-[#E2E8F0]">
+          <Search className="h-5 w-5" />
+        </div>
+        <h3 className="text-2xl font-sans font-normal tracking-tight text-[#0B0F19]">
+          Research Methodology Made Easy
+        </h3>
+        <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
+          Demystifying academic investigation. Learn to architect credible papers, find high-impact questions, and smoothly navigate the peer-reviewed publishing landscape.
+        </p>
+      </div>
 
-                <div className="lg:col-span-7 lg:pl-8 border-t lg:border-t-0 lg:border-l border-[#E2E8F0] pt-6 lg:pt-0">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#0D9488] mb-4">Learning Roadmap & Milestones</h4>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {[
-                      { step: "01", title: "Topic Selection", desc: "Formulating clear, high-impact research questions." },
-                      { step: "02", title: "Literature Review", desc: "Synthesizing existing theories and discovering gaps." },
-                      { step: "03", title: "Research Design", desc: "Structuring robust empirical or theoretical frameworks." },
-                      { step: "04", title: "Data Analysis", desc: "Unlocking metrics, variables, and profound patterns." },
-                      { step: "05", title: "Research Paper Publication", desc: "Polishing drafts and submitting to peer-reviewed journals." }
-                    ].map((item, idx) => (
-                      <div key={idx} className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                        <div className="text-xs font-mono font-bold text-[#0D9488] mb-1">{item.step}</div>
-                        <div className="text-sm font-medium text-[#0B0F19]">{item.title}</div>
-                        <div className="text-xs font-light mt-1 opacity-70">{item.desc}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+      <div className="lg:col-span-7 lg:pl-8 border-t lg:border-t-0 lg:border-l border-[#E2E8F0] pt-6 lg:pt-0">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-[#0D9488] mb-4">Learning Roadmap & Milestones</h4>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            { step: "01", title: "Topic Selection", desc: "Formulating clear, high-impact research questions." },
+            { step: "02", title: "Literature Review", desc: "Synthesizing existing theories and discovering gaps." },
+            { step: "03", title: "Research Design", desc: "Structuring robust empirical or theoretical frameworks." },
+            { step: "04", title: "Data Analysis", desc: "Unlocking metrics, variables, and profound patterns." },
+            { step: "05", title: "Research Paper Publication", desc: "Polishing drafts and submitting to peer-reviewed journals." }
+          ].map((item, idx) => (
+            <div key={idx} className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <div className="text-xs font-mono font-bold text-[#0D9488] mb-1">{item.step}</div>
+              <div className="text-sm font-medium text-[#0B0F19]">{item.title}</div>
+              <div className="text-xs font-light mt-1 opacity-70">{item.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </CardContent>
+  </Card>
 
-            {/* Program 2: Foundation of Counseling (Non-Clinical) */}
-            <Card className="border border-[#E2E8F0] bg-white rounded-2xl shadow-sm p-6 md:p-10 group transition-all hover:shadow-md">
-              <CardContent className="p-0 grid lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-5 space-y-4">
-                  <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488] border border-[#E2E8F0]">
-                    <Heart className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-2xl font-sans font-normal tracking-tight text-[#0B0F19]">
-                    Foundation of Counseling (Non-Clinical)
-                  </h3>
-                  <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
-                    Master interpersonal communication, empathy frameworks, and ethical mentoring loops. Ideal for prospective guides, coaches, team leaders, and peer support facilitators.
-                  </p>
-                </div>
+  {/* Program 2: Foundation of Counseling (Non-Clinical) */}
+  <Card className="border border-[#E2E8F0] bg-white rounded-2xl shadow-sm p-6 md:p-10 group transition-all hover:shadow-md">
+    <CardContent className="p-0 grid lg:grid-cols-12 gap-8 items-start">
+      <div className="lg:col-span-5 space-y-4">
+        <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488] border border-[#E2E8F0]">
+          <Heart className="h-5 w-5" />
+        </div>
+        <h3 className="text-2xl font-sans font-normal tracking-tight text-[#0B0F19]">
+          Foundation of Counseling (Non-Clinical)
+        </h3>
+        <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
+          Master interpersonal communication, empathy frameworks, and ethical mentoring loops. Ideal for prospective guides, coaches, team leaders, and peer support facilitators.
+        </p>
+      </div>
 
-                <div className="lg:col-span-7 lg:pl-8 border-t lg:border-t-0 lg:border-l border-[#E2E8F0] pt-6 lg:pt-0">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#0D9488] mb-4">Core Domains Coverage</h4>
-                  <div className="space-y-3">
-                    {[
-                      { title: "Active Listening", text: "Attending deeply to verbal and non-verbal nuances without judgment." },
-                      { title: "Communication Skills", text: "Articulating restorative, constructive prompts to unlock internal barriers." },
-                      { title: "Emotional Understanding", text: "Decoding underlying psychological needs and driving authentic empathy." },
-                      { title: "Helping Skills", text: "Facilitating structured frameworks to encourage self-directed solution paths." },
-                      { title: "Ethical Foundations", text: "Preserving healthy boundaries, client privacy, and safe environment loops." }
-                    ].map((pill, idx) => (
-                      <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E2E8F0]">
-                        <CheckCircle2 className="h-4 w-4 text-[#0D9488] mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="text-sm font-medium text-[#0B0F19]">{pill.title} — </span>
-                          <span className="text-xs font-light opacity-80">{pill.text}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+      <div className="lg:col-span-7 lg:pl-8 border-t lg:border-t-0 lg:border-l border-[#E2E8F0] pt-6 lg:pt-0">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-[#0D9488] mb-4">Core Domains Coverage</h4>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            { step: "01", title: "Active Listening", desc: "Attending deeply to verbal and non-verbal nuances without judgment." },
+            { step: "02", title: "Communication Skills", desc: "Articulating restorative prompts to unlock internal barriers." },
+            { step: "03", title: "Emotional Understanding", desc: "Decoding underlying psychological needs and driving authentic empathy." },
+            { step: "04", title: "Helping Skills", desc: "Facilitating structured frameworks to encourage self-directed paths." },
+            { step: "05", title: "Ethical Foundations", desc: "Preserving healthy boundaries, client privacy, and safe environments." }
+          ].map((item, idx) => (
+            <div key={idx} className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <div className="text-xs font-mono font-bold text-[#0D9488] mb-1">{item.step}</div>
+              <div className="text-sm font-medium text-[#0B0F19]">{item.title}</div>
+              <div className="text-xs font-light mt-1 opacity-70">{item.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </CardContent>
+  </Card>
 
-            {/* Program 3: Business Development from a Psychological Lens */}
-            <Card className="border border-[#E2E8F0] bg-white rounded-2xl shadow-sm p-6 md:p-10 group transition-all hover:shadow-md">
-              <CardContent className="p-0 grid lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-5 space-y-4">
-                  <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488] border border-[#E2E8F0]">
-                    <Briefcase className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-2xl font-sans font-normal tracking-tight text-[#0B0F19]">
-                    Business Development from a Psychological Lens
-                  </h3>
-                  <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
-                    Unlock market dynamics by fully understanding human motivations. Learn the science behind purchasing decisions, relationship building, and high-stakes negotiation.
-                  </p>
-                </div>
+  {/* Program 3: Business Development from a Psychological Lens */}
+  <Card className="border border-[#E2E8F0] bg-white rounded-2xl shadow-sm p-6 md:p-10 group transition-all hover:shadow-md">
+    <CardContent className="p-0 grid lg:grid-cols-12 gap-8 items-start">
+      <div className="lg:col-span-5 space-y-4">
+        <div className="w-12 h-12 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488] border border-[#E2E8F0]">
+          <Briefcase className="h-5 w-5" />
+        </div>
+        <h3 className="text-2xl font-sans font-normal tracking-tight text-[#0B0F19]">
+          Business Development from a Psychological Lens
+        </h3>
+        <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
+          Unlock market dynamics by fully understanding human motivations. Learn the science behind purchasing decisions, relationship building, and high-stakes negotiation.
+        </p>
+      </div>
 
-                <div className="lg:col-span-7 lg:pl-8 border-t lg:border-t-0 lg:border-l border-[#E2E8F0] pt-6 lg:pt-0">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#0D9488] mb-4">Strategic Masterclasses</h4>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    {[
-                      { label: "Sales Psychology", desc: "Analyzing behavioral drivers to spark natural resonance and conversions." },
-                      { label: "Negotiation", desc: "Crafting win-win agreements with emotional intelligence and posture." },
-                      { label: "Consumer Behaviour", desc: "Mapping client discovery paths and subconscious decision matrixes." },
-                      { label: "Conflict Resolution", desc: "De-escalating friction into productive corporate alignments." },
-                      { label: "Client Relationship Management", desc: "Nurturing long-term loyalty and sustainable premium value loops." }
-                    ].map((item, idx) => (
-                      <div key={idx} className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                        <div className="text-sm font-medium text-[#0B0F19]">{item.label}</div>
-                        <div className="text-xs font-light mt-1 opacity-70">{item.desc}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+      <div className="lg:col-span-7 lg:pl-8 border-t lg:border-t-0 lg:border-l border-[#E2E8F0] pt-6 lg:pt-0">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-[#0D9488] mb-4">Strategic Masterclasses</h4>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            { step: "01", title: "Sales Psychology", desc: "Analyzing behavioral drivers to spark natural resonance and conversions." },
+            { step: "02", title: "Negotiation", desc: "Crafting win-win agreements with emotional intelligence and posture." },
+            { step: "03", title: "Consumer Behaviour", desc: "Mapping client discovery paths and subconscious decision matrixes." },
+            { step: "04", title: "Conflict Resolution", desc: "De-escalating friction into productive corporate alignments." },
+            { step: "05", title: "Client Relationship Management", desc: "Nurturing long-term loyalty and sustainable premium value loops." }
+          ].map((item, idx) => (
+            <div key={idx} className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <div className="text-xs font-mono font-bold text-[#0D9488] mb-1">{item.step}</div>
+              <div className="text-sm font-medium text-[#0B0F19]">{item.title}</div>
+              <div className="text-xs font-light mt-1 opacity-70">{item.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</div>
         </div>
       </section>
 
