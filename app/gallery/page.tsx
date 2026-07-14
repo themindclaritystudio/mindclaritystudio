@@ -3,7 +3,6 @@
 import type React from "react"
 import Navigation from "@/components/navigation"
 import { Card } from "@/components/ui/card"
-import { MapPin } from "lucide-react"
 import Footer from "@/components/footer"
 import Image from "next/image"
 
@@ -16,7 +15,6 @@ export default function OfficeGalleryPage() {
       <section className="pt-20 pb-16 md:pt-24 md:pb-20 bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
-            {/* Left Column */}
             <div>
               <span className="text-xs font-bold tracking-widest uppercase text-[#0D9488] block mb-2">Our Studio</span>
               <h1 className="font-sans tracking-tight text-4xl md:text-6xl leading-tight text-[#0B0F19]">
@@ -25,16 +23,12 @@ export default function OfficeGalleryPage() {
                   The Mind Clarity Studio
                 </span>
               </h1>
-              <p
-                className="mt-6 text-lg font-light leading-relaxed max-w-xl"
-                style={{ color: "#0B0F19", opacity: .75 }}
-              >
+              <p className="mt-6 text-lg font-light leading-relaxed max-w-xl" style={{ color: "#0B0F19", opacity: .75 }}>
                 A serene, thoughtfully designed space where clarity is cultivated. 
                 Our studio is crafted to support deep reflection, meaningful conversations, and transformative growth.
               </p>
             </div>
 
-            {/* Right Visual Column */}
             <div className="relative">
               <div className="aspect-video w-full rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-xl relative bg-slate-50">
                 <Image 
@@ -43,20 +37,15 @@ export default function OfficeGalleryPage() {
                   fill 
                   priority
                   sizes="(max-width: 1024px) 100vw, 600px"
-                  /* Optimized for a logo: contained nicely with padding so it never distorts */
                   className="object-contain p-6" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-6 left-6 text-[#0B0F19] md:text-white">
-                 
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Photo Gallery Section */}
+      {/* Photo Gallery Section - IMPROVED */}
       <section id="photos" className="py-16 md:py-24 bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -74,29 +63,21 @@ export default function OfficeGalleryPage() {
               { src: "/images/stdimg5.jpeg", title: "Coaching Suite", desc: "Private one-on-one sessions" },
               { src: "/images/stdimg2.jpeg", title: "Resource Library", desc: "Books & research materials" },
               { src: "/images/stdimg4.jpeg", title: "Discussion Lounge", desc: "Intimate group conversations" },
-              { src: "/images/stdimg3.jpeg", title: "Work & Reflection Area", desc: "Focused individual space" },
-              { src: "/images/stdimg7.jpeg", title: "Positive Affirmation Wall", desc: "A comforting space filled with motivational messages and daily reminders for mental well-being."}          
+              { src: "/images/stdimg8.jpeg", title: "Work & Reflection Area", desc: "Focused individual space" },
+              { src: "/images/stdimg7.jpeg", title: "Positive Affirmation Wall", desc: "A comforting space filled with motivational messages..." }          
             ].map((photo, idx) => (
               <Card 
                 key={idx} 
                 className="group overflow-hidden border border-[#E2E8F0] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image 
-                    src={photo.src} 
-                    alt={photo.title} 
-                    fill 
-                    className="object-cover group-hover:scale-105 transition-transform duration-700" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform">
-                    <div className="text-white">
-                      <h3 className="font-medium text-lg">{photo.title}</h3>
-                      <p className="text-sm opacity-90 mt-1">{photo.desc}</p>
-                    </div>
-                  </div>
-                </div>
+                <div className="relative aspect-[4/3] flex items-center justify-center">
+  <Image
+    src={photo.src}
+    alt={photo.title}
+    fill
+    className="object-contain p-2 group-hover:scale-105 transition-transform duration-700"
+  />
+</div>
               </Card>
             ))}
           </div>
