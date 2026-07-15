@@ -144,7 +144,7 @@ export default function TestimonialsPage() {
                     onPlay={() => setIsPlaying(true)}
                     onPause={() => setIsPlaying(false)}
                   >
-                    <source src="/images/testintern.mp4" type="video/mp4" />
+                    <source src="/images/testimonial1.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
 
