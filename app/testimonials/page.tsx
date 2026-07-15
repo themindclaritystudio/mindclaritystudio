@@ -1,14 +1,29 @@
 "use client"
 
 import type React from "react"
+import { useState, useRef } from "react"
 import Navigation from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, Quote, TrendingUp, Shield, Users, ArrowUpRight } from "lucide-react"
+import { Star, Quote, TrendingUp, Shield, Users, ArrowUpRight, Play, Pause } from "lucide-react"
 import Link from "next/link"
 import Footer from "@/components/footer"
 
 export default function TestimonialsPage() {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const togglePlay = () => {
+    if (!videoRef.current) return
+    if (isPlaying) {
+      videoRef.current.pause()
+      setIsPlaying(false)
+    } else {
+      videoRef.current.play()
+      setIsPlaying(true)
+    }
+  }
+
   return (
     <div className="min-h-screen antialiased selection:bg-[#0D9488] selection:text-white" style={{ backgroundColor: '#F8FAFC' }}>
       <Navigation />
@@ -72,26 +87,48 @@ export default function TestimonialsPage() {
 
       </div>
 
-      {/* Featured Video */}
+<div className="flex justify-center lg:justify-end">
+  <div className="rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-sm bg-[#F8FAFC] w-full max-w-[440px] relative group">
+    
+    <div 
+      className="aspect-square relative w-full h-full cursor-pointer overflow-hidden" 
+      onClick={togglePlay}
+    >
+      {/* Poster Image - Fully visible & properly covered */}
+      {!isPlaying && (
+        <img
+          src="/images/videothumbnail.jpeg"
+          alt="Video thumbnail"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      )}
 
-      <div>
+      <video
+        ref={videoRef}
+        className="w-full h-full object-cover"
+        playsInline
+        preload="metadata"
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      >
+        <source src="/images/testintern.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-        <div className="rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-sm bg-[#F8FAFC]">
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 pointer-events-none" />
 
-          <div className="aspect-video">
-
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-              title="Intern Testimonial"
-              allowFullScreen
-            />
-
+      {/* Center Play Button - Only when paused */}
+      {!isPlaying && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-20 h-20 rounded-full bg-white/95 text-[#0D9488] shadow-xl flex items-center justify-center transform transition-all duration-300 hover:scale-110 active:scale-95 pointer-events-auto">
+            <Play className="h-8 w-8 fill-current translate-x-0.5" />
           </div>
-
         </div>
-
-      </div>
+      )}
+    </div>
+  </div>
+</div>
 
     </div>
 
@@ -275,7 +312,6 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Premium Minimal Footer */}
       <Footer />
     </div>
   )
