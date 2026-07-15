@@ -5,7 +5,7 @@ import { useState, useRef } from "react"
 import Navigation from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, Quote, TrendingUp, Shield, Users, ArrowUpRight, Play, Pause } from "lucide-react"
+import { Star, Quote, TrendingUp, Shield, Users, ArrowUpRight, Play } from "lucide-react"
 import Link from "next/link"
 import Footer from "@/components/footer"
 
@@ -28,113 +28,145 @@ export default function TestimonialsPage() {
     <div className="min-h-screen antialiased selection:bg-[#0D9488] selection:text-white" style={{ backgroundColor: '#F8FAFC' }}>
       <Navigation />
 
-      {/* Hero Section */}
-   
-{/* Intern Testimonials Hero */}
-<section className="pt-20 pb-16 md:pt-24 md:pb-20 bg-white border-b border-[#E2E8F0]">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Intern Testimonials Hero */}
+      <section className="pt-20 pb-16 md:pt-24 md:pb-20 bg-white border-b border-[#E2E8F0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            {/* Left */}
+            <div>
+              <span className="text-xs font-bold tracking-widest uppercase text-[#0D9488] block mb-2">First Internship Cohort</span>
 
-    <div className="grid lg:grid-cols-2 gap-14 items-center">
+              <h1 className="font-sans tracking-tight text-4xl md:text-6xl leading-tight text-[#0B0F19]">
+                Hear From Our{" "}
+                <span className="font-serif italic font-light text-[#0D9488]">
+                  First Batch
+                </span>
+                {" "}of Interns
+              </h1>
 
-      {/* Left */}
-      <div>
-            <span className="text-xs font-bold tracking-widest uppercase text-[#0D9488] block mb-2">First Internship Cohort</span>
+              <p
+                className="mt-6 text-lg font-light leading-relaxed max-w-xl"
+                style={{ color: "#0B0F19", opacity: .75 }}
+              >
+                Our internship goes beyond learning skills. It develops
+                confidence, professional thinking, research ability, and real
+                workplace experience through mentorship and hands-on projects.
+              </p>
 
-      
+              <div className="flex flex-wrap gap-8 mt-10">
+                <div>
+                  <div className="text-3xl font-normal text-[#0D9488]">50+</div>
+                  <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: 0.65 }}>
+                    Mentorship Hours
+                  </div>
+                </div>
+                <div>
+                  <div className="text-3xl font-normal text-[#0D9488]">5★</div>
+                  <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: .65 }}>
+                    Mentor Rating
+                  </div>
+                </div>
+                <div>
+                  <div className="text-3xl font-normal text-[#0D9488]">100%</div>
+                  <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: 0.65 }}>
+                    Practical Learning
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <h1 className="font-sans tracking-tight text-4xl md:text-6xl leading-tight text-[#0B0F19]">
+            {/* Video Player */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-sm bg-[#F8FAFC] w-full max-w-[440px] relative group">
+                <div 
+                  className="aspect-square relative w-full h-full cursor-pointer overflow-hidden" 
+                  onClick={togglePlay}
+                >
+                  {!isPlaying && (
+                    <img
+                      src="/images/videothumbnail.jpeg"
+                      alt="Video thumbnail"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  )}
 
-          Hear From Our{" "}
+                  <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    playsInline
+                    preload="metadata"
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                  >
+                    <source src="/images/testintern.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
 
-          <span className="font-serif italic font-light text-[#0D9488]">
-            First Batch
-          </span>
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 pointer-events-none" />
 
-          {" "}of Interns
-
-        </h1>
-
-        <p
-          className="mt-6 text-lg font-light leading-relaxed max-w-xl"
-          style={{ color: "#0B0F19", opacity: .75 }}
-        >
-          Our internship goes beyond learning skills. It develops
-          confidence, professional thinking, research ability, and real
-          workplace experience through mentorship and hands-on projects.
-        </p>
-
-      
-       <div className="flex flex-wrap gap-8 mt-10">
-
-
-  <div>
-    <div className="text-3xl font-normal text-[#0D9488]">50+</div>
-    <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: 0.65 }}>
-      Mentorship Hours
-    </div>
-  </div>
-    <div> <div className="text-3xl font-normal text-[#0D9488]">5★</div> <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: .65 }} > Mentor Rating </div> </div>
-
-
-  <div>
-    <div className="text-3xl font-normal text-[#0D9488]">100%</div>
-    <div className="text-sm mt-1" style={{ color: "#0B0F19", opacity: 0.65 }}>
-      Practical Learning
-    </div>
-  </div>
-
-</div>
-
-      </div>
-
-<div className="flex justify-center lg:justify-end">
-  <div className="rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-sm bg-[#F8FAFC] w-full max-w-[440px] relative group">
-    
-    <div 
-      className="aspect-square relative w-full h-full cursor-pointer overflow-hidden" 
-      onClick={togglePlay}
-    >
-      {/* Poster Image - Fully visible & properly covered */}
-      {!isPlaying && (
-        <img
-          src="/images/videothumbnail.jpeg"
-          alt="Video thumbnail"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      )}
-
-      <video
-        ref={videoRef}
-        className="w-full h-full object-cover"
-        playsInline
-        preload="metadata"
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
-      >
-        <source src="/images/testintern.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 pointer-events-none" />
-
-      {/* Center Play Button - Only when paused */}
-      {!isPlaying && (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-20 h-20 rounded-full bg-white/95 text-[#0D9488] shadow-xl flex items-center justify-center transform transition-all duration-300 hover:scale-110 active:scale-95 pointer-events-auto">
-            <Play className="h-8 w-8 fill-current translate-x-0.5" />
+                  {!isPlaying && (
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div className="w-20 h-20 rounded-full bg-white/95 text-[#0D9488] shadow-xl flex items-center justify-center transform transition-all duration-300 hover:scale-110 active:scale-95 pointer-events-auto">
+                        <Play className="h-8 w-8 fill-current translate-x-0.5" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      )}
-    </div>
-  </div>
-</div>
+      </section>
 
-    </div>
+      {/* New Testimonial Video Section */}
+      <section className="py-20 bg-white border-b border-[#E2E8F0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest uppercase text-[#0D9488]">Client Stories</span>
+            <h2 className="text-3xl md:text-5xl font-sans font-normal tracking-tight mt-3 text-[#0B0F19]">
+              Voices of{" "}
+              <span className="font-serif italic font-light text-[#0D9488]">Transformation</span>
+            </h2>
+          </div>
 
-  </div>
-</section>
-   <section className="pt-20 pb-12 md:pt-24 md:pb-20 relative bg-white border-b border-[#E2E8F0]">
+          <div className="flex justify-center">
+            <div className="rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-sm bg-[#F8FAFC] w-full max-w-[520px] relative group">
+              <div 
+                className="aspect-video relative w-full cursor-pointer overflow-hidden" 
+                onClick={togglePlay}
+              >
+               
+ <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    playsInline
+                    preload="metadata"
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                  >
+                    <source src="/images/testintern.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 pointer-events-none" />
+
+                  {!isPlaying && (
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div className="w-20 h-20 rounded-full bg-white/95 text-[#0D9488] shadow-xl flex items-center justify-center transform transition-all duration-300 hover:scale-110 active:scale-95 pointer-events-auto">
+                        <Play className="h-8 w-8 fill-current translate-x-0.5" />
+                      </div>
+                    </div>
+                  )}
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real Transformations Section */}
+      <section className="pt-20 pb-12 md:pt-24 md:pb-20 relative bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="font-sans font-normal tracking-tight text-4xl md:text-6xl leading-tight mb-6 text-balance" style={{ color: '#0B0F19' }}>
@@ -150,6 +182,7 @@ export default function TestimonialsPage() {
           </div>
         </div>
       </section>
+
       {/* Featured Testimonials */}
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,7 +258,6 @@ export default function TestimonialsPage() {
                 </div>
               </CardContent>
             </Card>
-
           </div>
         </div>
       </section>
