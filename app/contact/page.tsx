@@ -8,45 +8,16 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { MapPin, Phone, Mail, Clock, MessageSquare, Calendar, Users, ArrowUpRight, CheckCircle } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, MessageSquare, Calendar, Users, ArrowUpRight, Loader2 } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa"
-import Image from "next/image"
 import Footer from "@/components/footer"
 
 export default function ContactPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen antialiased selection:bg-[#0D9488] selection:text-white" style={{ backgroundColor: '#F8FAFC' }}>
-        <Navigation />
-        <div className="min-h-[calc(100vh-200px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md w-full text-center space-y-6 bg-white p-8 rounded-2xl border border-[#E2E8F0] shadow-sm">
-            <div className="mx-auto h-16 w-16 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488]">
-              <CheckCircle className="h-8 w-8" />
-            </div>
-            <h2 className="font-sans font-normal tracking-tight text-3xl" style={{ color: '#0B0F19' }}>
-              Message <span className="font-serif italic font-light text-[#0D9488]">Sent!</span>
-            </h2>
-            <p className="text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
-              Thank you for reaching out. We have received your inquiry and will respond within 24 hours.
-            </p>
-            <div className="pt-2">
-              <Link href="/">
-                <Button 
-                  className="w-full text-base font-medium px-6 py-5 rounded-xl hover:opacity-90 transition-all border-none"
-                  style={{ backgroundColor: '#0B0F19', color: '#F8FAFC' }}
-                >
-                  Return to Homepage
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
+  const handleSubmit = () => {
+    setIsSubmitting(true)
   }
 
   return (
@@ -81,7 +52,6 @@ export default function ContactPage() {
                   <Phone className="h-4 w-4" />
                 </div>
                 <h3 className="text-base font-sans font-normal tracking-tight" style={{ color: '#0B0F19' }}>Call Us</h3>
-                <p className="text-xs font-light" style={{ color: '#0B0F19', opacity: 0.75 }}></p>
               </div>
               <div className="mt-4">
                 <a href="tel:+917990202179" className="text-base font-medium transition-colors hover:opacity-80 block" style={{ color: '#0B0F19' }}>
@@ -149,7 +119,7 @@ export default function ContactPage() {
                   <form
                     action="https://formsubmit.co/contact@themindclaritystudio.com"
                     method="POST"
-                    onSubmit={() => setTimeout(() => setIsSubmitted(true), 800)}
+                    onSubmit={handleSubmit}
                     className="space-y-5"
                   >
                     <input type="hidden" name="_subject" value="New Contact Form Submission - Mind Clarity Studio" />
@@ -224,11 +194,21 @@ export default function ContactPage() {
 
                     <Button 
                       type="submit" 
-                      className="w-full text-base font-medium px-8 py-5 rounded-xl hover:opacity-90 transition-all border-none shadow-md mt-2"
+                      disabled={isSubmitting}
+                      className="w-full text-base font-medium px-8 py-5 rounded-xl hover:opacity-90 transition-all border-none shadow-md mt-2 flex items-center justify-center gap-2"
                       style={{ backgroundColor: '#0B0F19', color: '#F8FAFC' }}
                     >
-                      Send Message
-                      <ArrowUpRight className="ml-2 h-4 w-4" />
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="h-5 w-5 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <ArrowUpRight className="ml-2 h-4 w-4" />
+                        </>
+                      )}
                     </Button>
                   </form>
                 </CardContent>
@@ -329,7 +309,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Premium Minimal Footer */}
       <Footer />
     </div>
   )

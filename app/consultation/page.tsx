@@ -8,53 +8,17 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Clock, Phone, Mail, MapPin, CheckCircle, TrendingUp, ArrowUpRight } from "lucide-react";
+import { Clock, Phone, Mail, MapPin, CheckCircle, TrendingUp, ArrowUpRight, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Footer from "@/components/footer";
 
 export default function ConsultationPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen antialiased selection:bg-[#0D9488] selection:text-white" style={{ backgroundColor: '#F8FAFC' }}>
-        <Navigation />
-        <div className="min-h-[calc(100vh-200px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md w-full text-center space-y-6 bg-white p-8 rounded-2xl border border-[#E2E8F0] shadow-sm">
-            <div className="mx-auto h-16 w-16 bg-[#F8FAFC] rounded-full flex items-center justify-center text-[#0D9488]">
-              <CheckCircle className="h-8 w-8" />
-            </div>
-            <h2 className="font-sans font-normal tracking-tight text-3xl" style={{ color: '#0B0F19' }}>
-              Thank <span className="font-serif italic font-light text-[#0D9488]">You!</span>
-            </h2>
-            <p className="text-base font-light leading-relaxed" style={{ color: '#0B0F19', opacity: 0.75 }}>
-              We've received your consultation request. We will contact you within 24 hours to schedule your discovery call.
-            </p>
-            <div className="space-y-3 pt-2">
-              <Link href="/">
-                <Button 
-                  className="w-full text-base font-medium px-6 py-5 rounded-xl hover:opacity-90 transition-all border-none"
-                  style={{ backgroundColor: '#0B0F19', color: '#F8FAFC' }}
-                >
-                  Return to Homepage
-                </Button>
-              </Link>
-              <Button
-                variant="outline"
-                onClick={() => setIsSubmitted(false)}
-                className="w-full text-base font-medium px-6 py-5 rounded-xl transition-all border border-[#E2E8F0] hover:bg-[#F8FAFC]"
-                style={{ color: '#0B0F19' }}
-              >
-                Book Another Consultation
-              </Button>
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
+  const handleSubmit = () => {
+    setIsSubmitting(true);
+  };
 
   return (
     <div className="min-h-screen antialiased selection:bg-[#0D9488] selection:text-white" style={{ backgroundColor: '#F8FAFC' }}>
@@ -98,7 +62,7 @@ export default function ConsultationPage() {
                   <form
                     action="https://formsubmit.co/contact@themindclaritystudio.com"
                     method="POST"
-                    onSubmit={() => setTimeout(() => setIsSubmitted(true), 800)}
+                    onSubmit={handleSubmit}
                     className="space-y-5"
                   >
                     {/* Hidden Fields */}
@@ -197,11 +161,21 @@ export default function ConsultationPage() {
 
                     <Button 
                       type="submit" 
-                      className="w-full text-base font-medium px-8 py-5 rounded-xl hover:opacity-90 transition-all border-none shadow-md"
+                      disabled={isSubmitting}
+                      className="w-full text-base font-medium px-8 py-5 rounded-xl hover:opacity-90 transition-all border-none shadow-md flex items-center justify-center gap-2"
                       style={{ backgroundColor: '#0B0F19', color: '#F8FAFC' }}
                     >
-                      Book My Consultation
-                      <ArrowUpRight className="ml-2 h-4 w-4" />
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="h-5 w-5 animate-spin" />
+                          Booking Consultation...
+                        </>
+                      ) : (
+                        <>
+                          Book My Consultation
+                          <ArrowUpRight className="ml-2 h-4 w-4" />
+                        </>
+                      )}
                     </Button>
                   </form>
                 </CardContent>
@@ -303,10 +277,6 @@ export default function ConsultationPage() {
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Soft Insight Card */}
-              
-
             </div>
           </div>
         </div>
